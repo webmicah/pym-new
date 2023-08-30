@@ -1,0 +1,745 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="text-scheme-text bg-scheme-background relative overflow-hidden" style="background-color: {{ section.settings.background-color }}">
+
+  <div class="section-content section-{{ section.id }}-padding px-section">
+    <div class="max-w-site mx-auto {{ section.settings.content_width_desktop }}">
+      <div class="{{ section.settings.text_align }} mx-auto relative z-shape-divider">
+        {% if section.settings.image %}
+          <div class="py-5 flex justify-center">
+          {{ section.settings.image | image_url: width: auto | image_tag }}
+          </div>
+        {% endif %}
+        {% if section.settings.title != '' %}
+        <h2 class="{{ section.settings.heading_font }} heading-effects {{ section.settings.heading_size }} heading-style break-words {{ settings.heading_drop_shadow_style }}">{{ section.settings.title }}</h2>
+        {% endif %}
+
+        <div class="{{ section.settings.text_font }} {% if section.settings.title != '' %}mt-5{% endif %} leading-snug mx-auto {{ section.settings.text_size }} rte">
+          {{ section.settings.rich_text }}
+        </div>
+
+        {%- if section.settings.button_link != blank and section.settings.button_label != '' -%}
+        <div class="mt-5">
+          <a href="{{ section.settings.button_link }}" class="push-btn inline-block">
+            <span class="push-btn-surface">{{ section.settings.button_label }}</span>
+          </a>
+        </div>
+        {%- endif -%}
+      </div>
+      {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}<div class="card-border"></div>{% endif %}
+    </div>
+  </div>
+
+  {%- liquid
+    for block in section.blocks
+      case block.type
+        when 'background_shape'
+          render 'block-background-shape' with block: block, section: section
+      endcase
+    endfor
+  -%}
+</section>
+
+{%- liquid
+  assign stickers = section.blocks | where: "type", "sticker"
+  assign shape_dividers = section.blocks | where: "type", "shape_divider"
+  for sticker in stickers
+    render 'block-sticker' with block: sticker, section: section
+  endfor
+  for shape_divider in shape_dividers
+    render 'block-shape-divider' with block: shape_divider, section: section
+  endfor
+-%}
+
+{% schema %}
+{
+  "name": "Rich text",
+  "settings": [
+        {
+          "type": "select",
+          "id": "background-color",
+          "label": "Background Color",
+          "options": [
+            {
+              "value": "#000000",
+              "label": "Black"
+            },
+            {
+              "value": "#FFF7E8",
+              "label": "Cosmic Latte"
+            },
+            {
+              "value": "#F1D09F",
+              "label": "Peach"
+            },
+            {
+              "value": "#DEA46E",
+              "label": "Peru"
+            },
+            {
+              "value": "#FFC56D",
+              "label": "Topaz"
+            },
+            {
+              "value": "#C5D9E7",
+              "label": "Columbia Blue"
+            },
+            {
+              "value": "#7BADD3",
+              "label": "Iceberg"
+            },
+            {
+              "value": "#C0CA80",
+              "label": "Sage"
+            },
+            {
+              "value": "#A1A468",
+              "label": "Olivine"
+            },
+            {
+              "value": "#638C1C",
+              "label": "Olive"
+            },
+            {
+              "value": "#999A32",
+              "label": "Pistachio"
+            },
+            {
+              "value": "#AE5D57",
+              "label": "Matrix"
+            },
+            {
+              "value": "#E99182",
+              "label": "Dark Salmon"
+            },
+            {
+              "value": "#F9B7AC",
+              "label": "Sundown"
+            },
+            {
+              "value": "#FFC844",
+              "label": "Sun Burst"
+            },
+            {
+              "value": "#FDDA64",
+              "label": "Pale Gold"
+            },
+            {
+              "value": "#F8DF8D",
+              "label": "Flavescent"
+            }
+        ],
+      "default": "#FFF7E8"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 70
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "radio",
+      "id": "text_align",
+      "label": "Text Align",
+      "options": [
+        {
+            "value": "text-left",
+            "label": "Left"
+          },
+          {
+            "value": "text-center",
+            "label": "Center"
+          },
+          {
+            "value": "text-right",
+            "label": "Right"
+          }
+      ],
+      "default": "text-center"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading Size",
+      "options": [
+        {
+          "value": "text-sm",
+          "label": "Small"
+        },
+        {
+          "value": "text-base",
+          "label": "Medium"
+        },
+        {
+          "value": "text-lg",
+          "label": "Large"
+        },
+        {
+          "value": "text-xl",
+          "label": "XL"
+        },
+        {
+          "value": "text-2xl",
+          "label": "2XL"
+        },
+        {
+          "value": "heading-base",
+          "label": "Base"
+        },
+        {
+          "value": "heading-template",
+          "label": "Template"
+        }
+      ],
+      "default": "heading-template"
+    },
+    {
+      "type": "radio",
+      "id": "heading_font",
+      "label": "Heading font",
+      "options": [
+        {
+            "value": "font-main",
+            "label": "Creo Light"
+          },
+          {
+            "value": "font-heading",
+            "label": "Creo Bold"
+          },
+          {
+            "value": "font-accent",
+            "label": "Auger Mono"
+          }
+      ],
+      "default": "font-heading"
+    },
+    {
+      "id": "rich_text",
+      "type": "richtext",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "Text Size",
+      "options": [
+        {
+          "value": "text-sm",
+          "label": "Small"
+        },
+        {
+          "value": "text-base",
+          "label": "Medium"
+        },
+        {
+          "value": "text-lg",
+          "label": "Large"
+        },
+        {
+          "value": "text-xl",
+          "label": "XL"
+        },
+        {
+          "value": "text-2xl",
+          "label": "2XL"
+        },
+        {
+          "value": "heading-base",
+          "label": "Base"
+        },
+        {
+          "value": "heading-template",
+          "label": "Template"
+        }
+      ],
+      "default": "text-base"
+    },
+    {
+      "type": "radio",
+      "id": "text_font",
+      "label": "Text font",
+      "options": [
+        {
+            "value": "font-main",
+            "label": "Creo Light"
+          },
+          {
+            "value": "font-heading",
+            "label": "Creo Bold"
+          },
+          {
+            "value": "font-accent",
+            "label": "Auger Mono"
+          }
+      ],
+      "default": "font-main"
+    },
+    {
+      "type": "select",
+      "id": "content_width_desktop",
+      "label": "Content width on desktop",
+      "default": "lg:w-2/3",
+      "options": [
+        {
+          "value": "lg:w-1/3",
+          "label": "One third"
+        },
+        {
+          "value": "lg:w-1/2",
+          "label": "One half"
+        },
+        {
+          "value": "lg:w-2/3",
+          "label": "Two thirds"
+        },
+        {
+          "value": "lg:w-full",
+          "label": "Full width"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Link"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Label",
+      "default": "Shop Now"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Sticker",
+      "type": "sticker",
+      "settings": [
+        {
+          "type": "select",
+          "id": "shape",
+          "label": "Shape",
+          "options": [
+            {
+              "value": "pym_shape_1",
+              "label": "Shape 1",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_2",
+              "label": "Shape 2",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_3",
+              "label": "Shape 3",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_4",
+              "label": "Shape 4",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_5",
+              "label": "Shape 5",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_6",
+              "label": "Shape 6",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_7",
+              "label": "Shape 7",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_8",
+              "label": "Shape 8",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_9",
+              "label": "Shape 9",
+              "group": "PYM Shapes"
+            }
+          ],
+          "default": "pym_shape_1"
+        },
+        {
+          "type": "select",
+          "id": "color",
+          "label": "Color",
+          "default": "bg-scheme-accent text-scheme-accent-overlay",
+          "options": [
+            {
+              "value": "bg-scheme-accent text-scheme-accent-overlay",
+              "label": "Black"
+            },
+            {
+              "value": "bg-scheme-accent-2 text-scheme-accent-2-overlay",
+              "label": "Cosmic Latte"
+            },
+            {
+              "value": "bg-scheme-accent-3 text-scheme-accent-3-overlay",
+              "label": "Peach"
+            },
+            {
+              "value": "bg-scheme-accent-4 text-scheme-accent-4-overlay",
+              "label": "Peru"
+            },
+            {
+              "value": "bg-scheme-accent-5 text-scheme-accent-5-overlay",
+              "label": "Topaz"
+            },
+            {
+              "value": "bg-scheme-accent-6 text-scheme-accent-6-overlay",
+              "label": "Columbia Blue"
+            },
+            {
+              "value": "bg-scheme-accent-7 text-scheme-accent-7-overlay",
+              "label": "Iceberg"
+            },
+            {
+              "value": "bg-scheme-accent-8 text-scheme-accent-8-overlay",
+              "label": "Sage"
+            },
+            {
+              "value": "bg-scheme-accent-9 text-scheme-accent-9-overlay",
+              "label": "Olivine"
+            },
+            {
+              "value": "bg-scheme-accent-10 text-scheme-accent-10-overlay",
+              "label": "Olive"
+            },
+            {
+              "value": "bg-scheme-accent-11 text-scheme-accent-11-overlay",
+              "label": "Pistachio"
+            },
+            {
+              "value": "bg-scheme-accent-12 text-scheme-accent-12-overlay",
+              "label": "Matrix"
+            },
+            {
+              "value": "bg-scheme-accent-13 text-scheme-accent-13-overlay",
+              "label": "Dark Salmon"
+            },
+            {
+              "value": "bg-scheme-accent-14 text-scheme-accent-14-overlay",
+              "label": "Sundown"
+            },
+            {
+              "value": "bg-scheme-accent-15 text-scheme-accent-15-overlay",
+              "label": "Sun Burst"
+            },
+            {
+              "value": "bg-scheme-accent-16 text-scheme-accent-16-overlay",
+              "label": "Pale Gold"
+            },
+            {
+              "value": "bg-scheme-accent-17 text-scheme-accent-17-overlay",
+              "label": "Flavescent"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "sticker_multiply",
+          "label": "Blend Multiply",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Position"
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "min": 100,
+          "max": 1000,
+          "step": 10,
+          "unit": "px",
+          "label": "Sticker width",
+          "default": 150
+        },
+        {
+          "type": "range",
+          "id": "horizontal_position",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Horizontal position",
+          "default": 80
+        },
+        {
+          "type": "range",
+          "id": "vertical_position",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Vertical position",
+          "default": 80
+        },
+        {
+          "type": "range",
+          "id": "rotate",
+          "min": -90,
+          "max": 90,
+          "step": 2,
+          "unit": "deg",
+          "label": "Rotate",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "sticker_opacity",
+          "min": 0.1,
+          "max": 1,
+          "step": 0.1,
+          "label": "Opacity",
+          "default": 1
+        },
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_sticker_on_mobile",
+          "label": "Show sticker on mobile",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_sticker_on_desktop",
+          "label": "Show sticker on desktop",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Animation"
+        },
+        {
+          "type": "select",
+          "id": "rotation_animation",
+          "label": "Rotation",
+          "options": [
+            {
+              "value": "none",
+              "label": "No rotation"
+            },
+            {
+              "value": "constantly_rotate",
+              "label": "Constantly rotate"
+            },
+            {
+              "value": "rotate_when_scrolling",
+              "label": "Rotate only when page is scrolling"
+            }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_parallax",
+          "label": "Enable parallax",
+          "default": false,
+          "info": "When enabled stickers will scroll faster than the rest of the page."
+        },
+        {
+          "type": "range",
+          "id": "parallax_speed",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "label": "Parallax speed",
+          "default": 3
+        },
+        {
+          "type": "header",
+          "content": "Custom image"
+        },
+        {
+          "type": "paragraph",
+          "content": "Using an image will override shape and text settings above."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "half_image_width_on_mobile",
+          "label": "Half image width on mobile",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "Shape divider",
+      "type": "shape_divider",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "radio",
+          "label": "Target section",
+          "id": "target_section",
+          "default": "above",
+          "options": [
+            {
+              "value": "above",
+              "label": "Section above"
+            },
+            {
+              "value": "below",
+              "label": "Section below"
+            }
+          ],
+          "info": "This will be the section that connects to the straight side of the divider. Best to use sections with a solid background color. [Learn more](https://help.switchthemes.co/shapes/style-blocks/shape-divider.html)"
+        },
+        {
+          "type": "select",
+          "label": "Target section color scheme",
+          "id": "target_section_color_scheme",
+          "default": "secondary",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "tertiary",
+              "label": "Tertiary"
+            },
+            {
+              "value": "quaternary",
+              "label": "Quaternary"
+            }
+          ],
+          "info": "Select the color scheme of the target section"
+        },
+        {
+          "type": "select",
+          "label": "Style",
+          "id": "style",
+          "default": "customshape_1919x170",
+          "options": [
+            {
+              "value": "mountains-1-asymmetrical_1440x293",
+              "label": "Mountains 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "mountains-2-asymmetrical_1440x325",
+              "label": "Mountains 2",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "customshape_1919x170",
+              "label": "PYM Shape 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "customshape2_1919x120",
+              "label": "PYM Shape 2",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "customshape3_1919x130",
+              "label": "PYM Shape 3",
+              "group": "Asymmetrical"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "flip_horizontal",
+          "label": "Flip horizontal"
+        },
+        {
+          "type": "header",
+          "content": "Animation"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_animation",
+          "label": "Enable animation",
+          "info": "Asymmetrical shape dividers will sway when animated."
+        },
+        {
+          "type": "radio",
+          "id": "animation_direction",
+          "label": "Direction",
+          "options": [
+            {
+              "value": "",
+              "label": "Right to left"
+            },
+            {
+              "value": "reverse",
+              "label": "Left to right"
+            }
+          ],
+          "default": ""
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rich text"
+    }
+  ]
+}
+{% endschema %}

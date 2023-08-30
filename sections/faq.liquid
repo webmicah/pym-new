@@ -1,0 +1,644 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign block_heading_level = 'h2'
+-%}
+
+<section class="relative text-scheme-text bg-scheme-background overflow-hidden {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %}" data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}">
+  
+  <div class="section-content max-w-site mx-auto px-section relative z-10 section-{{ section.id }}-padding">
+    {% if section.settings.title != blank %}
+      {%- assign block_heading_level = 'h3' -%}
+      <h2 class="text-center font-heading heading-effects heading-base heading-style break-words {{ settings.heading_drop_shadow_style }}">
+          {{ section.settings.title | escape }}
+      </h2>
+    {% endif %}
+
+    {% if section.settings.richtext != blank %}
+      <div class="text-center font-main mt-5 leading-snug">
+        {{ section.settings.richtext }}
+      </div>
+    {% endif %}
+
+    <div class="{% if section.settings.title != '' or section.settings.richtext != blank %}section-content-top-margin{% endif %} {% unless section.settings.display_on_card %}border-scheme-text border-b-2{% endunless %} mx-auto grid grid-cols-1 gap-2.5 {% if section.settings.two_columns_desktop %}lg:grid-cols-2 max-w-7xl{% else %}max-w-4xl{% endif %} {{ section.settings.section_shift }}">
+    {%- for block in section.blocks -%}
+      {% if block.type == 'question' %}
+        <div class="{% if section.settings.display_on_card %}card-container{% else %}{% endif %}" {{ block.shopify_attributes }}>
+          <div class="{% if section.settings.display_on_card %}card p-4{% else %}border-scheme-text border-b-1 py-4{% endif %}" x-data="{ open: false }" x-cloak>
+            <{{ block_heading_level }} class="">
+              <button @click="open = !open" class="{% if section.settings.heading_text_style == 'heading' %}heading-secondary{% endif %} font-heading cursor-pointer flex justify-between items-center w-full text-left" :aria-expanded="open ? true : 'false'">
+                <div class="w-10/12 lg:w-11/12 grow-0 {% if section.settings.uppercase %} uppercase{% endif %}">
+                  <span class="inline-block break-words w-full">
+                    {{ block.settings.question }}
+                  </span>
+                </div>
+                <div class="block pl-5 flex-shrink-0">
+                  <span class="inline-block w-5 h-5 transform transition origin-center" :class="{'rotate-180': open }">{%- render 'icon-chevron-down' %}</span>
+                </div>
+              </button>
+            </{{ block_heading_level }}>
+            <div class="mt-4 rte" x-show="open" id="{{ block.id }}">
+              {{ block.settings.answer }}
+            </div>
+          </div>
+          {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}<div class="card-border"></div>{% endif %}
+          <noscript>
+            <div class="rte mt-8">
+              <h2 class="{{ settings.base_heading_size }}"></h2>
+              {{ block.settings.answer }}
+            </div>
+          </noscript>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+    </div>
+  </div>
+
+  {%- liquid
+    for block in section.blocks
+      case block.type
+        when 'background_shape'
+          render 'block-background-shape' with block: block, section: section
+        when 'background_pattern'
+          render 'block-background-pattern' with block: block, section: section, scheme: section.settings.color_scheme
+      endcase
+    endfor
+  -%}
+</section>
+
+
+{%- liquid
+  assign stickers = section.blocks | where: "type", "sticker" 
+  assign shape_dividers = section.blocks | where: "type", "shape_divider" 
+  for sticker in stickers
+    render 'block-sticker' with block: sticker, section: section
+  endfor
+  for shape_divider in shape_dividers
+    render 'block-shape-divider' with block: shape_divider, section: section
+  endfor
+-%}
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+    {
+      "type": "radio",
+      "id": "section_shift",
+      "label": "Shift Section",
+      "options": [
+        {
+          "value": "",
+          "label": "Center"
+        },
+        {
+          "value": "ml-40",
+          "label": "Shift Right"
+        },
+        {
+          "value": "mr-40",
+          "label": "Shift Left"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 70
+    },
+    {
+      "type": "radio",
+      "id": "heading_text_style",
+      "label": "Heading text style",
+      "options": [
+        {
+          "value": "heading",
+          "label": "Heading"
+        },
+        {
+          "value": "body",
+          "label": "Body"
+        }
+      ],
+      "default": "heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "uppercase",
+      "label": "Uppercase Headings",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "two_columns_desktop",
+      "default": true,
+      "label": "Two columns on desktop"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "FAQ"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext",
+      "label": "Text",
+      "default": "<p>Find the most frequently asked questions below.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "tertiary",
+          "label": "Tertiary"
+        },
+        {
+          "value": "quaternary",
+          "label": "Quaternary"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "use_gradient_background",
+      "label": "Use gradient for background"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Question",
+      "type": "question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Frequently asked question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Use this text to share the answer to the question with your customers.</p>"
+        }
+      ]
+    },
+    {
+      "name": "Sticker",
+      "type": "sticker",
+      "settings": [
+        {
+          "type": "select",
+          "id": "shape",
+          "label": "Shape",
+          "options": [
+            {
+              "value": "pym_shape_1",
+              "label": "Shape 1",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_2",
+              "label": "Shape 2",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_3",
+              "label": "Shape 3",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_4",
+              "label": "Shape 4",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_5",
+              "label": "Shape 5",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_6",
+              "label": "Shape 6",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_7",
+              "label": "Shape 7",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_8",
+              "label": "Shape 8",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_9",
+              "label": "Shape 9",
+              "group": "PYM Shapes"
+            }
+          ],
+          "default": "pym_shape_1"
+        },
+        {
+          "type": "select",
+          "id": "color",
+          "label": "Color",
+          "default": "bg-scheme-accent text-scheme-accent-overlay",
+          "options": [
+            {
+              "value": "bg-scheme-accent text-scheme-accent-overlay",
+              "label": "Black"
+            },
+            {
+              "value": "bg-scheme-accent-2 text-scheme-accent-2-overlay",
+              "label": "Cosmic Latte"
+            },
+            {
+              "value": "bg-scheme-accent-3 text-scheme-accent-3-overlay",
+              "label": "Peach"
+            },
+            {
+              "value": "bg-scheme-accent-4 text-scheme-accent-4-overlay",
+              "label": "Peru"
+            },
+            {
+              "value": "bg-scheme-accent-5 text-scheme-accent-5-overlay",
+              "label": "Topaz"
+            },
+            {
+              "value": "bg-scheme-accent-6 text-scheme-accent-6-overlay",
+              "label": "Columbia Blue"
+            },
+            {
+              "value": "bg-scheme-accent-7 text-scheme-accent-7-overlay",
+              "label": "Iceberg"
+            },
+            {
+              "value": "bg-scheme-accent-8 text-scheme-accent-8-overlay",
+              "label": "Sage"
+            },
+            {
+              "value": "bg-scheme-accent-9 text-scheme-accent-9-overlay",
+              "label": "Olivine"
+            },
+            {
+              "value": "bg-scheme-accent-10 text-scheme-accent-10-overlay",
+              "label": "Olive"
+            },
+            {
+              "value": "bg-scheme-accent-11 text-scheme-accent-11-overlay",
+              "label": "Pistachio"
+            },
+            {
+              "value": "bg-scheme-accent-12 text-scheme-accent-12-overlay",
+              "label": "Matrix"
+            },
+            {
+              "value": "bg-scheme-accent-13 text-scheme-accent-13-overlay",
+              "label": "Dark Salmon"
+            },
+            {
+              "value": "bg-scheme-accent-14 text-scheme-accent-14-overlay",
+              "label": "Sundown"
+            },
+            {
+              "value": "bg-scheme-accent-15 text-scheme-accent-15-overlay",
+              "label": "Sun Burst"
+            },
+            {
+              "value": "bg-scheme-accent-16 text-scheme-accent-16-overlay",
+              "label": "Pale Gold"
+            },
+            {
+              "value": "bg-scheme-accent-17 text-scheme-accent-17-overlay",
+              "label": "Flavescent"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "sticker_multiply",
+          "label": "Blend Multiply",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Position"
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "min": 100,
+          "max": 1000,
+          "step": 10,
+          "unit": "px",
+          "label": "Sticker width",
+          "default": 150
+        },
+        {
+          "type": "range",
+          "id": "horizontal_position",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Horizontal position",
+          "default": 80
+        },
+        {
+          "type": "range",
+          "id": "vertical_position",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Vertical position",
+          "default": 80
+        },
+        {
+          "type": "range",
+          "id": "rotate",
+          "min": -90,
+          "max": 90,
+          "step": 2,
+          "unit": "deg",
+          "label": "Rotate",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "sticker_opacity",
+          "min": 0.1,
+          "max": 1,
+          "step": 0.1,
+          "label": "Opacity",
+          "default": 1
+        },
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_sticker_on_mobile",
+          "label": "Show sticker on mobile",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_sticker_on_desktop",
+          "label": "Show sticker on desktop",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Animation"
+        },
+        {
+          "type": "select",
+          "id": "rotation_animation",
+          "label": "Rotation",
+          "options": [
+            {
+              "value": "none",
+              "label": "No rotation"
+            },
+            {
+              "value": "constantly_rotate",
+              "label": "Constantly rotate"
+            },
+            {
+              "value": "rotate_when_scrolling",
+              "label": "Rotate only when page is scrolling"
+            }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_parallax",
+          "label": "Enable parallax",
+          "default": false,
+          "info": "When enabled stickers will scroll faster than the rest of the page."
+        },
+        {
+          "type": "range",
+          "id": "parallax_speed",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "label": "Parallax speed",
+          "default": 3
+        },
+        {
+          "type": "header",
+          "content": "Custom image"
+        },
+        {
+          "type": "paragraph",
+          "content": "Using an image will override shape and text settings above."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "half_image_width_on_mobile",
+          "label": "Half image width on mobile",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "Shape divider",
+      "type": "shape_divider",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "radio",
+          "label": "Target section",
+          "id": "target_section",
+          "default": "above",
+          "options": [
+            {
+              "value": "above",
+              "label": "Section above"
+            },
+            {
+              "value": "below",
+              "label": "Section below"
+            }
+          ],
+          "info": "This will be the section that connects to the straight side of the divider. Best to use sections with a solid background color. [Learn more](https://help.switchthemes.co/shapes/style-blocks/shape-divider.html)"
+        },
+        {
+          "type": "select",
+          "label": "Target section color scheme",
+          "id": "target_section_color_scheme",
+          "default": "secondary",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "tertiary",
+              "label": "Tertiary"
+            },
+            {
+              "value": "quaternary",
+              "label": "Quaternary"
+            }
+          ],
+          "info": "Select the color scheme of the target section"
+        },
+        {
+          "type": "select",
+          "label": "Style",
+          "id": "style",
+          "default": "customshape_1919x170",
+          "options": [
+            {
+              "value": "mountains-1-asymmetrical_1440x293",
+              "label": "Mountains 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "mountains-2-asymmetrical_1440x325",
+              "label": "Mountains 2",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "customshape_1919x170",
+              "label": "PYM Shape 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "customshape2_1919x120",
+              "label": "PYM Shape 2",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "customshape3_1919x130",
+              "label": "PYM Shape 3",
+              "group": "Asymmetrical"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "flip_horizontal",
+          "label": "Flip horizontal"
+        },
+        {
+          "type": "header",
+          "content": "Animation"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_animation",
+          "label": "Enable animation",
+          "info": "Asymmetrical shape dividers will sway when animated."
+        },
+        {
+          "type": "radio",
+          "id": "animation_direction",
+          "label": "Direction",
+          "options": [
+            {
+              "value": "",
+              "label": "Right to left"
+            },
+            {
+              "value": "reverse",
+              "label": "Left to right"
+            }
+          ],
+          "default": ""
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "blocks": [
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
