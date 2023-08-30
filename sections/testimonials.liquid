@@ -1,0 +1,1364 @@
+{%- liquid
+  assign testimonials = section.blocks | where: "type", "testimonial"
+  assign crop = section.settings.crop 
+-%}
+
+{%- render 'collection-shape-defs',
+  shape: section.settings.image_shape,
+  section_id: section.id,
+  item_count: testimonials.size
+-%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="relative text-scheme-text bg-scheme-background overflow-hidden" style="background-color: {{ section.settings.background-color }}">
+  
+  <div class="section-content section-{{ section.id }}-padding">
+    {% if section.settings.title != '' %}
+    <h2 class="text-center font-heading heading-effects heading-base heading-style break-words {{ settings.heading_drop_shadow_style }}">{{ section.settings.title }}</h2>
+    {% endif %}
+
+    <div
+      {% if testimonials.size > 1 %}
+        id="slideshow-{{ section.id }}"
+        class="splide {% if section.settings.title != '' %}section-content-top-margin{% endif %}"
+      {% endif %}
+    >
+      <div class="splide__track">
+        <ul class="splide__list  w-full {% if section.settings.title != '' %}{% if section.settings.display_on_card %}mt-5{% else %}mt-10{% endif %}{% endif %}">
+          {%- for block in testimonials -%}
+            {%- liquid
+              assign shape_id = section.id
+              if section.settings.image_shape == 'blob'
+                assign shape_id = section.id | append: '-' | append: forloop.index0
+              endif
+            -%}
+            <li class="splide__slide w-4/5 {% if settings.card_shadow_direction contains 'top' %}pt-card-shadow{% else %}pb-card-shadow{% endif %}" {% unless block.settings.color_scheme == 'same_as_section' %}data-color-scheme="{{ block.settings.color_scheme }}"{% endunless %} {{ block.shopify_attributes }}>
+              <div class="{% if section.settings.display_on_card %}text-scheme-text card-container{% endif %}">
+                <div class="max-w-site mx-auto {{ section.settings.content_width_desktop }} {% if section.settings.display_on_card %}bg-scheme-card card p-5 h-full{% endif %} text-center">
+                  {%- if block.settings.image != blank -%}
+                  <div class="mb-5 mx-auto {% unless section.settings.disable_media_style %}{% if settings.media_shadow_direction contains 'top' %}pt-media-shadow{% else %}pb-media-shadow{% endif %}{% endunless %}" style="max-width: {{ section.settings.max_width }}px">
+                    {%- render
+                      'media-image',
+                      media: block.settings.image,
+                      shape: section.settings.image_shape,
+                      shape_id: shape_id,
+                      is_card: section.settings.display_on_card,
+                      crop: crop,
+                      container_id: section.id,
+                      index: forloop.index0,
+                      disable_media_style: section.settings.disable_media_style
+                    -%}
+                  </div>
+                  {%- endif -%}
+                  <blockquote class="text-center {% if block.settings.image != blank %}mt-5{% endif %}">
+
+                    {%- if block.settings.rating != 'none' -%}
+                    {%- assign stars = block.settings.rating | split: '_' | first | plus: 0 -%}
+                    <span class="block text-center mb-5 tracking-rating font-main text-2xl" style="color: #8f3f2b;">{% for i in (1..stars) %}★{% endfor %}</span>
+                    {%- endif -%}
+        
+                    <div class="{{ section.settings.review_size }} {{ section.settings.review_font }}">
+                      {{ block.settings.quote | replace: '<p>', '<p>&#8220;' | replace: '</p>', '&#8221;</p>' }}
+                    </div>
+                    {% if block.settings.source != blank %}
+                      <footer class="mt-5 font-accent break-words">{{ block.settings.source }}</footer>
+                    {% endif %}
+                  </blockquote>
+                </div>
+                {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}<div class="card-border"></div>{% endif %}
+              </div>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {% if section.blocks.size > 1 %}
+      <div class="splide__arrows flex justify-between items-center -mt-10 px-section">
+        {%- render 'splide-navigation' %}
+      </div>
+    {% endif %}
+      
+      <script class="slideshow-options" type="application/json">
+        {
+          "mediaQuery": "min",
+          "arrows": true,
+          "pagination": false,
+          "rewind": true,
+          "autoWidth": true,
+          "gap": "2.5rem",
+          "focus": "left",
+          "type": "loop",
+          "autoScroll": {
+            "autoStart": {% if section.settings.autoscroll_mode == '0' %}false{% else %}true{% endif %},
+            "speed": {{ section.settings.autoscroll_mode | plus: 0 | json }}
+          },
+          "padding": {
+            "left": "1.25rem",
+            "right": "1.25rem"
+          }
+        }
+      </script>
+      <style>
+        @media (min-width: 990px) {
+          #slideshow-{{ section.id }} .splide__slide {
+            width: {{ section.settings.desktop_slide_width }}%;
+          }
+        }
+      </style>
+    </div>
+  </div>
+  {% unless request.design_mode %}
+    <script src="{{ 'modules-slideshow.bundle.min.js' | asset_url }}" type="module"></script>
+  {% endunless %}
+  {{ 'modules-slideshow.bundle.css' | asset_url | stylesheet_tag }}
+
+  {%- liquid
+    for block in section.blocks
+      case block.type
+        when 'background_shape'
+          render 'block-background-shape' with block: block, section: section
+        when 'background_pattern'
+          render 'block-background-pattern' with block: block, section: section, scheme: section.settings.color_scheme
+      endcase
+    endfor
+  -%}
+</section>
+
+{%- liquid
+  assign stickers = section.blocks | where: "type", "sticker" 
+  assign shape_dividers = section.blocks | where: "type", "shape_divider" 
+  for sticker in stickers
+    render 'block-sticker' with block: sticker, section: section
+  endfor
+  for shape_divider in shape_dividers
+    render 'block-shape-divider' with block: shape_divider, section: section
+  endfor
+-%}
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display_on_card",
+      "label": "Display blocks on cards",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "content_width_desktop",
+      "label": "Content width on desktop",
+      "default": "lg:w-2/3",
+      "options": [
+        {
+          "value": "lg:w-1/3",
+          "label": "One third"
+        },
+        {
+          "value": "lg:w-1/2",
+          "label": "One half"
+        },
+        {
+          "value": "lg:w-2/3",
+          "label": "Two thirds"
+        },
+        {
+          "value": "lg:w-full",
+          "label": "Full width"
+        }
+      ]
+    },
+    {
+          "type": "select",
+          "id": "background-color",
+          "label": "Background Color",
+          "options": [
+            {
+              "value": "#000000",
+              "label": "Black"
+            },
+            {
+              "value": "#FFF7E8",
+              "label": "Cosmic Latte"
+            },
+            {
+              "value": "#F1D09F",
+              "label": "Peach"
+            },
+            {
+              "value": "#DEA46E",
+              "label": "Peru"
+            },
+            {
+              "value": "#FFC56D",
+              "label": "Topaz"
+            },
+            {
+              "value": "#C5D9E7",
+              "label": "Columbia Blue"
+            },
+            {
+              "value": "#7BADD3",
+              "label": "Iceberg"
+            },
+            {
+              "value": "#C0CA80",
+              "label": "Sage"
+            },
+            {
+              "value": "#A1A468",
+              "label": "Olivine"
+            },
+            {
+              "value": "#638C1C",
+              "label": "Olive"
+            },
+            {
+              "value": "#999A32",
+              "label": "Pistachio"
+            },
+            {
+              "value": "#AE5D57",
+              "label": "Matrix"
+            },
+            {
+              "value": "#E99182",
+              "label": "Dark Salmon"
+            },
+            {
+              "value": "#F9B7AC",
+              "label": "Sundown"
+            },
+            {
+              "value": "#FFC844",
+              "label": "Sun Burst"
+            },
+            {
+              "value": "#FDDA64",
+              "label": "Pale Gold"
+            },
+            {
+              "value": "#F8DF8D",
+              "label": "Flavescent"
+            }
+        ],
+      "default": "#FFF7E8"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 70
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+          "type": "select",
+          "id": "review_size",
+          "label": "Font Size",
+          "options": [
+          {
+            "value": "text-sm",
+            "label": "Small"
+          },
+          {
+            "value": "text-base",
+            "label": "Medium"
+          },
+          {
+            "value": "text-lg",
+            "label": "Large"
+          },
+          {
+            "value": "text-xl",
+            "label": "XL"
+          },
+          {
+            "value": "text-2xl",
+            "label": "2XL"
+          },
+          {
+            "value": "heading-base",
+            "label": "Base"
+          },
+          {
+            "value": "heading-template",
+            "label": "Template"
+          }
+          ],
+            "default": "text-base"
+        },
+        {
+          "type": "radio",
+          "id": "review_font",
+          "label": "Font",
+          "options": [
+          {
+            "value": "font-main",
+            "label": "Creo Light"
+          },
+          {
+            "value": "font-heading",
+            "label": "Creo Bold"
+          },
+          {
+            "value": "font-accent",
+            "label": "Auger Mono"
+          }
+          ],
+            "default": "font-main"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 50,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Images max width",
+      "default": 100
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_media_style",
+      "label": "Disable media style",
+      "default": false,
+      "info": "Recommended if using brand logos for testimonials"
+    },
+    {
+      "type": "select",
+      "id": "crop",
+      "label": "Crop",
+      "options": [
+        {
+          "value": "",
+          "label": "No crop"
+        },
+        {
+          "value": "aspect-w-4 aspect-h-3",
+          "label": "Landscape"
+        },
+        {
+          "value": "aspect-w-1 aspect-h-1",
+          "label": "Square"
+        },
+        {
+          "value": "aspect-w-3 aspect-h-4",
+          "label": "Portrait"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "image_shape",
+      "label": "Default image shape",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default",
+          "group": "Fit to image"
+        },
+        {
+          "value": "default_ellipse",
+          "label": "Ellipse",
+          "group": "Fit to image"
+        },
+        {
+          "value": "default_pill",
+          "label": "Pill",
+          "group": "Fit to image"
+        },
+        {
+          "value": "default_archway",
+          "label": "Archway",
+          "group": "Fit to image"
+        },
+        {
+          "value": "diamond",
+          "label": "Diamond",
+          "group": "Basic"
+        },
+        {
+          "value": "triangle_1",
+          "label": "Triangle 1",
+          "group": "Basic"
+        },
+        {
+          "value": "triangle_2",
+          "label": "Triangle 2",
+          "group": "Basic"
+        },
+        {
+          "value": "pentagon",
+          "label": "Pentagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "hexagon",
+          "label": "Hexagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "heptagon",
+          "label": "Heptagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "octagon",
+          "label": "Octagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_pentagon",
+          "label": "Rounded pentagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_hexagon",
+          "label": "Rounded hexagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_heptagon",
+          "label": "Rounded heptagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_octagon",
+          "label": "Rounded octagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "star_1",
+          "label": "Star 1",
+          "group": "Circular"
+        },
+        {
+          "value": "star_2",
+          "label": "Star 2",
+          "group": "Circular"
+        },
+        {
+          "value": "star_3",
+          "label": "Star 3",
+          "group": "Circular"
+        },
+        {
+          "value": "star_4",
+          "label": "Star 4",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_1",
+          "label": "Scalloped circle 1",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_2",
+          "label": "Scalloped circle 2",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_3",
+          "label": "Scalloped circle 3",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_4",
+          "label": "Scalloped circle 4",
+          "group": "Circular"
+        },
+        {
+          "value": "parallelogram",
+          "label": "Parallelogram",
+          "group": "Square"
+        },
+        {
+          "value": "scalloped_square",
+          "label": "Scalloped",
+          "group": "Square"
+        },
+        {
+          "value": "leaf",
+          "label": "Leaf",
+          "group": "Square"
+        },
+        {
+          "value": "clipped_square",
+          "label": "Clipped",
+          "group": "Square"
+        },
+        {
+          "value": "convex_square",
+          "label": "Convex",
+          "group": "Square"
+        },
+        {
+          "value": "twisted_square",
+          "label": "Twisted",
+          "group": "Square"
+        },
+        {
+          "value": "trapeze",
+          "label": "Trapeze",
+          "group": "Square"
+        },
+        {
+          "value": "blob",
+          "label": "Blob",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "zig_zag",
+          "label": "Zig zag",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "zig_zag_tear",
+          "label": "Zig zag tear",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "wave_tear",
+          "label": "Wave tear",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "flower",
+          "label": "Flower",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "concave",
+          "label": "Concave",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "cross",
+          "label": "Cross",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "quatrefoil",
+          "label": "Quatrefoil",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "wind",
+          "label": "Wind",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "heart",
+          "label": "Heart",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "mirrored_pyramids",
+          "label": "Mirrored pyramids",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "plus",
+          "label": "Plus",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "double_pill",
+          "label": "Double pill",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "triple_pill",
+          "label": "Triple pill",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "crown",
+          "label": "Crown",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "abstract_star",
+          "label": "Abstract star",
+          "group": "Miscellaneous"
+        }
+      ],
+      "info": "Selecting some shapes will crop the image. [Learn more](https://help.switchthemes.co/shapes/guides/style-images-with-shapes.html)"
+    },
+    {
+      "type": "range",
+      "id": "desktop_slide_width",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Desktop slide width",
+      "default": 100
+    },
+    {
+      "type": "select",
+      "id": "autoscroll_mode",
+      "label": "Autoscroll mode",
+      "options": [
+        {
+          "value": "1",
+          "label": "Right to left"
+        },
+        {
+          "value": "-1",
+          "label": "Left to right"
+        },
+        {
+          "value": "0",
+          "label": "Disabled"
+        }
+      ],
+      "default": "0"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "rating",
+          "label": "Rating",
+          "options": [
+            {
+              "value": "none",
+              "label": "No rating"
+            },
+            {
+              "value": "5_stars",
+              "label": "5 stars"
+            },
+            {
+              "value": "4_stars",
+              "label": "4 stars"
+            },
+            {
+              "value": "3_stars",
+              "label": "3 stars"
+            },
+            {
+              "value": "2_stars",
+              "label": "2 stars"
+            },
+            {
+              "value": "1_stars",
+              "label": "1 star"
+            }
+          ],
+          "default": "5_stars"
+        },
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": "Quote",
+          "default": "<p>A quote from a customer or staff member can help show of your products' unique selling points.</p>"
+        },
+        {
+          "type": "text",
+          "id": "source",
+          "label": "Source",
+          "default": "Source"
+        }
+      ]
+    },
+    {
+      "type": "background_shape",
+      "name": "Background shape",
+      "settings": [
+        {
+          "type": "select",
+          "id": "shape",
+          "label": "Shape",
+          "default": "square",
+          "options": [
+            {
+              "value": "square",
+              "label": "Square",
+              "group": "Basic"
+            },
+            {
+              "value": "circle",
+              "label": "Circle",
+              "group": "Basic"
+            },
+            {
+              "value": "oval",
+              "label": "Oval",
+              "group": "Basic"
+            },
+            {
+              "value": "triangle",
+              "label": "Triangle",
+              "group": "Basic"
+            },
+            {
+              "value": "parallelogram",
+              "label": "Parallelogram",
+              "group": "Basic"
+            },
+            {
+              "value": "pentagon",
+              "label": "Pentagon",
+              "group": "Polygons"
+            },
+            {
+              "value": "hexagon",
+              "label": "Hexagon",
+              "group": "Polygons"
+            },
+            {
+              "value": "heptagon",
+              "label": "Heptagon",
+              "group": "Polygons"
+            },
+            {
+              "value": "octagon",
+              "label": "Octagon",
+              "group": "Polygons"
+            },
+            {
+              "value": "star_1",
+              "label": "Star 1",
+              "group": "Circular"
+            },
+            {
+              "value": "star_2",
+              "label": "Star 2",
+              "group": "Circular"
+            },
+            {
+              "value": "star_3",
+              "label": "Star 3",
+              "group": "Circular"
+            },
+            {
+              "value": "star_4",
+              "label": "Star 4",
+              "group": "Circular"
+            },
+            {
+              "value": "scalloped_circle_1",
+              "label": "Scalloped circle 1",
+              "group": "Circular"
+            },
+            {
+              "value": "scalloped_circle_2",
+              "label": "Scalloped circle 2",
+              "group": "Circular"
+            },
+            {
+              "value": "scalloped_circle_3",
+              "label": "Scalloped circle 3",
+              "group": "Circular"
+            },
+            {
+              "value": "scalloped_circle_4",
+              "label": "Scalloped circle 4",
+              "group": "Circular"
+            },
+            {
+              "value": "blob",
+              "label": "Blob",
+              "group": "Miscellaneous"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "blob_type",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "label": "Blob type",
+          "default": 1,
+          "info": "Applies when blob shape is selected above."
+        },
+        {
+          "type": "range",
+          "id": "size",
+          "min": 25,
+          "max": 300,
+          "step": 5,
+          "label": "Size",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "opacity",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Opacity",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "blur",
+          "min": 0,
+          "max": 500,
+          "step": 5,
+          "unit": "px",
+          "label": "Blur",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Position"
+        },
+        {
+          "type": "range",
+          "id": "horizontal_position",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Horizontal position",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "vertical_position",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Vertical position",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "rotate",
+          "min": -90,
+          "max": 90,
+          "step": 2,
+          "unit": "deg",
+          "label": "Rotate",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Animation"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_parallax",
+          "label": "Enable parallax",
+          "default": false,
+          "info": "When enabled shape will scroll slower than the rest of the page."
+        },
+        {
+          "type": "range",
+          "id": "parallax_speed",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "label": "Parallax speed",
+          "default": 3
+        },
+        {
+          "type": "header",
+          "content": "Color"
+        },
+        {
+          "type": "select",
+          "id": "color",
+          "label": "Color",
+          "default": "accent",
+          "options": [
+            {
+              "value": "text",
+              "label": "Text"
+            },
+            {
+              "value": "accent",
+              "label": "Accent"
+            },
+            {
+              "value": "card",
+              "label": "Card"
+            },
+            {
+              "value": "background",
+              "label": "Background"
+            },
+            {
+              "value": "gradient",
+              "label": "Gradient"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "label": "Scheme",
+          "default": "same_as_section",
+          "options": [
+            {
+              "value": "same_as_section",
+              "label": "Same as section"
+            },
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "tertiary",
+              "label": "Tertiary"
+            },
+            {
+              "value": "quaternary",
+              "label": "Quaternary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sticker",
+      "type": "sticker",
+      "settings": [
+        {
+          "type": "select",
+          "id": "shape",
+          "label": "Shape",
+          "options": [
+            {
+              "value": "pym_shape_1",
+              "label": "Shape 1",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_2",
+              "label": "Shape 2",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_3",
+              "label": "Shape 3",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_4",
+              "label": "Shape 4",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_5",
+              "label": "Shape 5",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_6",
+              "label": "Shape 6",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_7",
+              "label": "Shape 7",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_8",
+              "label": "Shape 8",
+              "group": "PYM Shapes"
+            },
+            {
+              "value": "pym_shape_9",
+              "label": "Shape 9",
+              "group": "PYM Shapes"
+            }
+          ],
+          "default": "pym_shape_1"
+        },
+        {
+          "type": "select",
+          "id": "color",
+          "label": "Color",
+          "default": "bg-scheme-accent text-scheme-accent-overlay",
+          "options": [
+            {
+              "value": "bg-scheme-accent text-scheme-accent-overlay",
+              "label": "Black"
+            },
+            {
+              "value": "bg-scheme-accent-2 text-scheme-accent-2-overlay",
+              "label": "Cosmic Latte"
+            },
+            {
+              "value": "bg-scheme-accent-3 text-scheme-accent-3-overlay",
+              "label": "Peach"
+            },
+            {
+              "value": "bg-scheme-accent-4 text-scheme-accent-4-overlay",
+              "label": "Peru"
+            },
+            {
+              "value": "bg-scheme-accent-5 text-scheme-accent-5-overlay",
+              "label": "Topaz"
+            },
+            {
+              "value": "bg-scheme-accent-6 text-scheme-accent-6-overlay",
+              "label": "Columbia Blue"
+            },
+            {
+              "value": "bg-scheme-accent-7 text-scheme-accent-7-overlay",
+              "label": "Iceberg"
+            },
+            {
+              "value": "bg-scheme-accent-8 text-scheme-accent-8-overlay",
+              "label": "Sage"
+            },
+            {
+              "value": "bg-scheme-accent-9 text-scheme-accent-9-overlay",
+              "label": "Olivine"
+            },
+            {
+              "value": "bg-scheme-accent-10 text-scheme-accent-10-overlay",
+              "label": "Olive"
+            },
+            {
+              "value": "bg-scheme-accent-11 text-scheme-accent-11-overlay",
+              "label": "Pistachio"
+            },
+            {
+              "value": "bg-scheme-accent-12 text-scheme-accent-12-overlay",
+              "label": "Matrix"
+            },
+            {
+              "value": "bg-scheme-accent-13 text-scheme-accent-13-overlay",
+              "label": "Dark Salmon"
+            },
+            {
+              "value": "bg-scheme-accent-14 text-scheme-accent-14-overlay",
+              "label": "Sundown"
+            },
+            {
+              "value": "bg-scheme-accent-15 text-scheme-accent-15-overlay",
+              "label": "Sun Burst"
+            },
+            {
+              "value": "bg-scheme-accent-16 text-scheme-accent-16-overlay",
+              "label": "Pale Gold"
+            },
+            {
+              "value": "bg-scheme-accent-17 text-scheme-accent-17-overlay",
+              "label": "Flavescent"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "sticker_multiply",
+          "label": "Blend Multiply",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Position"
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "min": 100,
+          "max": 1000,
+          "step": 10,
+          "unit": "px",
+          "label": "Sticker width",
+          "default": 150
+        },
+        {
+          "type": "range",
+          "id": "horizontal_position",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Horizontal position",
+          "default": 80
+        },
+        {
+          "type": "range",
+          "id": "vertical_position",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Vertical position",
+          "default": 80
+        },
+        {
+          "type": "range",
+          "id": "rotate",
+          "min": -90,
+          "max": 90,
+          "step": 2,
+          "unit": "deg",
+          "label": "Rotate",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "sticker_opacity",
+          "min": 0.1,
+          "max": 1,
+          "step": 0.1,
+          "label": "Opacity",
+          "default": 1
+        },
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_sticker_on_mobile",
+          "label": "Show sticker on mobile",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_sticker_on_desktop",
+          "label": "Show sticker on desktop",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Animation"
+        },
+        {
+          "type": "select",
+          "id": "rotation_animation",
+          "label": "Rotation",
+          "options": [
+            {
+              "value": "none",
+              "label": "No rotation"
+            },
+            {
+              "value": "constantly_rotate",
+              "label": "Constantly rotate"
+            },
+            {
+              "value": "rotate_when_scrolling",
+              "label": "Rotate only when page is scrolling"
+            }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_parallax",
+          "label": "Enable parallax",
+          "default": false,
+          "info": "When enabled stickers will scroll faster than the rest of the page."
+        },
+        {
+          "type": "range",
+          "id": "parallax_speed",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "label": "Parallax speed",
+          "default": 3
+        },
+        {
+          "type": "header",
+          "content": "Custom image"
+        },
+        {
+          "type": "paragraph",
+          "content": "Using an image will override shape and text settings above."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "half_image_width_on_mobile",
+          "label": "Half image width on mobile",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "Shape divider",
+      "type": "shape_divider",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "radio",
+          "label": "Target section",
+          "id": "target_section",
+          "default": "above",
+          "options": [
+            {
+              "value": "above",
+              "label": "Section above"
+            },
+            {
+              "value": "below",
+              "label": "Section below"
+            }
+          ],
+          "info": "This will be the section that connects to the straight side of the divider. Best to use sections with a solid background color. [Learn more](https://help.switchthemes.co/shapes/style-blocks/shape-divider.html)"
+        },
+        {
+          "type": "select",
+          "label": "Target section color scheme",
+          "id": "target_section_color_scheme",
+          "default": "secondary",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "tertiary",
+              "label": "Tertiary"
+            },
+            {
+              "value": "quaternary",
+              "label": "Quaternary"
+            }
+          ],
+          "info": "Select the color scheme of the target section"
+        },
+        {
+          "type": "select",
+          "label": "Style",
+          "id": "style",
+          "default": "customshape_1919x170",
+          "options": [
+            {
+              "value": "mountains-1-asymmetrical_1440x293",
+              "label": "Mountains 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "mountains-2-asymmetrical_1440x325",
+              "label": "Mountains 2",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "customshape_1919x170",
+              "label": "PYM Shape 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "customshape2_1919x120",
+              "label": "PYM Shape 2",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "customshape3_1919x130",
+              "label": "PYM Shape 3",
+              "group": "Asymmetrical"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "flip_horizontal",
+          "label": "Flip horizontal"
+        },
+        {
+          "type": "header",
+          "content": "Animation"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_animation",
+          "label": "Enable animation",
+          "info": "Asymmetrical shape dividers will sway when animated."
+        },
+        {
+          "type": "radio",
+          "id": "animation_direction",
+          "label": "Direction",
+          "options": [
+            {
+              "value": "",
+              "label": "Right to left"
+            },
+            {
+              "value": "reverse",
+              "label": "Left to right"
+            }
+          ],
+          "default": ""
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

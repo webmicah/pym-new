@@ -1,0 +1,77 @@
+{%- liquid
+
+  assign background_color = "color_" | append: color_scheme | append: "_background"
+  assign card_color = "color_" | append: color_scheme | append: "_card"
+  assign text_color = "color_" | append: color_scheme | append: "_text"
+  assign accent_color = "color_" | append: color_scheme | append: "_accent"
+  assign accent_color_2 = "color_" | append: color_scheme | append: "_accent_2"
+  assign accent_color_3 = "color_" | append: color_scheme | append: "_accent_3"
+  assign accent_color_4 = "color_" | append: color_scheme | append: "_accent_4"
+  assign accent_color_5 = "color_" | append: color_scheme | append: "_accent_5"
+  assign accent_color_6 = "color_" | append: color_scheme | append: "_accent_6"
+  assign accent_color_7 = "color_" | append: color_scheme | append: "_accent_7"
+  assign accent_color_8 = "color_" | append: color_scheme | append: "_accent_8"
+  assign accent_color_9 = "color_" | append: color_scheme | append: "_accent_9"
+  assign accent_color_10 = "color_" | append: color_scheme | append: "_accent_10"
+  assign accent_color_11 = "color_" | append: color_scheme | append: "_accent_11"
+  assign accent_color_12 = "color_" | append: color_scheme | append: "_accent_12"
+  assign accent_color_13 = "color_" | append: color_scheme | append: "_accent_13"
+  assign accent_color_14 = "color_" | append: color_scheme | append: "_accent_14"
+  assign accent_color_15 = "color_" | append: color_scheme | append: "_accent_15"
+  assign accent_color_16 = "color_" | append: color_scheme | append: "_accent_16"
+  assign accent_color_17 = "color_" | append: color_scheme | append: "_accent_17"
+
+  assign text_background_contrast = settings[text_color] | color_contrast: settings[background_color]
+  if text_background_contrast > 4.4
+    assign text_overlay = settings[background_color]
+  else
+    assign text_brightness = settings[text_color] | color_brightness 
+    if text_brightness > 127 
+      assign text_overlay = '#000000' 
+    else 
+      assign text_overlay = '#FFFFFF' 
+    endif
+  endif
+
+  assign text_card_contrast = settings[text_color] | color_contrast: settings[card_color]
+  if text_card_contrast > 4.4
+    assign text_card_overlay = settings[card_color]
+  else
+    assign text_card_overlay = text_overlay
+  endif
+
+  assign accent_background_contrast = settings[accent_color] | color_contrast: settings[background_color]
+  assign accent_text_contrast = settings[accent_color] | color_contrast: settings[text_color]
+  if accent_background_contrast > 4.4
+    assign accent_overlay = settings[background_color]
+    assign accent_2_overlay = settings[background_color]
+    assign accent_3_overlay = settings[background_color]
+    assign accent_4_overlay = settings[background_color]
+  elsif accent_text_contrast > 4.4
+    assign accent_overlay = settings[text_color]
+    assign accent_2_overlay = settings[text_color]
+    assign accent_3_overlay = settings[text_color]
+    assign accent_4_overlay = settings[text_color]
+  else
+    assign accent_brightness = settings[accent_color] | color_brightness
+    if accent_brightness > 127 
+      assign accent_overlay = '#000000'
+      assign accent_2_overlay = '#000000'
+      assign accent_3_overlay = '#000000'
+      assign accent_4_overlay = '#000000'
+    else 
+      assign accent_overlay = '#FFFFFF'
+      assign accent_2_overlay = '#FFFFFF' 
+      assign accent_3_overlay = '#FFFFFF' 
+      assign accent_4_overlay = '#FFFFFF' 
+    endif
+  endif
+     
+-%}
+
+--color-{{ color_scheme }}-text-overlay: {{ text_overlay | color_to_rgb | split: "(" | last | split: ")" | first }};
+--color-{{ color_scheme }}-card-text-overlay: {{ text_card_overlay | color_to_rgb | split: "(" | last | split: ")" | first }};
+--color-{{ color_scheme }}-accent-overlay: {{ accent_overlay | color_to_rgb | split: "(" | last | split: ")" | first }};
+--color-{{ color_scheme }}-accent-2-overlay: {{ accent_2_overlay | color_to_rgb | split: "(" | last | split: ")" | first }};
+--color-{{ color_scheme }}-accent-3-overlay: {{ accent_3_overlay | color_to_rgb | split: "(" | last | split: ")" | first }};
+--color-{{ color_scheme }}-accent-4-overlay: {{ accent_4_overlay | color_to_rgb | split: "(" | last | split: ")" | first }};

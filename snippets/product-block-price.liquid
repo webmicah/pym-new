@@ -1,0 +1,106 @@
+{%- liquid
+  if settings.template_heading_size contains "2x"
+    assign price_text_size = 'text-base lg:text-lg'
+  else
+    assign price_text_size = 'text-base'
+  endif
+-%}
+<div style=" {% unless block.settings.price_top_margin %} margin-top: 0rem; {% endunless %}"
+  class="{{ block_base_classes }}  text-lg  {{ block.settings.text_align }}"
+  :class="{ 'invisible': !current_variant }"
+  {{ block.shopify_attributes }}
+>
+
+  <span class="sr-only">{{ 'products.general.regular_price' | t }}</span>
+  <span
+    style="color: {{ block.settings.price_color }};"
+    class="text-scheme-text {{ block.settings.price_text_size }} {{ block.settings.price_font }}"
+    x-html="formatMoney(current_price)"
+    :class="
+      {
+        'invisible': !current_variant
+      }"
+    data-product-price
+  >
+    {{ current_variant.price | money_without_trailing_zeros }}
+  </span>
+
+  {% if product.compare_at_price_max > product.price %}
+    <template x-if="current_variant && product.compare_at_price_max && current_variant.compare_at_price > current_variant.price">
+      <span class="{{ price_text_size }} {{ block.settings.price_font }}">
+        <span class="sr-only">{{ 'products.general.sale_price' | t }}</span>
+        <s data-compare-price
+          style="color: {{ block.settings.price_sale_color }};"
+          class="text-scheme-text"
+          x-html="formatMoney(current_variant.compare_at_price)">
+          {% if current_variant.compare_at_price > current_variant.price %}
+            {{ current_variant.compare_at_price | money_without_trailing_zeros }}
+          {% endif %}
+        </s>
+      </span>
+    </template>
+  {% endif %}
+
+  <template x-if="current_variant && current_variant.unit_price">
+    <div class="text-sm text-scheme-text mt-2" data-unit-price-wrapper>
+      <span class="sr-only">
+        {{- 'products.product.unit_price_label' | t -}}
+      </span>
+      <span x-html="formatMoney(current_variant.unit_price)">
+        {{- current_variant.unit_price | money_without_trailing_zeros -}}
+      </span>
+      <span aria-hidden="true">
+        /
+      </span>
+      <span class="sr-only">
+        {{- 'general.accessibility.unit_price_separator' | t -}}
+      </span>
+      <span
+        x-html="
+          current_variant.unit_price_measurement.reference_value != 1 ? current_variant.unit_price_measurement.reference_value : ''
+        "
+      >
+        {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
+          {{- current_variant.unit_price_measurement.reference_value -}}
+        {%- endif -%}
+      </span><!--
+      --><span x-html="current_variant.unit_price_measurement.reference_unit">
+        {{- current_variant.unit_price_measurement.reference_unit -}}
+      </span>
+    </div>
+  </template>
+
+  {%- if cart.taxes_included -%}
+    <div class="product__tax caption mt-1.5 text-sm">
+      {%- if cart.taxes_included -%}
+        {{ 'products.product.include_taxes' | t }}
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+
+  {%- if block.settings.show_on_sale_sticker -%}
+    {%- if product.compare_at_price_max > product.price -%}
+      {%- liquid
+        assign text = 'products.product.on_sale' | t
+        assign id = 'on-sale-sticker-' | append: product.id
+        assign shape = settings.on_sale_badge_shape
+      -%}
+      {%- render 'static-sticker-defs' with shape: settings.on_sale_badge_shape, id: id -%}
+      {%- render 'static-sticker',
+        static_id: id,
+        shape: shape,
+        id: id,
+        text: text,
+        vertical_position: 2,
+        horizontal_position: 90,
+        rotate: 15,
+        width: 120,
+        font_size: '1.563rem',
+        color: 'bg-scheme-accent text-scheme-accent-overlay'
+      %}
+    {%- endif -%}
+  {%- endif -%}
+</div>
+
+
