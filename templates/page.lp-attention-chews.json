@@ -91,6 +91,10 @@
     },
     "f9e5cd64-1cf4-4f1b-98ed-bc2bfd53a5b7": {
       "type": "image-with-text",
+      "custom_css": [
+        "p {font-size: 16px; line-height: 1.8em; margin-bottom: 0px;}",
+        "p strong {color: #DA6655;}"
+      ],
       "settings": {
         "background-color": "#FFF7E8",
         "padding_top": 70,
