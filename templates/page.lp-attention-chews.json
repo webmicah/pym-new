@@ -78,7 +78,7 @@
         "padding_top": 50,
         "padding_bottom": 30,
         "text_align": "text-center",
-        "title": "ALL-NATURAL AMINO ACID INFUSED MOOD CHEWS TO SUPPORT LIFE'S UPS AND DOWNS",
+        "title": "Be you on a good day, every day",
         "heading_size": "heading-base",
         "heading_font": "font-heading",
         "rich_text": "",
@@ -89,36 +89,30 @@
         "button_label": "Shop Now"
       }
     },
-    "eabf6d97-41c2-45d5-80fa-849c87fabe76": {
-      "type": "rich-text",
-      "blocks": {
-        "d60b28c7-ee76-4ef7-b6f1-50d76ca8a9a8": {
-          "type": "shape_divider",
-          "settings": {
-            "target_section": "below",
-            "target_section_color_scheme": "tertiary",
-            "style": "customshape2_1919x120",
-            "flip_horizontal": true,
-            "enable_animation": false,
-            "animation_direction": ""
-          }
-        }
-      },
-      "block_order": [
-        "d60b28c7-ee76-4ef7-b6f1-50d76ca8a9a8"
-      ],
+    "f9e5cd64-1cf4-4f1b-98ed-bc2bfd53a5b7": {
+      "type": "image-with-text",
       "settings": {
         "background-color": "#FFF7E8",
         "padding_top": 70,
         "padding_bottom": 70,
-        "text_align": "text-center",
-        "title": "",
-        "heading_size": "heading-template",
-        "heading_font": "font-heading",
-        "rich_text": "",
-        "text_size": "text-base",
-        "text_font": "font-main",
-        "content_width_desktop": "lg:w-2\/3",
+        "image": "shopify:\/\/shop_images\/Group_476.png",
+        "crop": "",
+        "image_shape": "default",
+        "blob_type": 1,
+        "rotate_image": 0,
+        "image_position": "left",
+        "image_size": "half",
+        "disable_media_style": false,
+        "text_alignment": "text-left",
+        "text_color": "#000000",
+        "title": "Regulate Dopamine, Reclaim your Focus",
+        "heading_size": "heading-base",
+        "title_uppercase": false,
+        "subtitle": "",
+        "subtitle_size": "text-sm",
+        "subtitle_uppercase": false,
+        "subtitle_font": "font-accent",
+        "richtext": "<p>If you want to <strong>filter out distractions<\/strong> and <strong>accomplish more in a day<\/strong>, your brain needs regulated levels of <strong>dopamine<\/strong>–our “pleasure” neurotransmitter that makes us feel good when we accomplish things, and <strong>helps us focus<\/strong>.<br\/><br\/>In today’s fast-paced world, we’re up against <strong>chronic stress<\/strong> and a million things constantly competing for attention, all of which can <strong>deplete our<\/strong> <strong>dopamine levels.<\/strong> This leads us to be unmotivated, unfocused and unproductive.<br\/><br\/>That’s why we created <strong>Attention Chews<\/strong>–a blend of amino acids that help lower stress and <strong>regulate your dopamine levels naturally<\/strong>, so you can supercharge your <strong>productivity <\/strong>and reclaim your<strong> focus.<\/strong><br\/><\/p>",
         "button_link": "",
         "button_label": "Shop Now"
       }
@@ -147,7 +141,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/PYM_002_Animation-Icon-3_RC.gif",
+            "image": "shopify:\/\/shop_images\/Group.png",
             "title": "",
             "heading_size": "text-base",
             "column-text-color": "#000000",
@@ -210,43 +204,9 @@
         "slideshow_on_mobile": false,
         "text_align": "text-center",
         "title": "",
-        "crop": "aspect-w-1 aspect-h-1",
+        "crop": "",
         "image_shape": "default",
         "index_shape": "star_1"
-      }
-    },
-    "1664472544e9a6cd7f": {
-      "type": "rich-text",
-      "blocks": {
-        "a99c0315-b274-48f2-9b4e-4c18858038c0": {
-          "type": "shape_divider",
-          "settings": {
-            "target_section": "above",
-            "target_section_color_scheme": "tertiary",
-            "style": "customshape_1919x170",
-            "flip_horizontal": false,
-            "enable_animation": false,
-            "animation_direction": ""
-          }
-        }
-      },
-      "block_order": [
-        "a99c0315-b274-48f2-9b4e-4c18858038c0"
-      ],
-      "settings": {
-        "background-color": "#FFF7E8",
-        "padding_top": 0,
-        "padding_bottom": 50,
-        "text_align": "text-center",
-        "title": "",
-        "heading_size": "heading-template",
-        "heading_font": "font-heading",
-        "rich_text": "",
-        "text_size": "text-base",
-        "text_font": "font-main",
-        "content_width_desktop": "lg:w-2\/3",
-        "button_link": "",
-        "button_label": "Shop Now"
       }
     },
     "939f07c7-2655-444b-b6c3-8d970c8299a9": {
@@ -433,9 +393,8 @@
     "df3cc9fc-03dd-4f71-9f61-96339351d368",
     "main",
     "73c04252-d2ca-4247-a4d4-89b0ec0ef06b",
-    "eabf6d97-41c2-45d5-80fa-849c87fabe76",
+    "f9e5cd64-1cf4-4f1b-98ed-bc2bfd53a5b7",
     "ff17cd22-c3ab-433f-bea8-68def1d0d075",
-    "1664472544e9a6cd7f",
     "939f07c7-2655-444b-b6c3-8d970c8299a9",
     "93f13fc7-9d5b-4b33-8957-e8fa8e7b8853"
   ]
