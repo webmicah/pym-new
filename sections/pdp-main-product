@@ -1,0 +1,18 @@
+
+
+
+
+
+{% schema %}
+{
+  "name": "Main Product Details",
+  "class":"main-product-details",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Main Product Details
+    }
+  ]
+}
+{% endschema %}
+1
