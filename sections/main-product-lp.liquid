@@ -1,3 +1,5 @@
+  <link rel="stylesheet" href="{{ 'attention-lp.css' | asset_url }}">
+
 {%- liquid
   assign product = all_products[section.settings.product]
   assign current_variant = product.selected_or_first_available_variant
