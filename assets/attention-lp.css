@@ -23,3 +23,25 @@ span.okeReviews-ratingsBadge-reviewCount {
 .okeReviews-lazyPoweredBy.is-okeReviews-lazyLoaded {
     display: none !important;
 }
+
+legend.block.font-secondary {
+    color: #000;
+    font-family: Creo;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 141.199%; /* 31.064px */
+}
+
+
+.shopify-payment-button__more-options[disabled] {
+    display: none;
+}
+
+.shopify-payment-button {
+    display: none !important;
+}
+
+ul.attn-li {
+    font-size: 14px;
+}
