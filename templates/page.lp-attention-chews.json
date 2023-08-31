@@ -75,6 +75,7 @@
         "32130d83-7c4e-4196-8fb1-62dafc8d74f0",
         "2c79453b-1c33-4492-8395-50e4cede938c"
       ],
+      "disabled": true,
       "settings": {
         "background-color": "#FFF7E8",
         "padding_top": 70,
@@ -154,6 +155,7 @@
         "b826aab0-0902-484e-b6b6-2a867338b1a9",
         "a76dfa1a-999f-4f80-9ed7-2e6fca095e85"
       ],
+      "disabled": true,
       "settings": {
         "background-color": "#FFF7E8",
         "padding_top": 20,
@@ -225,7 +227,7 @@
       ],
       "settings": {
         "title": "Original Mood Chews",
-        "product": "original-mood-chews",
+        "product": "copy-of-attention-chews",
         "section_desktop_width": "lg:col-span-full",
         "crop": "aspect-w-1 aspect-h-1",
         "image_shape": "default",
@@ -321,6 +323,7 @@
         "f63cb4c3-7948-4dec-bc09-59fe37855d2c",
         "ca1dae76-62dd-452b-a34a-335ce0514a94"
       ],
+      "disabled": true,
       "settings": {
         "title": "EASE STRESS",
         "product": "copy-of-attention-chews",
