@@ -1,0 +1,11 @@
+{% schema %}
+{
+  "name": "Main Product LP",
+  "settings": [],
+  "presets": [
+      {
+        "name": "Main Product LP",
+      }
+    ]
+  }
+{% endschema %}
