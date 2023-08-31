@@ -1,33 +1,16 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "display_on_card": false,
-        "color_scheme": "primary",
-        "use_gradient_background": false
-      }
-    },
-    "9b4eec98-74c1-499f-8dc2-1010940576c6": {
-      "type": "featured-product",
+    "df3cc9fc-03dd-4f71-9f61-96339351d368": {
+      "type": "main-product-lp",
       "blocks": {
-        "template--16642170487037__9b4eec98-74c1-499f-8dc2-1010940576c6-166545078983568d22-0": {
+        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-title-1": {
           "type": "title",
           "settings": {
             "display_on_card": false,
             "text_align": "text-left"
           }
         },
-        "template--16642170487037__9b4eec98-74c1-499f-8dc2-1010940576c6-166545078983568d22-1": {
-          "type": "price",
-          "settings": {
-            "display_on_card": false,
-            "show_on_sale_sticker": false,
-            "text_align": "text-left"
-          }
-        },
-        "60a6bba7-fca4-44b8-b753-de24c0d2f488": {
+        "4a946270-3449-4b83-afb1-a78939056c0b": {
           "type": "description",
           "settings": {
             "display_on_card": false,
@@ -35,40 +18,48 @@
             "text_align": "text-left"
           }
         },
-        "template--16642170487037__9b4eec98-74c1-499f-8dc2-1010940576c6-166545078983568d22-2": {
+        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-variant_picker-1": {
           "type": "variant_picker",
           "settings": {
             "display_on_card": false,
-            "option_style": "buttons",
-            "hide_option_labels": false,
+            "option_style": "drop_down",
+            "hide_option_labels": true,
             "enable_color_swatches": false
           }
         },
-        "template--16642170487037__9b4eec98-74c1-499f-8dc2-1010940576c6-166545078983568d22-3": {
+        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-buy_buttons-1": {
           "type": "buy_buttons",
           "settings": {
             "display_on_card": false,
-            "show_price": true,
-            "enable_payment_button": false,
-            "show_pickup_availability": false
+            "show_price": false,
+            "enable_payment_button": true,
+            "show_pickup_availability": true
           }
         }
       },
       "block_order": [
-        "template--16642170487037__9b4eec98-74c1-499f-8dc2-1010940576c6-166545078983568d22-0",
-        "template--16642170487037__9b4eec98-74c1-499f-8dc2-1010940576c6-166545078983568d22-1",
-        "60a6bba7-fca4-44b8-b753-de24c0d2f488",
-        "template--16642170487037__9b4eec98-74c1-499f-8dc2-1010940576c6-166545078983568d22-2",
-        "template--16642170487037__9b4eec98-74c1-499f-8dc2-1010940576c6-166545078983568d22-3"
+        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-title-1",
+        "4a946270-3449-4b83-afb1-a78939056c0b",
+        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-variant_picker-1",
+        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-buy_buttons-1"
       ],
       "settings": {
         "title": "",
         "product": "copy-of-attention-chews",
         "section_desktop_width": "lg:col-span-full",
-        "crop": "aspect-w-1 aspect-h-1",
+        "crop": "",
         "image_shape": "default",
         "desktop_media_width": "lg:col-span-6_lg:col-span-6",
-        "enable_video_looping": false,
+        "enable_video_looping": true,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
         "color_scheme": "primary",
         "use_gradient_background": false
       }
@@ -432,8 +423,8 @@
     }
   },
   "order": [
+    "df3cc9fc-03dd-4f71-9f61-96339351d368",
     "main",
-    "9b4eec98-74c1-499f-8dc2-1010940576c6",
     "73c04252-d2ca-4247-a4d4-89b0ec0ef06b",
     "eabf6d97-41c2-45d5-80fa-849c87fabe76",
     "ff17cd22-c3ab-433f-bea8-68def1d0d075",
