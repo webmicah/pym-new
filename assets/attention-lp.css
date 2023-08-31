@@ -9,3 +9,17 @@ h2.font-heading.text-left {
 }
 
 
+.okeReviews .okeReviews-ratingsBadge--small .okeReviews-ratingsBadge-holder {
+    background-color: transparent;
+    border: 0px;
+    display: flex;
+}
+
+
+span.okeReviews-ratingsBadge-reviewCount {
+    margin-left: 5px;
+}
+
+.okeReviews-lazyPoweredBy.is-okeReviews-lazyLoaded {
+    display: none !important;
+}
