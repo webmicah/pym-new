@@ -237,130 +237,6 @@
         "use_gradient_background": false
       }
     },
-    "19404a56-85be-4e31-b384-2bad2fad98e1": {
-      "type": "featured-product",
-      "blocks": {
-        "template--16642269085949__19404a56-85be-4e31-b384-2bad2fad98e1-16656940991fa3139e-0": {
-          "type": "title",
-          "disabled": true,
-          "settings": {
-            "display_on_card": false,
-            "text_align": "text-left"
-          }
-        },
-        "template--16642269085949__19404a56-85be-4e31-b384-2bad2fad98e1-16656940991fa3139e-1": {
-          "type": "price",
-          "settings": {
-            "display_on_card": false,
-            "show_on_sale_sticker": false,
-            "text_align": "text-left"
-          }
-        },
-        "26a2504f-a2bb-453e-a53e-3e7a5f17c52b": {
-          "type": "description",
-          "settings": {
-            "display_on_card": false,
-            "truncate_description": false,
-            "text_align": "text-left"
-          }
-        },
-        "template--16642269085949__19404a56-85be-4e31-b384-2bad2fad98e1-16656940991fa3139e-2": {
-          "type": "variant_picker",
-          "settings": {
-            "display_on_card": false,
-            "option_style": "drop_down",
-            "hide_option_labels": true,
-            "enable_color_swatches": false
-          }
-        },
-        "69fd744e-7a5c-469b-a1ee-f6e445bdc2e0": {
-          "type": "liquid",
-          "settings": {
-            "display_on_card": false,
-            "liquid": "<div class=\"mt-5\">\n<a href=\"https:\/\/youcanpym.com\/products\/mental-hygiene-kit-1?selling_plan=3204284669\" class=\"inline-block push-btn mb-1 add-to-cart-btn push-btn w-full\">\n<span class=\"push-btn-surface w-full\">ADD TO CART<\/span>\n<\/a>\n<\/div>"
-          }
-        },
-        "template--16642269085949__19404a56-85be-4e31-b384-2bad2fad98e1-16656940991fa3139e-3": {
-          "type": "buy_buttons",
-          "disabled": true,
-          "settings": {
-            "display_on_card": false,
-            "show_price": false,
-            "enable_payment_button": false,
-            "show_pickup_availability": false
-          }
-        },
-        "f63cb4c3-7948-4dec-bc09-59fe37855d2c": {
-          "type": "shape_divider",
-          "settings": {
-            "target_section": "above",
-            "target_section_color_scheme": "primary",
-            "style": "customshape_1919x170",
-            "flip_horizontal": false,
-            "enable_animation": false,
-            "animation_direction": ""
-          }
-        },
-        "ca1dae76-62dd-452b-a34a-335ce0514a94": {
-          "type": "shape_divider",
-          "settings": {
-            "target_section": "below",
-            "target_section_color_scheme": "primary",
-            "style": "customshape3_1919x130",
-            "flip_horizontal": false,
-            "enable_animation": false,
-            "animation_direction": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--16642269085949__19404a56-85be-4e31-b384-2bad2fad98e1-16656940991fa3139e-0",
-        "template--16642269085949__19404a56-85be-4e31-b384-2bad2fad98e1-16656940991fa3139e-1",
-        "26a2504f-a2bb-453e-a53e-3e7a5f17c52b",
-        "template--16642269085949__19404a56-85be-4e31-b384-2bad2fad98e1-16656940991fa3139e-2",
-        "69fd744e-7a5c-469b-a1ee-f6e445bdc2e0",
-        "template--16642269085949__19404a56-85be-4e31-b384-2bad2fad98e1-16656940991fa3139e-3",
-        "f63cb4c3-7948-4dec-bc09-59fe37855d2c",
-        "ca1dae76-62dd-452b-a34a-335ce0514a94"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "EASE STRESS",
-        "product": "copy-of-attention-chews",
-        "section_desktop_width": "lg:col-span-full",
-        "crop": "",
-        "image_shape": "default",
-        "desktop_media_width": "lg:col-span-6_lg:col-span-6",
-        "enable_video_looping": true,
-        "color_scheme": "secondary",
-        "use_gradient_background": false
-      }
-    },
-    "e8537053-9d70-4922-a42f-91b7293cc013": {
-      "type": "featured-collection",
-      "settings": {
-        "padding_top": 70,
-        "padding_bottom": 70,
-        "title": "Bundle & Save",
-        "subheading": "Science-backed nutrients for optimal mental well-being.",
-        "collection": "bundle-save",
-        "no_products": 4,
-        "show_view_all": true,
-        "enable_quick_buy": false,
-        "display_on_card": true,
-        "layout": "carousel",
-        "products_per_row_mobile": "1",
-        "products_per_row_desktop": 4,
-        "slideshow_focus": "center",
-        "mobile_slide_width": "three_fifths",
-        "desktop_slide_width": 40,
-        "autoscroll_mode": "1",
-        "product_tiles_aspect_ratio": "",
-        "image_shape": "",
-        "color_scheme": "primary",
-        "use_gradient_background": false
-      }
-    },
     "73c04252-d2ca-4247-a4d4-89b0ec0ef06b": {
       "type": "rich-text",
       "settings": {
@@ -724,8 +600,6 @@
     "62e39f95-6918-4693-bacb-b8018ce72695",
     "88737c5b-04d5-4f86-8d08-91fcad3385de",
     "9b4eec98-74c1-499f-8dc2-1010940576c6",
-    "19404a56-85be-4e31-b384-2bad2fad98e1",
-    "e8537053-9d70-4922-a42f-91b7293cc013",
     "73c04252-d2ca-4247-a4d4-89b0ec0ef06b",
     "eabf6d97-41c2-45d5-80fa-849c87fabe76",
     "ff17cd22-c3ab-433f-bea8-68def1d0d075",
