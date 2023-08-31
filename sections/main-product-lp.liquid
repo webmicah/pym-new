@@ -1,7 +1,23 @@
+
+{%- liquid
+  assign product = all_products[section.settings.product]
+  assign current_variant = product.selected_or_first_available_variant
+-%}
+
+{%- render 'product-template', section: section, product: product, is_feature: true -%}
+
+
 {% schema %}
 {
   "name": "Main Product LP",
-  "settings": [],
+  "class":"main-product-lp"
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Featured product"
+    }
+  ],
   "presets": [
       {
         "name": "Main Product LP"
