@@ -1,5 +1,10 @@
 {
   "sections": {
+    "a740e62e-bb79-4561-9521-ec74bb2fb0ae": {
+      "type": "main-product-lp",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -596,6 +601,7 @@
     }
   },
   "order": [
+    "a740e62e-bb79-4561-9521-ec74bb2fb0ae",
     "main",
     "62e39f95-6918-4693-bacb-b8018ce72695",
     "88737c5b-04d5-4f86-8d08-91fcad3385de",
