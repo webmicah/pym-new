@@ -255,8 +255,9 @@
       ],
       "custom_css": [
         "section.relative.text-scheme-text.bg-scheme-background.relative.overflow-hidden {background-color: #da6655 !important;}",
-        ".section-content.relative.z-10.section-template--16869722980605__ff17cd22-c3ab-433f-bea8-68def1d0d075-padding {width: 100%;}",
-        "ul.grid {display: flex;}"
+        ".section-content.relative.z-10.section-template--16869722980605__ff17cd22-c3ab-433f-bea8-68def1d0d075-padding {width: 100%; max-width:1920px;}",
+        "ul.grid {display: flex; justify-content: center;}",
+        ".media-style-container.media-no-shadow.default img {width: 150px; height: 100px; object-fit: contain; margin: auto; border-radius: 0;}"
       ],
       "settings": {
         "background-color": "#DEA46E",
