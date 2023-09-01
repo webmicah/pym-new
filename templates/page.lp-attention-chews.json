@@ -121,6 +121,43 @@
         "button_label": "Shop Now"
       }
     },
+    "68142f7f-f3c1-4b4a-8f90-cc9c23dc6d1a": {
+      "type": "rich-text",
+      "blocks": {
+        "9d8df444-18dc-402b-88b6-81f3c93a824a": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "target_section_color_scheme": "quaternary",
+            "style": "customshape3_1919x130",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "9d8df444-18dc-402b-88b6-81f3c93a824a"
+      ],
+      "custom_css": [
+        "section.text-scheme-text.bg-scheme-background.relative.overflow-hidden {background-color: #da6655 !important;}"
+      ],
+      "settings": {
+        "background-color": "#FFF7E8",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "text_align": "text-center",
+        "title": "",
+        "heading_size": "heading-template",
+        "heading_font": "font-heading",
+        "rich_text": "",
+        "text_size": "text-base",
+        "text_font": "font-main",
+        "content_width_desktop": "lg:w-2\/3",
+        "button_link": "",
+        "button_label": "Shop Now"
+      }
+    },
     "ff17cd22-c3ab-433f-bea8-68def1d0d075": {
       "type": "text-columns-with-images",
       "blocks": {
@@ -261,8 +298,8 @@
       ],
       "settings": {
         "background-color": "#DEA46E",
-        "padding_top": 10,
-        "padding_bottom": 15,
+        "padding_top": 45,
+        "padding_bottom": 45,
         "content_width_desktop": "lg:w-1\/2",
         "extra_wide": true,
         "slideshow_on_mobile": false,
@@ -290,6 +327,9 @@
       },
       "block_order": [
         "f5847903-73d9-4194-9f5f-1cd04b89be62"
+      ],
+      "custom_css": [
+        "section.text-scheme-text.bg-scheme-background.relative.overflow-hidden {background-color: #da6655 !important;}"
       ],
       "settings": {
         "background-color": "#F9B7AC",
@@ -436,6 +476,7 @@
     "main",
     "73c04252-d2ca-4247-a4d4-89b0ec0ef06b",
     "f9e5cd64-1cf4-4f1b-98ed-bc2bfd53a5b7",
+    "68142f7f-f3c1-4b4a-8f90-cc9c23dc6d1a",
     "ff17cd22-c3ab-433f-bea8-68def1d0d075",
     "d519ca42-894c-4821-bd4e-05914fcc62dd",
     "93f13fc7-9d5b-4b33-8957-e8fa8e7b8853"
