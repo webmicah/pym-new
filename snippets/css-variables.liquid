@@ -35,6 +35,13 @@
     --color-quaternary-gradient: {{ settings.color_quaternary_gradient }};
     {%- render 'color-overlay-variables', color_scheme: 'quaternary' -%}
 
+    --color-quinary-text: {{ settings.color_quinary_text.red }}, {{ settings.color_quinary_text.green }}, {{ settings.color_quinary_text.blue }};
+    --color-quinary-background: {{ settings.color_quinary_background.red }}, {{ settings.color_quinary_background.green }}, {{ settings.color_quinary_background.blue }};
+    --color-quinary-accent: {{ settings.color_quinary_accent.red }}, {{ settings.color_quinary_accent.green }}, {{ settings.color_quinary_accent.blue }};
+    --color-quinary-card: {{ settings.color_quinary_card.red }}, {{ settings.color_quinary_card.green }}, {{ settings.color_quinary_card.blue }};
+    --color-quinary-gradient: {{ settings.color_quinary_gradient }};
+    {%- render 'color-overlay-variables', color_scheme: 'quinary' -%}
+
     --color-principle-text: {{ settings.color_principle_text.red }}, {{ settings.color_principle_text.green }}, {{ settings.color_principle_text.blue }};
     --color-principle-background: {{ settings.color_principle_background.red }}, {{ settings.color_principle_background.green }}, {{ settings.color_principle_background.blue }};
     --color-principle-accent: {{ settings.color_principle_accent.red }}, {{ settings.color_principle_accent.green }}, {{ settings.color_principle_accent.blue }};
@@ -169,6 +176,20 @@
     --color-scheme-secondary-background: {% if settings.secondary_button_color == 'match_background' %}var(--color-quaternary-background){% else %}var(--color-quaternary-card){% endif %};
     --select-svg: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 12L23.2826 36.0527C23.3724 36.1542 23.4826 36.2354 23.6062 36.291C23.7297 36.3467 23.8636 36.3755 23.999 36.3755C24.1345 36.3755 24.2684 36.3467 24.3919 36.291C24.5154 36.2354 24.6257 36.1542 24.7155 36.0527L46 12' stroke='{{ settings.color_quaternary_text | replace: '#', '%23' }}' stroke-width='{{ settings.icon_thickness }}' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E%0A");
   }
+
+  [data-color-scheme="quinary"] {
+    --color-scheme-text: var(--color-quinary-text);
+    --color-scheme-background: var(--color-quinary-background);
+    --color-scheme-accent: var(--color-quinary-accent);
+    --color-scheme-card: var(--color-quinary-card);
+    --color-scheme-gradient: var(--color-quinary-gradient);
+    --color-scheme-text-overlay: var(--color-quinary-text-overlay);
+    --color-scheme-card-text-overlay: var(--color-quinary-card-text-overlay);
+    --color-scheme-accent-overlay: var(--color-quinary-accent-overlay);
+    --color-scheme-secondary-background: {% if settings.secondary_button_color == 'match_background' %}var(--color-quinary-background){% else %}var(--color-quinary-card){% endif %};
+    --select-svg: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 12L23.2826 36.0527C23.3724 36.1542 23.4826 36.2354 23.6062 36.291C23.7297 36.3467 23.8636 36.3755 23.999 36.3755C24.1345 36.3755 24.2684 36.3467 24.3919 36.291C24.5154 36.2354 24.6257 36.1542 24.7155 36.0527L46 12' stroke='{{ settings.color_quinary_text | replace: '#', '%23' }}' stroke-width='{{ settings.icon_thickness }}' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E%0A");
+  }
+  
   [data-color-scheme="principle"] {
     --color-scheme-text: var(--color-principle-text);
     --color-scheme-background: var(--color-principle-background);
