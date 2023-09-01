@@ -128,7 +128,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/icon1.png",
+            "image": "shopify:\/\/shop_images\/Vector_6.png",
             "title": "",
             "heading_size": "text-base",
             "column-text-color": "#FFF7E8",
@@ -145,12 +145,12 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Group.png",
+            "image": "shopify:\/\/shop_images\/Group_6_a9931bbc-2389-4974-9d33-ec545f5b370a.png",
             "title": "",
             "heading_size": "text-base",
             "column-text-color": "#000000",
             "title_uppercase": false,
-            "text": "<p><strong>NON-GMO<\/strong><\/p>",
+            "text": "<p><strong>KETO<br\/>FRIENDLY<\/strong><\/p>",
             "text_size": "text-base",
             "text_font": "font-main",
             "cta_link": "",
@@ -162,12 +162,12 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/PYM_002-Animation-Icon-4_RC.gif",
+            "image": "shopify:\/\/shop_images\/Group_4.png",
             "title": "",
             "heading_size": "text-base",
             "column-text-color": "#000000",
             "title_uppercase": false,
-            "text": "<p><strong>GLUTEN-FREE<\/strong><\/p>",
+            "text": "<p><strong>CAFFEINE<br\/>FREE<\/strong><\/p>",
             "text_size": "text-base",
             "text_font": "font-main",
             "cta_link": "",
@@ -179,12 +179,46 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/PYM_002-Animation-Icon-5.gif",
+            "image": "shopify:\/\/shop_images\/Group_5.png",
             "title": "",
             "heading_size": "text-base",
             "column-text-color": "#000000",
             "title_uppercase": false,
-            "text": "<p><strong>NO ADDED SUGAR<\/strong><\/p>",
+            "text": "<p><strong>ALL<br\/>NATURAL<\/strong><\/p>",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "8f8d07e7-88f0-4b1a-9bd9-6cdd3b254439": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Vector_7.png",
+            "title": "",
+            "heading_size": "text-base",
+            "column-text-color": "#000000",
+            "title_uppercase": false,
+            "text": "<p>GLUTEN<br\/>FREE<\/p>",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "1b76197f-3b20-4a93-aed6-78e6ea444575": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Vector_8.png",
+            "title": "",
+            "heading_size": "text-base",
+            "column-text-color": "#000000",
+            "title_uppercase": false,
+            "text": "<p>NON<br\/>GMO<\/p>",
             "text_size": "text-base",
             "text_font": "font-main",
             "cta_link": "",
@@ -197,7 +231,9 @@
         "template--16642170487037__ff17cd22-c3ab-433f-bea8-68def1d0d075-1665451386fc877d75-0",
         "template--16642170487037__ff17cd22-c3ab-433f-bea8-68def1d0d075-1665451386fc877d75-1",
         "template--16642170487037__ff17cd22-c3ab-433f-bea8-68def1d0d075-1665451386fc877d75-2",
-        "717c09d0-c2bc-4c2f-8f9e-9fe17a071b9f"
+        "717c09d0-c2bc-4c2f-8f9e-9fe17a071b9f",
+        "8f8d07e7-88f0-4b1a-9bd9-6cdd3b254439",
+        "1b76197f-3b20-4a93-aed6-78e6ea444575"
       ],
       "settings": {
         "background-color": "#DEA46E",
