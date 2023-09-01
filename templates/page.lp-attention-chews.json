@@ -128,7 +128,7 @@
           "type": "shape_divider",
           "settings": {
             "target_section": "above",
-            "target_section_color_scheme": "quaternary",
+            "target_section_color_scheme": "primary",
             "style": "customshape3_1919x130",
             "flip_horizontal": false,
             "enable_animation": false,
@@ -317,7 +317,7 @@
           "type": "shape_divider",
           "settings": {
             "target_section": "below",
-            "target_section_color_scheme": "quaternary",
+            "target_section_color_scheme": "primary",
             "style": "customshape3_1919x130",
             "flip_horizontal": false,
             "enable_animation": false,
