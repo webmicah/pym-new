@@ -45,3 +45,13 @@ legend.block.font-secondary {
 ul.attn-li {
     font-size: 14px;
 }
+
+
+
+div#shopify-section-template--16869722980605__ff17cd22-c3ab-433f-bea8-68def1d0d075 .media-style-container.media-no-shadow.default img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: auto;
+    border-radius: 0px;
+}
