@@ -89,6 +89,92 @@
         "button_label": "Shop Now"
       }
     },
+    "6063cf99-a37f-4493-aa3a-6dd18b3eb92e": {
+      "type": "rich-text",
+      "blocks": {
+        "3b68867a-51a2-42ad-bb59-ffe9cd82da0f": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "target_section_color_scheme": "secondary",
+            "style": "customshape3_1919x130",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "3b68867a-51a2-42ad-bb59-ffe9cd82da0f"
+      ],
+      "settings": {
+        "background-color": "#FFF7E8",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "text_align": "text-center",
+        "title": "",
+        "heading_size": "heading-template",
+        "heading_font": "font-heading",
+        "rich_text": "",
+        "text_size": "text-base",
+        "text_font": "font-main",
+        "content_width_desktop": "lg:w-2\/3",
+        "button_link": "",
+        "button_label": "Shop Now"
+      }
+    },
+    "41b938c6-8f56-4006-a33e-1f67ad92998e": {
+      "type": "rich-text",
+      "settings": {
+        "background-color": "#F1D09F",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "text_align": "text-center",
+        "title": "Block out distractions, get into flow state",
+        "heading_size": "heading-base",
+        "heading_font": "font-heading",
+        "rich_text": "<p>Without the side effects<\/p>",
+        "text_size": "text-xl",
+        "text_font": "font-heading",
+        "content_width_desktop": "lg:w-2\/3",
+        "button_link": "",
+        "button_label": "Shop Now"
+      }
+    },
+    "efb87c5d-00cd-4ebc-905a-93dc5bdbfe1e": {
+      "type": "rich-text",
+      "blocks": {
+        "67a8c0d5-cfcd-4f2a-9613-256349d4dc69": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "target_section_color_scheme": "secondary",
+            "style": "customshape3_1919x130",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "67a8c0d5-cfcd-4f2a-9613-256349d4dc69"
+      ],
+      "settings": {
+        "background-color": "#FFF7E8",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "text_align": "text-center",
+        "title": "",
+        "heading_size": "heading-template",
+        "heading_font": "font-heading",
+        "rich_text": "",
+        "text_size": "text-base",
+        "text_font": "font-main",
+        "content_width_desktop": "lg:w-2\/3",
+        "button_link": "",
+        "button_label": "Shop Now"
+      }
+    },
     "f9e5cd64-1cf4-4f1b-98ed-bc2bfd53a5b7": {
       "type": "image-with-text",
       "custom_css": [
@@ -475,6 +561,9 @@
     "df3cc9fc-03dd-4f71-9f61-96339351d368",
     "main",
     "73c04252-d2ca-4247-a4d4-89b0ec0ef06b",
+    "6063cf99-a37f-4493-aa3a-6dd18b3eb92e",
+    "41b938c6-8f56-4006-a33e-1f67ad92998e",
+    "efb87c5d-00cd-4ebc-905a-93dc5bdbfe1e",
     "f9e5cd64-1cf4-4f1b-98ed-bc2bfd53a5b7",
     "68142f7f-f3c1-4b4a-8f90-cc9c23dc6d1a",
     "ff17cd22-c3ab-433f-bea8-68def1d0d075",
