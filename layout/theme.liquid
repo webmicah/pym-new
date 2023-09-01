@@ -230,7 +230,7 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
 
 </head>
   
-    <body data-color-scheme="primary" id="{{ template.escape }}">
+    <body data-color-scheme="primary" id="{{ template }}-{{ page.handle}}">
       {% comment %}theme-check-disable MissingTemplate{% endcomment %}
       <a class="skip-link" href="#MainContent">{{ "general.accessibility.skip_to_content" | t }}</a>
        {% liquid
