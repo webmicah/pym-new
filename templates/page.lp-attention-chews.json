@@ -225,6 +225,23 @@
             "cta_text": "",
             "color_scheme": "same_as_section"
           }
+        },
+        "cf0d2728-7c30-4171-a94a-1107a4fca825": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Group_7_353c01f8-99b8-4ad5-bd0a-946f1d8c1ae7.png",
+            "title": "",
+            "heading_size": "text-base",
+            "column-text-color": "#000000",
+            "title_uppercase": false,
+            "text": "<p>NO ADDED<br\/>SUGAR<\/p>",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
         }
       },
       "block_order": [
@@ -233,7 +250,8 @@
         "template--16642170487037__ff17cd22-c3ab-433f-bea8-68def1d0d075-1665451386fc877d75-2",
         "717c09d0-c2bc-4c2f-8f9e-9fe17a071b9f",
         "8f8d07e7-88f0-4b1a-9bd9-6cdd3b254439",
-        "1b76197f-3b20-4a93-aed6-78e6ea444575"
+        "1b76197f-3b20-4a93-aed6-78e6ea444575",
+        "cf0d2728-7c30-4171-a94a-1107a4fca825"
       ],
       "settings": {
         "background-color": "#DEA46E",
