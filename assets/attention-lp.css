@@ -47,3 +47,11 @@ ul.attn-li {
 }
 
 
+body#attention-chews .text-col-img ul.grid strong {
+    color: #fff;
+    font-family: Creo;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 105.699%;
+}
