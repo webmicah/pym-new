@@ -1,6 +1,6 @@
 h2.font-heading.text-left {
     color: #000;
-    font-family: Creo;
+    font-family: 'Creo Bold';
     font-size: 40px;
     font-style: normal;
     font-weight: 800;
@@ -50,7 +50,7 @@ ul.attn-li {
 body#attention-chews .text-col-img ul.grid strong {
     color: #fff;
     font-family: Creo;
-    font-size: 25px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 800;
     line-height: 105.699%;
