@@ -253,6 +253,9 @@
         "1b76197f-3b20-4a93-aed6-78e6ea444575",
         "cf0d2728-7c30-4171-a94a-1107a4fca825"
       ],
+      "custom_css": [
+        "section.relative.text-scheme-text.bg-scheme-background.relative.overflow-hidden {background-color: #da6655 !important;}"
+      ],
       "settings": {
         "background-color": "#DEA46E",
         "padding_top": 0,
