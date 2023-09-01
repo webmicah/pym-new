@@ -297,7 +297,7 @@
         ".media-style-container.media-no-shadow.default img {width: 150px; height: 100px; object-fit: contain; margin: auto; border-radius: 0;}"
       ],
       "settings": {
-        "background-color": "#DEA46E",
+        "background-color": "#FFF7E8",
         "padding_top": 45,
         "padding_bottom": 45,
         "content_width_desktop": "lg:w-1\/2",
