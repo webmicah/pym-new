@@ -141,6 +141,160 @@
         "button_label": "Shop Now"
       }
     },
+    "d0705ec0-5e83-4f53-88be-a0820869d5e8": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8-column-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/dopamine_01_1.png",
+            "title": "",
+            "heading_size": "text-base",
+            "column-text-color": "#000000",
+            "title_uppercase": false,
+            "text": "<p>Regulates dopamine <br\/>levels naturally<\/p>",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8-column-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/green-energy_1.png",
+            "title": "",
+            "heading_size": "text-base",
+            "column-text-color": "#000000",
+            "title_uppercase": false,
+            "text": "<p>Stimulant-free <br\/>energy boost<\/p>",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8-column-3": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/stress_01_1.png",
+            "title": "",
+            "heading_size": "text-base",
+            "column-text-color": "#000000",
+            "title_uppercase": false,
+            "text": "<p>Reduces stress & <br\/>anxiousness<\/p>",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8-column-1",
+        "template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8-column-2",
+        "template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8-column-3"
+      ],
+      "custom_css": [
+        ".media-style-container.media-no-shadow.default img {width: 150px; height: 100px; object-fit: contain; margin: auto; border-radius: 0;}"
+      ],
+      "settings": {
+        "background-color": "#F1D09F",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "content_width_desktop": "lg:w-2\/3",
+        "extra_wide": false,
+        "slideshow_on_mobile": false,
+        "text_align": "text-center",
+        "title": "",
+        "crop": "",
+        "image_shape": "default",
+        "index_shape": "star_1"
+      }
+    },
+    "4e500af2-a04d-470f-a23b-85fb84b46783": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783-column-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/productivity_02_1.png",
+            "title": "",
+            "heading_size": "text-base",
+            "column-text-color": "#000000",
+            "title_uppercase": false,
+            "text": "<p>Skyrockets your <br\/>productivity<\/p>",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783-column-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/memory_02_1.png",
+            "title": "",
+            "heading_size": "text-base",
+            "column-text-color": "#000000",
+            "title_uppercase": false,
+            "text": "<p>Enhances mental <br\/>performance & memory<\/p>",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783-column-3": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/good_1.png",
+            "title": "",
+            "heading_size": "text-base",
+            "column-text-color": "#000000",
+            "title_uppercase": false,
+            "text": "<p>Functional +<br\/> Delicious taste<\/p>",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783-column-1",
+        "template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783-column-2",
+        "template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783-column-3"
+      ],
+      "custom_css": [
+        ".media-style-container.media-no-shadow.default img {width: 150px; height: 100px; object-fit: contain; margin: auto; border-radius: 0;}"
+      ],
+      "settings": {
+        "background-color": "#F1D09F",
+        "padding_top": 10,
+        "padding_bottom": 0,
+        "content_width_desktop": "lg:w-2\/3",
+        "extra_wide": false,
+        "slideshow_on_mobile": false,
+        "text_align": "text-center",
+        "title": "",
+        "crop": "",
+        "image_shape": "default",
+        "index_shape": "star_1"
+      }
+    },
     "efb87c5d-00cd-4ebc-905a-93dc5bdbfe1e": {
       "type": "rich-text",
       "blocks": {
@@ -563,6 +717,8 @@
     "73c04252-d2ca-4247-a4d4-89b0ec0ef06b",
     "6063cf99-a37f-4493-aa3a-6dd18b3eb92e",
     "41b938c6-8f56-4006-a33e-1f67ad92998e",
+    "d0705ec0-5e83-4f53-88be-a0820869d5e8",
+    "4e500af2-a04d-470f-a23b-85fb84b46783",
     "efb87c5d-00cd-4ebc-905a-93dc5bdbfe1e",
     "f9e5cd64-1cf4-4f1b-98ed-bc2bfd53a5b7",
     "68142f7f-f3c1-4b4a-8f90-cc9c23dc6d1a",
