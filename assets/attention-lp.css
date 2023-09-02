@@ -49,13 +49,15 @@ ul.attn-li {
 
 body#attention-chews .text-col-img ul.grid strong {
     color: #fff;
-    font-family: 'Creo Bold';
+    font-family: Creo Bold;
     font-size: 22px;
     font-style: normal;
     font-weight: 800;
     line-height: 105.699%;
+    max-width: 60%;
+    display: block;
+    margin: auto;
 }
-
 
 @media (max-width:1024px){
 
@@ -64,9 +66,14 @@ body#attention-chews .text-col-img ul.grid strong {
     display: none;
 }
 
+#shopify-section-template--16869722980605__ff17cd22-c3ab-433f-bea8-68def1d0d075 .media-style-container.media-no-shadow.default img {
+    width: 30px;
+    height: 30px;
+}
 
 
-   .z-sticker#sticker-c0c54392-3c15-4250-b9e7-4d43d6feb57a {
+.z-sticker#sticker-c0c54392-3c15-4250-b9e7-4d43d6feb57a {
     left: 81%;
-    }
+}
+
 }
