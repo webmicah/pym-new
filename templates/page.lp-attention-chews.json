@@ -601,7 +601,7 @@
             "color": "bg-scheme-accent text-scheme-accent-overlay",
             "sticker_multiply": false,
             "width": 210,
-            "horizontal_position": 40,
+            "horizontal_position": 39,
             "vertical_position": 43,
             "rotate": 0,
             "sticker_opacity": 1,
