@@ -151,8 +151,8 @@
       ],
       "settings": {
         "background-color": "#FFF7E8",
-        "padding_top": 25,
-        "padding_bottom": 20,
+        "padding_top": 0,
+        "padding_bottom": 40,
         "content_width_desktop": "lg:w-full",
         "extra_wide": true,
         "slideshow_on_mobile": false,
