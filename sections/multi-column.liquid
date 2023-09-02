@@ -120,10 +120,6 @@
             </li>
           {% endfor %}
         </ul>
-        <div class="lbox__see-all border-t-1 mt-8 pt-2 flex justify-center">
-          <span class="mr-2">See all {{ columns.size }}</span> 
-          {% render 'icon-arrow-down' %}
-        </div>
       </div>
       {%- if slideshow_on_mobile -%}
       <div class="splide__arrows flex justify-between items-center mt-5 px-section lg:hidden">
@@ -532,6 +528,17 @@
     }
   ],
   "blocks": [
+   {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+         {
+          "id": "multi_image",
+          "type": "image_picker",
+          "label": "Image"
+        }
+      ]
+    },
     {
       "type": "column",
       "name": "Column",
@@ -1272,13 +1279,13 @@
       "name": "Multi Column",
       "blocks": [
         {
-          "type": "column"
+          "type": "Image"
         },
         {
-          "type": "column"
+          "type": "Slider"
         },
         {
-          "type": "column"
+          "type": "Image"
         }
       ]
     }
