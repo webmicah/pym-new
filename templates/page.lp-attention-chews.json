@@ -6,10 +6,8 @@
         "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-title-1": {
           "type": "title",
           "settings": {
-            "title_top_margin": true,
-            "title_uppercase": false,
-            "text_align": "text-left",
-            "title_size": "heading-template"
+            "display_on_card": false,
+            "text_align": "text-left"
           }
         },
         "60063fac-01c4-45af-8c7a-a60b7a234b14": {
@@ -38,10 +36,19 @@
         "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-buy_buttons-1": {
           "type": "buy_buttons",
           "settings": {
-            "product_preorder": false,
+            "display_on_card": false,
             "show_price": false,
             "enable_payment_button": true,
             "show_pickup_availability": true
+          }
+        },
+        "19b63198-008a-445f-a3fd-c6349c4a5bbd": {
+          "type": "popup",
+          "settings": {
+            "display_on_card": false,
+            "icon": "none",
+            "text": "Supplements Facts",
+            "page": ""
           }
         }
       },
@@ -50,23 +57,17 @@
         "60063fac-01c4-45af-8c7a-a60b7a234b14",
         "4a946270-3449-4b83-afb1-a78939056c0b",
         "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-variant_picker-1",
-        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-buy_buttons-1"
+        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-buy_buttons-1",
+        "19b63198-008a-445f-a3fd-c6349c4a5bbd"
       ],
       "settings": {
+        "title": "",
         "product": "copy-of-attention-chews",
+        "section_desktop_width": "lg:col-span-full",
         "crop": "",
         "image_shape": "default",
-        "desktop_media_width": "lg:col-span-7_lg:col-span-5",
-        "show_slideshow_arrows_on_desktop": true,
-        "enable_image_zoom": false,
-        "enable_video_looping": true,
-        "autoplay_videos_on_desktop": false,
-        "media_mobile_width": "w-full",
-        "thumbnails_position": "under",
-        "thumbnail_crop": "aspect-w-1 aspect-h-1",
-        "thumbnail_shape": "default",
-        "hide_media_shadow": true,
-        "thumbnail_size": "large",
+        "desktop_media_width": "lg:col-span-6_lg:col-span-6",
+        "enable_video_looping": false,
         "color_scheme": "primary",
         "use_gradient_background": false
       }
