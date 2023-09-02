@@ -64,10 +64,6 @@ body#attention-chews .text-col-img ul.grid strong {
     max-width: 1600px;
 }
 
-body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(3) {
-    display: none;
-}
-
 body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) img {
     width: 40%;
     margin: auto auto auto auto;
