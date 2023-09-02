@@ -163,6 +163,26 @@
         "index_shape": "star_1"
       }
     },
+    "eac2614c-3f4e-49a6-b20f-d88e9464cfbd": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "background-color": "#FFF7E8",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "image": "shopify:\/\/shop_images\/Group_559_3_a0445fbc-b542-4552-a497-7b9b7bba1908.png",
+        "text_align": "text-center",
+        "title": "",
+        "heading_size": "heading-template",
+        "heading_font": "font-heading",
+        "rich_text": "",
+        "text_size": "text-base",
+        "text_font": "font-main",
+        "content_width_desktop": "lg:w-2\/3",
+        "button_link": "",
+        "button_label": "Shop Now"
+      }
+    },
     "6063cf99-a37f-4493-aa3a-6dd18b3eb92e": {
       "type": "rich-text",
       "blocks": {
@@ -1052,6 +1072,7 @@
     "main",
     "73c04252-d2ca-4247-a4d4-89b0ec0ef06b",
     "cca9ca76-293e-41a3-87d5-b36862d7d486",
+    "eac2614c-3f4e-49a6-b20f-d88e9464cfbd",
     "6063cf99-a37f-4493-aa3a-6dd18b3eb92e",
     "41b938c6-8f56-4006-a33e-1f67ad92998e",
     "d0705ec0-5e83-4f53-88be-a0820869d5e8",
