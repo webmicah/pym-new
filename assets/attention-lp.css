@@ -59,6 +59,13 @@ body#attention-chews .text-col-img ul.grid strong {
 
 @media (max-width:1024px){
 
+#shopify-section-template--16869722980605__ff17cd22-c3ab-433f-bea8-68def1d0d075 ul.grid li:first-child,
+#shopify-section-template--16869722980605__ff17cd22-c3ab-433f-bea8-68def1d0d075 ul.grid li:last-child  {
+    display: none;
+}
+
+
+
    .z-sticker#sticker-c0c54392-3c15-4250-b9e7-4d43d6feb57a {
     left: 81%;
     }
