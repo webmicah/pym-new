@@ -77,7 +77,7 @@ body#attention-chews .text-col-img ul.grid strong {
     max-width: 100%;
 }
 
-body#attention-chews #shopify-section-template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8  .grid-cols-2,|
+body#attention-chews #shopify-section-template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8  .grid-cols-2,
 body#attention-chews div#shopify-section-template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783  .grid-cols-2 {
     grid-template-columns: repeat(1,minmax(0,1fr));
     row-gap: 50px;
