@@ -92,6 +92,12 @@
     "28f5e536-8b1b-4ccc-a4b0-8575ceefb456": {
       "type": "multi-column",
       "blocks": {
+        "f74abafd-9e21-4e3e-a242-40321894e7fa": {
+          "type": "image-multicolumn",
+          "settings": {
+            "image_multicolumn": "shopify:\/\/shop_images\/Group_558.png"
+          }
+        },
         "template--16869722980605__28f5e536-8b1b-4ccc-a4b0-8575ceefb456-column-1": {
           "type": "column",
           "settings": {
@@ -111,49 +117,17 @@
             "color_scheme": "same_as_section"
           }
         },
-        "template--16869722980605__28f5e536-8b1b-4ccc-a4b0-8575ceefb456-column-2": {
-          "type": "column",
+        "fa1db993-fb12-4463-8d98-bc81c3b120a5": {
+          "type": "image-multicolumn",
           "settings": {
-            "show_image": true,
-            "title": "",
-            "heading_size": "text-lg",
-            "column-heading-color": "#575892",
-            "title_uppercase": false,
-            "text": "",
-            "column-text-color": "#9A89A9",
-            "text_size": "text-base",
-            "text_font": "font-main",
-            "cta_link": "",
-            "cta_text": "",
-            "modal_title": "",
-            "modal_body": "",
-            "color_scheme": "same_as_section"
-          }
-        },
-        "template--16869722980605__28f5e536-8b1b-4ccc-a4b0-8575ceefb456-column-3": {
-          "type": "column",
-          "settings": {
-            "show_image": true,
-            "title": "",
-            "heading_size": "text-lg",
-            "column-heading-color": "#575892",
-            "title_uppercase": false,
-            "text": "",
-            "column-text-color": "#9A89A9",
-            "text_size": "text-base",
-            "text_font": "font-main",
-            "cta_link": "",
-            "cta_text": "",
-            "modal_title": "",
-            "modal_body": "",
-            "color_scheme": "same_as_section"
+            "image_multicolumn": "shopify:\/\/shop_images\/Group_559_2.png"
           }
         }
       },
       "block_order": [
+        "f74abafd-9e21-4e3e-a242-40321894e7fa",
         "template--16869722980605__28f5e536-8b1b-4ccc-a4b0-8575ceefb456-column-1",
-        "template--16869722980605__28f5e536-8b1b-4ccc-a4b0-8575ceefb456-column-2",
-        "template--16869722980605__28f5e536-8b1b-4ccc-a4b0-8575ceefb456-column-3"
+        "fa1db993-fb12-4463-8d98-bc81c3b120a5"
       ],
       "settings": {
         "background-color": "#FFF7E8",
