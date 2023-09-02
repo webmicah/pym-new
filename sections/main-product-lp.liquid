@@ -5,7 +5,7 @@
   assign current_variant = product.selected_or_first_available_variant
 -%}
 {%- if product != blank -%}
-  {%- render 'product-template', section: section, product: product, is_feature: true -%}
+  {%- render 'product-template2', section: section, product: product, is_feature: true -%}
 {%- else -%}
 {%- liquid
   assign media_desktop_width = section.settings.desktop_media_width | split: '_' | first
