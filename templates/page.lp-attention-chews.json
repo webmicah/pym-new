@@ -591,24 +591,6 @@
         "button_label": "Shop Now"
       }
     },
-    "64dde410-9b33-4ca5-923e-c65030a38472": {
-      "type": "rich-text",
-      "settings": {
-        "background-color": "#FFF7E8",
-        "padding_top": 70,
-        "padding_bottom": 70,
-        "text_align": "text-left",
-        "title": "Ingredients for Calm, yet Focused Productivity",
-        "heading_size": "heading-base",
-        "heading_font": "font-heading",
-        "rich_text": "",
-        "text_size": "text-base",
-        "text_font": "font-main",
-        "content_width_desktop": "lg:w-full",
-        "button_link": "",
-        "button_label": "Shop Now"
-      }
-    },
     "0647c1fa-750e-40fb-869b-725c468fbf9f": {
       "type": "lightbox-gallery",
       "blocks": {
@@ -736,11 +718,12 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "title": "",
+            "image": "shopify:\/\/shop_images\/image_2_1.png",
+            "title": "Vitamin B6",
             "heading_size": "text-base",
             "column-heading-color": "#000000",
             "title_uppercase": false,
-            "text": "",
+            "text": "<p>for DOPAMINE PRODUCTION<\/p>",
             "column-text-color": "#000000",
             "text_size": "text-base",
             "text_font": "font-main",
@@ -755,12 +738,13 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "title": "",
-            "heading_size": "text-base",
-            "column-heading-color": "#000000",
+            "image": "shopify:\/\/shop_images\/image_3.png",
+            "title": "Zinc Glycinate",
+            "heading_size": "text-lg",
+            "column-heading-color": "#575892",
             "title_uppercase": false,
             "text": "",
-            "column-text-color": "#000000",
+            "column-text-color": "#9A89A9",
             "text_size": "text-base",
             "text_font": "font-main",
             "cta_link": "",
@@ -774,11 +758,12 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "title": "",
+            "image": "shopify:\/\/shop_images\/image_1_2.png",
+            "title": "Wild Blueberry",
             "heading_size": "text-base",
             "column-heading-color": "#000000",
             "title_uppercase": false,
-            "text": "",
+            "text": "<p>for COGNITION<\/p>",
             "column-text-color": "#000000",
             "text_size": "text-base",
             "text_font": "font-main",
@@ -952,7 +937,6 @@
     "68142f7f-f3c1-4b4a-8f90-cc9c23dc6d1a",
     "ff17cd22-c3ab-433f-bea8-68def1d0d075",
     "d519ca42-894c-4821-bd4e-05914fcc62dd",
-    "64dde410-9b33-4ca5-923e-c65030a38472",
     "0647c1fa-750e-40fb-869b-725c468fbf9f",
     "93f13fc7-9d5b-4b33-8957-e8fa8e7b8853"
   ]
