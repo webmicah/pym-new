@@ -67,8 +67,7 @@ body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41
 }
 
 
-body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) h2.font-heading
-    color: #575892;
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) h2.font-heading{
     text-align: center;
     font-family: 'Creo Bold';
     font-size: 28px;
