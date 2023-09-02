@@ -601,7 +601,7 @@
             "color": "bg-scheme-accent text-scheme-accent-overlay",
             "sticker_multiply": false,
             "width": 210,
-            "horizontal_position": 35,
+            "horizontal_position": 40,
             "vertical_position": 43,
             "rotate": 0,
             "sticker_opacity": 1,
@@ -619,7 +619,7 @@
         "c0c54392-3c15-4250-b9e7-4d43d6feb57a"
       ],
       "custom_css": [
-        ".font-heading.leading-snug.mx-auto.heading-base.rte {color: #dd6859; line-height: 130.699%;}"
+        ".font-heading.leading-snug.mx-auto.heading-base.rte {color: #dd6859; line-height: 130.699%; margin-left: 10px;}"
       ],
       "settings": {
         "background-color": "#FFF7E8",
