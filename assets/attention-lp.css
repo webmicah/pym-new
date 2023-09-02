@@ -122,6 +122,15 @@ body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41
 
 @media (max-width:1024px){
 
+
+body#attention-chews div#shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 ul.grid {
+    display: block;
+}
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(1) {
+    display: none;
+}
+
 #shopify-section-template--16869722980605__ff17cd22-c3ab-433f-bea8-68def1d0d075 ul.grid li:first-child,
 #shopify-section-template--16869722980605__ff17cd22-c3ab-433f-bea8-68def1d0d075 ul.grid li:last-child  {
     display: none;
