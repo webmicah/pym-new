@@ -713,6 +713,87 @@
         "color_scheme": "primary",
         "use_gradient_background": false
       }
+    },
+    "0647c1fa-750e-40fb-869b-725c468fbf9f": {
+      "type": "lightbox-gallery",
+      "blocks": {
+        "template--16869722980605__0647c1fa-750e-40fb-869b-725c468fbf9f-column-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/image_1.png",
+            "title": "N-Acetyl-L-Tyrosine",
+            "heading_size": "text-base",
+            "column-heading-color": "#000000",
+            "title_uppercase": false,
+            "text": "<p>for FOCUS<\/p>",
+            "column-text-color": "#000000",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "modal_title": "",
+            "modal_body": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--16869722980605__0647c1fa-750e-40fb-869b-725c468fbf9f-column-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "title": "",
+            "heading_size": "text-base",
+            "column-heading-color": "#000000",
+            "title_uppercase": false,
+            "text": "",
+            "column-text-color": "#000000",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "modal_title": "",
+            "modal_body": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--16869722980605__0647c1fa-750e-40fb-869b-725c468fbf9f-column-3": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "title": "",
+            "heading_size": "text-base",
+            "column-heading-color": "#000000",
+            "title_uppercase": false,
+            "text": "",
+            "column-text-color": "#000000",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "modal_title": "",
+            "modal_body": "",
+            "color_scheme": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "template--16869722980605__0647c1fa-750e-40fb-869b-725c468fbf9f-column-1",
+        "template--16869722980605__0647c1fa-750e-40fb-869b-725c468fbf9f-column-2",
+        "template--16869722980605__0647c1fa-750e-40fb-869b-725c468fbf9f-column-3"
+      ],
+      "settings": {
+        "background-color": "#FFF7E8",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "content_width_desktop": "lg:w-2\/3",
+        "extra_wide": false,
+        "slideshow_on_mobile": false,
+        "text_align": "text-center",
+        "title": "",
+        "crop": "",
+        "image_shape": "default",
+        "index_shape": "star_1"
+      }
     }
   },
   "order": [
@@ -728,6 +809,7 @@
     "68142f7f-f3c1-4b4a-8f90-cc9c23dc6d1a",
     "ff17cd22-c3ab-433f-bea8-68def1d0d075",
     "d519ca42-894c-4821-bd4e-05914fcc62dd",
-    "93f13fc7-9d5b-4b33-8957-e8fa8e7b8853"
+    "93f13fc7-9d5b-4b33-8957-e8fa8e7b8853",
+    "0647c1fa-750e-40fb-869b-725c468fbf9f"
   ]
 }
