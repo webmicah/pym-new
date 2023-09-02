@@ -134,8 +134,8 @@
         "heading_size": "heading-base",
         "heading_font": "font-heading",
         "rich_text": "<p>Without the side effects<\/p>",
-        "text_size": "text-lg",
-        "text_font": "font-main",
+        "text_size": "text-base",
+        "text_font": "font-heading",
         "content_width_desktop": "lg:w-2\/3",
         "button_link": "",
         "button_label": "Shop Now"
