@@ -3,10 +3,7 @@
   assign current_variant = product.selected_or_first_available_variant
 -%}
 
-{%- liquid
-  render 'product-template', section: section
-  assign current_variant = product.selected_or_first_available_variant
--%}
+{%- render 'product-template', section: section, product: product, is_feature: true -%}
 
 <script type="application/ld+json">
   {
