@@ -74,6 +74,10 @@ body#attention-chews .text-col-img ul.grid strong {
     text-align:center;
 }
 
+.product-content {
+    display: block;
+}
+
 .section-content.relative.z-10.section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-padding {
     max-width: 1600px;
 }
@@ -155,6 +159,18 @@ body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41
 
 
 @media (max-width:1024px){
+
+h2.font-heading.text-left {
+    font-size: 25px;
+}
+
+.rte.text-theme-basic.text-left {
+    font-size: 16px;
+}
+
+ul.attn-li {
+    font-size: 16px;
+}
 
 body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) p {
     max-width: 100%;
