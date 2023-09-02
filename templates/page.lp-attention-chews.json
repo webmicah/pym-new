@@ -591,129 +591,6 @@
         "button_label": "Shop Now"
       }
     },
-    "93f13fc7-9d5b-4b33-8957-e8fa8e7b8853": {
-      "type": "faq",
-      "blocks": {
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-1": {
-          "type": "question",
-          "settings": {
-            "question": "Are Attention Chews safe for children?",
-            "answer": "<p>Children under 14 years old are not recommended to take Attention Chews. Please consult with a healthcare professional about if Attention Chews are right for your child.<\/p>"
-          }
-        },
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-2": {
-          "type": "question",
-          "settings": {
-            "question": "When can I expect to see results?",
-            "answer": "<p>The effects of Attention Chews are generally felt within 30 min and last up to 5 hours.<\/p>"
-          }
-        },
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-4": {
-          "type": "question",
-          "settings": {
-            "question": "Why chews instead of capsules or powder?",
-            "answer": "<p>Chews are a more effective delivery system. <br\/><br\/>Better Bioavailability & Faster Absorption: Chewing stimulates digestion and begins the process of breaking down the nutrients, for faster absorption and better bioavailability.<br\/><br\/>Calming Effect - the simple act of chewing is calming and brings you back to the present moment. <\/p><p><br\/>More enjoyable & tasty - Chewing something delicious actually stimulates the release of dopamine AND motivates you to actually remember to take them!<\/p>"
-          }
-        },
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-5": {
-          "type": "question",
-          "settings": {
-            "question": "Do Attention Chews contain nootropics or adaptogens?",
-            "answer": "<p>Nootropics are cognitive enhancers; supplements that support healthy brain function to boost focus, concentration and attentiveness. The core ingredients in Attention Chews are amino acids, which are considered nootropics.<\/p><p>We specifically focused on amino acids because they are the building blocks of neurotransmitters like dopamine, and they have less side effects and contraindications than adaptogens.<\/p>"
-          }
-        },
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-6": {
-          "type": "question",
-          "settings": {
-            "question": "Who benefits from Attention Chews?",
-            "answer": "<p>Attention Chews are beneficial for anyone struggling with procrastination, concentration, memory and learning, and wants to enhance their focus and mental performance.<\/p><p>Students, older adults, athletes, creatives, entrepreneurs, office workers, or anyone looking to reach their full potential may benefit from taking Attention Chews!<\/p>"
-          }
-        },
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-7": {
-          "type": "question",
-          "settings": {
-            "question": "How are Attention Chews different from others?",
-            "answer": "<p>Most productivity supplements out there focus on adaptogens and caffeine, while Attention Chews were specifically formulated with amino acids. <\/p><p>Amino acids are naturally occurring molecules in our body that are essential for the production of neurotransmitters like dopamine. We need regulated levels of dopamine to feel motivated and focused. <\/p><p>Therefore, amino acids help boost motivation and focus without the side effects that can come with adaptogens or caffeine.<\/p>"
-          }
-        },
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-8": {
-          "type": "question",
-          "settings": {
-            "question": "Can I take Attention Chews every day?",
-            "answer": "<p>It is recommended to take Attention Chews up to 5 days in a row and to then take a break of two days. This is so your body doesn’t build up a tolerance to the ingredients and to avoid minor side effects.<\/p>"
-          }
-        },
-        "fb867ba9-b369-44f8-8f22-fd6bd40c827a": {
-          "type": "question",
-          "settings": {
-            "question": "Can I take more than one chew a day?",
-            "answer": "<p>Yes, but we recommend not taking more than 2-3 chews per day.<\/p>"
-          }
-        },
-        "1c3e8af3-14ce-47bd-95a0-02d56461cc42": {
-          "type": "question",
-          "settings": {
-            "question": "How many chews do I take and how many are there?",
-            "answer": "<p>It is recommended to take one or two chews at a time, and there are 20 chews per tin. This is a full month’s supply if you take 1 chew Monday through Friday and take breaks on the weekends.<\/p>"
-          }
-        },
-        "b6ea74ff-4ec2-4023-9325-f0c141b34223": {
-          "type": "question",
-          "settings": {
-            "question": "Are there any side effects?",
-            "answer": "<p>As Attention Chews are formulated with all-natural, safe and effective ingredients, side effects are minimal to none. If you take Attention Chews every day without a day or two of a break, you may experience some anxiousness.<\/p>"
-          }
-        },
-        "1df055ef-364f-41df-9d81-368f8b1c29e7": {
-          "type": "question",
-          "settings": {
-            "question": "Can I take Attention Chews with other supplements or prescription drugs?",
-            "answer": "<p>Attention Chews are considered safe to take with other supplements or prescription medications, but please speak with your healthcare provider to confirm. They pair very well with our other products!<\/p>"
-          }
-        },
-        "98d5b15a-5164-4b5b-bc9b-e5015c26f973": {
-          "type": "question",
-          "settings": {
-            "question": "Can I take Attention Chews while trying to conceive, pregnant or breastfeeding?",
-            "answer": "<p>Please consult with your physician about Attention Chews if you are trying to conceive, pregnant or breastfeeding.<\/p>"
-          }
-        },
-        "2d2192f5-501f-4e75-9ed1-ba1469e86f3e": {
-          "type": "question",
-          "settings": {
-            "question": "Can I subscribe to Attention Chews?",
-            "answer": "<p>Currently, subscription for Attention Chews is unavailable. Look out for an option to subscribe in the future! :)<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-1",
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-2",
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-4",
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-5",
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-6",
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-7",
-        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-8",
-        "fb867ba9-b369-44f8-8f22-fd6bd40c827a",
-        "1c3e8af3-14ce-47bd-95a0-02d56461cc42",
-        "b6ea74ff-4ec2-4023-9325-f0c141b34223",
-        "1df055ef-364f-41df-9d81-368f8b1c29e7",
-        "98d5b15a-5164-4b5b-bc9b-e5015c26f973",
-        "2d2192f5-501f-4e75-9ed1-ba1469e86f3e"
-      ],
-      "settings": {
-        "section_shift": "",
-        "padding_top": 70,
-        "padding_bottom": 70,
-        "heading_text_style": "body",
-        "uppercase": true,
-        "two_columns_desktop": false,
-        "title": "FREQUENTLY ASKED QUESTIONS",
-        "richtext": "",
-        "color_scheme": "primary",
-        "use_gradient_background": false
-      }
-    },
     "0647c1fa-750e-40fb-869b-725c468fbf9f": {
       "type": "lightbox-gallery",
       "blocks": {
@@ -914,10 +791,133 @@
         "extra_wide": true,
         "slideshow_on_mobile": false,
         "text_align": "text-left",
-        "title": "<p>Ingredients for Calm, <br\/>yet Focused Productivity<\/p>",
+        "title": "<p><strong>Ingredients for Calm, <br\/>yet Focused Productivity<\/strong><\/p>",
         "crop": "",
         "image_shape": "default",
         "index_shape": "star_1"
+      }
+    },
+    "93f13fc7-9d5b-4b33-8957-e8fa8e7b8853": {
+      "type": "faq",
+      "blocks": {
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-1": {
+          "type": "question",
+          "settings": {
+            "question": "Are Attention Chews safe for children?",
+            "answer": "<p>Children under 14 years old are not recommended to take Attention Chews. Please consult with a healthcare professional about if Attention Chews are right for your child.<\/p>"
+          }
+        },
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-2": {
+          "type": "question",
+          "settings": {
+            "question": "When can I expect to see results?",
+            "answer": "<p>The effects of Attention Chews are generally felt within 30 min and last up to 5 hours.<\/p>"
+          }
+        },
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-4": {
+          "type": "question",
+          "settings": {
+            "question": "Why chews instead of capsules or powder?",
+            "answer": "<p>Chews are a more effective delivery system. <br\/><br\/>Better Bioavailability & Faster Absorption: Chewing stimulates digestion and begins the process of breaking down the nutrients, for faster absorption and better bioavailability.<br\/><br\/>Calming Effect - the simple act of chewing is calming and brings you back to the present moment. <\/p><p><br\/>More enjoyable & tasty - Chewing something delicious actually stimulates the release of dopamine AND motivates you to actually remember to take them!<\/p>"
+          }
+        },
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-5": {
+          "type": "question",
+          "settings": {
+            "question": "Do Attention Chews contain nootropics or adaptogens?",
+            "answer": "<p>Nootropics are cognitive enhancers; supplements that support healthy brain function to boost focus, concentration and attentiveness. The core ingredients in Attention Chews are amino acids, which are considered nootropics.<\/p><p>We specifically focused on amino acids because they are the building blocks of neurotransmitters like dopamine, and they have less side effects and contraindications than adaptogens.<\/p>"
+          }
+        },
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-6": {
+          "type": "question",
+          "settings": {
+            "question": "Who benefits from Attention Chews?",
+            "answer": "<p>Attention Chews are beneficial for anyone struggling with procrastination, concentration, memory and learning, and wants to enhance their focus and mental performance.<\/p><p>Students, older adults, athletes, creatives, entrepreneurs, office workers, or anyone looking to reach their full potential may benefit from taking Attention Chews!<\/p>"
+          }
+        },
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-7": {
+          "type": "question",
+          "settings": {
+            "question": "How are Attention Chews different from others?",
+            "answer": "<p>Most productivity supplements out there focus on adaptogens and caffeine, while Attention Chews were specifically formulated with amino acids. <\/p><p>Amino acids are naturally occurring molecules in our body that are essential for the production of neurotransmitters like dopamine. We need regulated levels of dopamine to feel motivated and focused. <\/p><p>Therefore, amino acids help boost motivation and focus without the side effects that can come with adaptogens or caffeine.<\/p>"
+          }
+        },
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-8": {
+          "type": "question",
+          "settings": {
+            "question": "Can I take Attention Chews every day?",
+            "answer": "<p>It is recommended to take Attention Chews up to 5 days in a row and to then take a break of two days. This is so your body doesn’t build up a tolerance to the ingredients and to avoid minor side effects.<\/p>"
+          }
+        },
+        "fb867ba9-b369-44f8-8f22-fd6bd40c827a": {
+          "type": "question",
+          "settings": {
+            "question": "Can I take more than one chew a day?",
+            "answer": "<p>Yes, but we recommend not taking more than 2-3 chews per day.<\/p>"
+          }
+        },
+        "1c3e8af3-14ce-47bd-95a0-02d56461cc42": {
+          "type": "question",
+          "settings": {
+            "question": "How many chews do I take and how many are there?",
+            "answer": "<p>It is recommended to take one or two chews at a time, and there are 20 chews per tin. This is a full month’s supply if you take 1 chew Monday through Friday and take breaks on the weekends.<\/p>"
+          }
+        },
+        "b6ea74ff-4ec2-4023-9325-f0c141b34223": {
+          "type": "question",
+          "settings": {
+            "question": "Are there any side effects?",
+            "answer": "<p>As Attention Chews are formulated with all-natural, safe and effective ingredients, side effects are minimal to none. If you take Attention Chews every day without a day or two of a break, you may experience some anxiousness.<\/p>"
+          }
+        },
+        "1df055ef-364f-41df-9d81-368f8b1c29e7": {
+          "type": "question",
+          "settings": {
+            "question": "Can I take Attention Chews with other supplements or prescription drugs?",
+            "answer": "<p>Attention Chews are considered safe to take with other supplements or prescription medications, but please speak with your healthcare provider to confirm. They pair very well with our other products!<\/p>"
+          }
+        },
+        "98d5b15a-5164-4b5b-bc9b-e5015c26f973": {
+          "type": "question",
+          "settings": {
+            "question": "Can I take Attention Chews while trying to conceive, pregnant or breastfeeding?",
+            "answer": "<p>Please consult with your physician about Attention Chews if you are trying to conceive, pregnant or breastfeeding.<\/p>"
+          }
+        },
+        "2d2192f5-501f-4e75-9ed1-ba1469e86f3e": {
+          "type": "question",
+          "settings": {
+            "question": "Can I subscribe to Attention Chews?",
+            "answer": "<p>Currently, subscription for Attention Chews is unavailable. Look out for an option to subscribe in the future! :)<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-1",
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-2",
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-4",
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-5",
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-6",
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-7",
+        "template--16869619040509__93f13fc7-9d5b-4b33-8957-e8fa8e7b8853-question-8",
+        "fb867ba9-b369-44f8-8f22-fd6bd40c827a",
+        "1c3e8af3-14ce-47bd-95a0-02d56461cc42",
+        "b6ea74ff-4ec2-4023-9325-f0c141b34223",
+        "1df055ef-364f-41df-9d81-368f8b1c29e7",
+        "98d5b15a-5164-4b5b-bc9b-e5015c26f973",
+        "2d2192f5-501f-4e75-9ed1-ba1469e86f3e"
+      ],
+      "settings": {
+        "section_shift": "",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "heading_text_style": "body",
+        "uppercase": true,
+        "two_columns_desktop": false,
+        "title": "FREQUENTLY ASKED QUESTIONS",
+        "richtext": "",
+        "color_scheme": "primary",
+        "use_gradient_background": false
       }
     }
   },
@@ -934,7 +934,7 @@
     "68142f7f-f3c1-4b4a-8f90-cc9c23dc6d1a",
     "ff17cd22-c3ab-433f-bea8-68def1d0d075",
     "d519ca42-894c-4821-bd4e-05914fcc62dd",
-    "93f13fc7-9d5b-4b33-8957-e8fa8e7b8853",
-    "0647c1fa-750e-40fb-869b-725c468fbf9f"
+    "0647c1fa-750e-40fb-869b-725c468fbf9f",
+    "93f13fc7-9d5b-4b33-8957-e8fa8e7b8853"
   ]
 }
