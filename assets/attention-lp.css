@@ -78,6 +78,16 @@ body#attention-chews .text-col-img ul.grid strong {
 }
 
 
+body#attention-chews #shopify-section-template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8  .grid-cols-2 {
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    row-gap: 50px;
+}
+
+body#attention-chews #shopify-section-template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8 .media-style-container.media-no-shadow.default img {
+    width: 60px;
+    height: 60px;
+}
+
 
 .z-sticker#sticker-c0c54392-3c15-4250-b9e7-4d43d6feb57a {
     left: 81%;
