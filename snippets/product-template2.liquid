@@ -110,7 +110,7 @@
             </div>
           {% elsif product.media.size > 1 %}
             <div class="col-span-6">
-              <div class="grid grid-cols-5 lg:grid-cols-12 gap-5 relative">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 relative">
 
              
                 <div class="{% if section.settings.thumbnails_position == 'left' %}{% if section.settings.thumbnail_size == 'standard' %}col-span-2{% else %}col-span-3{% endif %}{% else %}col-span-full{% endif %} hidden lg:block">
@@ -136,7 +136,7 @@
                           :class="{ 'opacity-0' : firstVisible }"
                         ></div>
                   {%- endif -%}
-                      <ul class="w-full {% if section.settings.thumbnails_position == 'left' %}splide__list h-full{% else %}grid {% if section.settings.thumbnail_size == 'standard' %}grid-cols-5{% else %}grid-cols-4{% endif %} {% endif %} gap-2.5">
+                      <ul class="w-full {% if section.settings.thumbnails_position == 'left' %}splide__list h-full{% else %}grid {% if section.settings.thumbnail_size == 'standard' %}grid-cols-5{% else %}grid-cols-5{% endif %} {% endif %} gap-2.5">
                         {% comment %} theme-check-disable LiquidTag {% endcomment %}
                         {%- assign thumbnail_index = 0 -%}
                         {%- if featured_media != null -%}
