@@ -60,6 +60,25 @@ body#attention-chews .text-col-img ul.grid strong {
     text-align:center;
 }
 
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) img {
+    width: 40%;
+    margin: 100px auto auto auto;
+}
+
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) h2.font-heading
+    color: #575892;
+    text-align: center;
+    font-family: 'Creo Bold';
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 105.699%; 
+}
+
+
+
 @media (max-width:1024px){
 
 #shopify-section-template--16869722980605__ff17cd22-c3ab-433f-bea8-68def1d0d075 ul.grid li:first-child,
