@@ -24,15 +24,6 @@
             "text_align": "text-left"
           }
         },
-        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-variant_picker-1": {
-          "type": "variant_picker",
-          "settings": {
-            "display_on_card": false,
-            "option_style": "buttons",
-            "hide_option_labels": false,
-            "enable_color_swatches": false
-          }
-        },
         "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-buy_buttons-1": {
           "type": "buy_buttons",
           "settings": {
@@ -57,7 +48,6 @@
         "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-title-1",
         "60063fac-01c4-45af-8c7a-a60b7a234b14",
         "4a946270-3449-4b83-afb1-a78939056c0b",
-        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-variant_picker-1",
         "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-buy_buttons-1",
         "19b63198-008a-445f-a3fd-c6349c4a5bbd"
       ],
