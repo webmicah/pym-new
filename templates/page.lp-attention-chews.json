@@ -76,7 +76,7 @@
       "settings": {
         "background-color": "#FFF7E8",
         "padding_top": 50,
-        "padding_bottom": 30,
+        "padding_bottom": 0,
         "text_align": "text-center",
         "title": "Be you on a good day, every day",
         "heading_size": "heading-base",
@@ -111,10 +111,84 @@
       ],
       "settings": {
         "background-color": "#FFF7E8",
-        "padding_top": 70,
+        "padding_top": 0,
         "padding_bottom": 70,
         "content_width_desktop": "lg:w-2\/3",
         "extra_wide": false,
+        "slideshow_on_mobile": false,
+        "text_align": "text-center",
+        "title": "",
+        "crop": "",
+        "image_shape": "default",
+        "index_shape": "star_1"
+      }
+    },
+    "cca9ca76-293e-41a3-87d5-b36862d7d486": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Group_558.png",
+            "title": "",
+            "heading_size": "text-base",
+            "column-text-color": "#000000",
+            "title_uppercase": false,
+            "text": "",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Group_5_8b36dd69-ce33-46e9-a68a-c05f923b0c7d.png",
+            "title": " Food for thought",
+            "heading_size": "text-base",
+            "column-text-color": "#000000",
+            "title_uppercase": false,
+            "text": "<p>\"And that is to say when I take this little vitamin, my mind, as does your body after your finished eating, just functions better and that’s just what this is, brain food. Keeps your clarity and focus on point..didn’t realize I even lacked this drive, but now that I have it I won’t be lacking again! \"<br\/><strong>PYM THANK YOU FOR YOUR PRODUCT, I LOVE IT.<\/strong><\/p>",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-3": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Group_560_1_1.png",
+            "title": "",
+            "heading_size": "text-base",
+            "column-text-color": "#000000",
+            "title_uppercase": false,
+            "text": "",
+            "text_size": "text-base",
+            "text_font": "font-main",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-1",
+        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-2",
+        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-3"
+      ],
+      "settings": {
+        "background-color": "#FFF7E8",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "content_width_desktop": "lg:w-full",
+        "extra_wide": true,
         "slideshow_on_mobile": false,
         "text_align": "text-center",
         "title": "",
@@ -1005,80 +1079,6 @@
         "color_scheme": "primary",
         "use_gradient_background": false
       }
-    },
-    "cca9ca76-293e-41a3-87d5-b36862d7d486": {
-      "type": "text-columns-with-images",
-      "blocks": {
-        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-1": {
-          "type": "column",
-          "settings": {
-            "show_image": true,
-            "image": "shopify:\/\/shop_images\/Group_558.png",
-            "title": "",
-            "heading_size": "text-base",
-            "column-text-color": "#000000",
-            "title_uppercase": false,
-            "text": "",
-            "text_size": "text-base",
-            "text_font": "font-main",
-            "cta_link": "",
-            "cta_text": "",
-            "color_scheme": "same_as_section"
-          }
-        },
-        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-2": {
-          "type": "column",
-          "settings": {
-            "show_image": true,
-            "image": "shopify:\/\/shop_images\/Group_5_8b36dd69-ce33-46e9-a68a-c05f923b0c7d.png",
-            "title": " Food for thought",
-            "heading_size": "text-base",
-            "column-text-color": "#000000",
-            "title_uppercase": false,
-            "text": "<p>\"And that is to say when I take this little vitamin, my mind, as does your body after your finished eating, just functions better and that’s just what this is, brain food. Keeps your clarity and focus on point..didn’t realize I even lacked this drive, but now that I have it I won’t be lacking again! \"<br\/><strong>PYM THANK YOU FOR YOUR PRODUCT, I LOVE IT.<\/strong><\/p>",
-            "text_size": "text-base",
-            "text_font": "font-main",
-            "cta_link": "",
-            "cta_text": "",
-            "color_scheme": "same_as_section"
-          }
-        },
-        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-3": {
-          "type": "column",
-          "settings": {
-            "show_image": true,
-            "image": "shopify:\/\/shop_images\/Group_560_1_1.png",
-            "title": "",
-            "heading_size": "text-base",
-            "column-text-color": "#000000",
-            "title_uppercase": false,
-            "text": "",
-            "text_size": "text-base",
-            "text_font": "font-main",
-            "cta_link": "",
-            "cta_text": "",
-            "color_scheme": "same_as_section"
-          }
-        }
-      },
-      "block_order": [
-        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-1",
-        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-2",
-        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-3"
-      ],
-      "settings": {
-        "background-color": "#FFF7E8",
-        "padding_top": 70,
-        "padding_bottom": 70,
-        "content_width_desktop": "lg:w-full",
-        "extra_wide": true,
-        "slideshow_on_mobile": false,
-        "text_align": "text-center",
-        "title": "",
-        "crop": "",
-        "image_shape": "default",
-        "index_shape": "star_1"
-      }
     }
   },
   "order": [
@@ -1086,6 +1086,7 @@
     "main",
     "73c04252-d2ca-4247-a4d4-89b0ec0ef06b",
     "28f5e536-8b1b-4ccc-a4b0-8575ceefb456",
+    "cca9ca76-293e-41a3-87d5-b36862d7d486",
     "6063cf99-a37f-4493-aa3a-6dd18b3eb92e",
     "41b938c6-8f56-4006-a33e-1f67ad92998e",
     "d0705ec0-5e83-4f53-88be-a0820869d5e8",
@@ -1097,7 +1098,6 @@
     "d519ca42-894c-4821-bd4e-05914fcc62dd",
     "cf3747ae-2e8f-44d7-b47b-a367376be2ee",
     "0647c1fa-750e-40fb-869b-725c468fbf9f",
-    "93f13fc7-9d5b-4b33-8957-e8fa8e7b8853",
-    "cca9ca76-293e-41a3-87d5-b36862d7d486"
+    "93f13fc7-9d5b-4b33-8957-e8fa8e7b8853"
   ]
 }
