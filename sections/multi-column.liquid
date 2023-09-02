@@ -157,6 +157,16 @@
   {%- liquid
     for block in section.blocks
       case block.type
+        when 'image-multicolumn'
+          <img src="{{ blocks.image_multicolumn | img_url:'master'}}">
+       
+      endcase
+    endfor
+  -%}
+
+  {%- liquid
+    for block in section.blocks
+      case block.type
         when 'background_shape'
           render 'block-background-shape' with block: block, section: section
         when 'background_pattern'
