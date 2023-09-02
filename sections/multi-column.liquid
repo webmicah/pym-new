@@ -154,15 +154,7 @@
     </div>  
   </div>  
 
-  {%- liquid
-    for block in section.blocks
-      case block.type
-        when 'image-multicolumn'
-          <img src="{{ blocks.image_multicolumn | img_url:'master'}}">
-       
-      endcase
-    endfor
-  -%}
+  
 
   {%- liquid
     for block in section.blocks
