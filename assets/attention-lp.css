@@ -78,6 +78,21 @@ body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41
 }
 
 
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) p {
+    color: #000;
+    text-align: center;
+    font-family: Creo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6em;
+    max-width: 80%;
+    text-align: center;
+    display: block !important;
+    margin: auto;
+}
+
+
 
 @media (max-width:1024px){
 
