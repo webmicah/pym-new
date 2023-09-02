@@ -833,7 +833,7 @@
         "12ce4f3e-8d8f-4fd6-8d24-2e92f43541a0"
       ],
       "custom_css": [
-        "h2.text-center.font-heading.heading-effects.heading-base.heading-style.break-words.none {color: #dd6859; font-family: \"Creo Bold\"; font-size: 50px; font-style: normal; font-weight: 800; line-height: 130.699%; text-align: left; margin-bottom: 100px;}"
+        ".section-lightbox-gallery {--section-x-padding: 0px;}"
       ],
       "settings": {
         "background-color": "#FFF7E8",
