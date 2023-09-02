@@ -66,6 +66,16 @@ body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41
     margin: 100px auto auto auto;
 }
 
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2)  {
+    display: table;
+}
+
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2)  .text-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 
 body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) h2.font-heading{
     color: #575892!important;
@@ -75,6 +85,7 @@ body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41
     font-style: normal;
     font-weight: 800;
     line-height: 105.699%; 
+    margin-bottom: 50px;
 }
 
 
