@@ -41,6 +41,15 @@
             "enable_payment_button": true,
             "show_pickup_availability": true
           }
+        },
+        "19b63198-008a-445f-a3fd-c6349c4a5bbd": {
+          "type": "popup",
+          "settings": {
+            "display_on_card": false,
+            "icon": "none",
+            "text": "Supplements Facts",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -48,7 +57,8 @@
         "60063fac-01c4-45af-8c7a-a60b7a234b14",
         "4a946270-3449-4b83-afb1-a78939056c0b",
         "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-variant_picker-1",
-        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-buy_buttons-1"
+        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-buy_buttons-1",
+        "19b63198-008a-445f-a3fd-c6349c4a5bbd"
       ],
       "settings": {
         "title": "",
