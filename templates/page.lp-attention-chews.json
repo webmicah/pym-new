@@ -24,7 +24,7 @@
             "text_align": "text-left"
           }
         },
-        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-variant_picker-1": {
+        "f13d3533-9a3a-4280-9167-0da504323df3": {
           "type": "variant_picker",
           "settings": {
             "display_on_card": false,
@@ -41,14 +41,25 @@
             "enable_payment_button": true,
             "show_pickup_availability": true
           }
+        },
+        "19b63198-008a-445f-a3fd-c6349c4a5bbd": {
+          "type": "popup",
+          "settings": {
+            "display_on_card": false,
+            "icon": "none",
+            "text": "Supplements Facts",
+            "page": "",
+            "popup_image": "shopify:\/\/shop_images\/MoodMagnesium2_600x600_0cacc6e0-4ff7-4493-ab9a-93dce993203d.webp"
+          }
         }
       },
       "block_order": [
         "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-title-1",
         "60063fac-01c4-45af-8c7a-a60b7a234b14",
         "4a946270-3449-4b83-afb1-a78939056c0b",
-        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-variant_picker-1",
-        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-buy_buttons-1"
+        "f13d3533-9a3a-4280-9167-0da504323df3",
+        "template--16869722980605__df3cc9fc-03dd-4f71-9f61-96339351d368-buy_buttons-1",
+        "19b63198-008a-445f-a3fd-c6349c4a5bbd"
       ],
       "settings": {
         "title": "",

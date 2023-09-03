@@ -1,7 +1,7 @@
 h2.font-heading.text-left {
     color: #000;
     font-family: 'Creo Bold';
-    font-size: 40px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 800;
     line-height: 105.699%;
@@ -43,7 +43,21 @@ legend.block.font-secondary {
 }
 
 ul.attn-li {
-    font-size: 14px;
+    font-family: Creo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 30px;
+}
+
+
+.rte.text-theme-basic.text-left {
+    color: #000;
+    font-family: Creo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
 }
 
 
@@ -58,6 +72,10 @@ body#attention-chews .text-col-img ul.grid strong {
     display: block;
     margin: auto;
     text-align:center;
+}
+
+.product-content {
+    display: block;
 }
 
 .section-content.relative.z-10.section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-padding {
@@ -119,8 +137,40 @@ body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41
 }
 
 
+.product-block li:before {
+    content: '';
+    background-image: url(https://cdn.shopify.com/s/files/1/0331/2094/4263/files/Vector_12.png?v=1693673962);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 8px;
+    width: 50px;
+    height: 20px;
+    background-position: center;
+    margin-right: 10px;
+}
+
+
+.product-block li {
+    list-style: none;
+    text-indent: -30px;
+    margin-left: 15px;
+}
+
+
 
 @media (max-width:1024px){
+
+h2.font-heading.text-left {
+    font-size: 25px;
+}
+
+.rte.text-theme-basic.text-left {
+    font-size: 16px;
+}
+
+ul.attn-li {
+    font-size: 16px;
+}
 
 body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) p {
     max-width: 100%;

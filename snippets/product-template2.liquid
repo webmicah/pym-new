@@ -112,7 +112,7 @@
             <div class="col-span-6">
               <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 relative">
 
-                {% unless is_feature %}
+             
                 <div class="{% if section.settings.thumbnails_position == 'left' %}{% if section.settings.thumbnail_size == 'standard' %}col-span-2{% else %}col-span-3{% endif %}{% else %}col-span-full{% endif %} hidden lg:block">
                   
                   {%- assign thumbnails_id = 'thumbnails-' | append: section.id -%}
@@ -136,7 +136,7 @@
                           :class="{ 'opacity-0' : firstVisible }"
                         ></div>
                   {%- endif -%}
-                      <ul class="w-full {% if section.settings.thumbnails_position == 'left' %}splide__list h-full{% else %}grid {% if section.settings.thumbnail_size == 'standard' %}grid-cols-5{% else %}grid-cols-4{% endif %} {% endif %} gap-2.5">
+                      <ul class="w-full {% if section.settings.thumbnails_position == 'left' %}splide__list h-full{% else %}grid {% if section.settings.thumbnail_size == 'standard' %}grid-cols-5{% else %}grid-cols-5{% endif %} {% endif %} gap-2.5">
                         {% comment %} theme-check-disable LiquidTag {% endcomment %}
                         {%- assign thumbnail_index = 0 -%}
                         {%- if featured_media != null -%}
@@ -174,7 +174,7 @@
                   </div>
                   {%- endif -%}
                 </div>
-                {%- endunless -%}
+      
 
                 <div class="{% if section.settings.thumbnails_position == 'left' %}{% if section.settings.thumbnail_size == 'standard' %}lg:col-span-10 lg:col-start-3{% else %}lg:col-span-9 lg:col-start-4{% endif %}{% else %}row-start-1  col-span-full{% endif %} min-w-[0]">
                   <div
