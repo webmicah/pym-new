@@ -12,9 +12,16 @@
     color: #fff;
     height: 56px;
 }
+.add-to-cart-btn .push-btn-surface {
+    background-color: transparent;
+    color: #fff;
+}
 .add-to-cart-btn.cursor-not-allowed {
     background-color: transparent;
     color: #000;
+}
+.add-to-cart-btn.push-btn:after {
+  content: none;
 }
 @media (min-width: 990px){
   .product-thumbnail-list-item img.media-style {
