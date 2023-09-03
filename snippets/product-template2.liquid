@@ -113,7 +113,7 @@
               <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 relative">
 
              
-                <div class="{% if section.settings.thumbnails_position == 'left' %}{% if section.settings.thumbnail_size == 'standard' %}col-span-2{% else %}col-span-3{% endif %}{% else %}col-span-full{% endif %} hidden lg:block">
+                <div class="{% if section.settings.thumbnails_position == 'left' %}{% if section.settings.thumbnail_size == 'standard' %}col-span-2{% else %}col-span-3{% endif %}{% else %}col-span-full{% endif %} block lg:px-0 px-5 py-4">
                   
                   {%- assign thumbnails_id = 'thumbnails-' | append: section.id -%}
                   {%- render 'collection-shape-defs',
