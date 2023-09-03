@@ -11,7 +11,7 @@
     }
   }
 {%- endstyle -%}
-
+{{ 'section-lightbox-gallery.css' | asset_url | stylesheet_tag }}
 {%- liquid
   assign block_heading_level = 'h2'
   assign columns = section.blocks | where: "type", "column"
@@ -41,7 +41,7 @@
 {%- render 'static-sticker-defs' with shape: section.settings.index_shape, id: index_id -%}
 <section class="relative text-scheme-text bg-scheme-background relative overflow-hidden" style="background-color: {{ section.settings.background-color }}" >
 
-  <div class="section-content relative z-10 section-{{ section.id }}-padding mx-auto {{ section.settings.content_width_desktop }} {% if section.settings.extra_wide %}lg:max-w-site {% else %}lg:max-w-4xl {% endif %}{% if slideshow_on_mobile %}lg:px-section lg:max-w-site lg:mx-auto{% else %}px-section{% endif %}">
+  <div class="section-lightbox-gallery section-content relative z-10 section-{{ section.id }}-padding mx-auto {{ section.settings.content_width_desktop }} {% if section.settings.extra_wide %}lg:max-w-site {% else %}lg:max-w-4xl {% endif %}{% if slideshow_on_mobile %}lg:px-section lg:max-w-site lg:mx-auto{% else %}px-section{% endif %}">
     {% if section.settings.title != '' %}
     {%- assign block_heading_level = 'h3' -%}
     <h2 class="text-center font-heading heading-effects heading-base heading-style break-words {{ settings.heading_drop_shadow_style }}">{{ section.settings.title }}</h2>
@@ -49,10 +49,26 @@
 
     <div {% if slideshow_on_mobile %}id="slideshow-{{ section.id }}"{% endif %} class="{% if slideshow_on_mobile %}splide{% endif %}  {% if section.settings.title != '' %}section-content-top-margin{% endif %}">
       <div class="{% if slideshow_on_mobile %}splide__track {% if section.settings.display_on_card %}{% if settings.card_shadow_direction contains 'top' %}pt-card-shadow{% else %}pb-card-shadow{% endif %}{% endif %}{% endif %}">
-        <ul class="{% if slideshow_on_mobile %}splide__list{% endif %} {% if section.settings.title != '' %}section-content-top-margin{% endif %} {% if slideshow_on_mobile %}lg:grid lg:gap-10{% else %}grid grid-cols-2 gap-5{% endif %} lg:grid-cols-12 ">
+        <ul class="lbox {% if slideshow_on_mobile %}splide__list{% endif %} {% if section.settings.title != '' %}section-content-top-margin{% endif %} {% if slideshow_on_mobile %}lg:grid lg:gap-10{% else %}grid grid-cols md:grid-cols-2 gap-5{% endif %} lg:grid-cols-3">
           {% for block in columns %}
-            <li class="{% if slideshow_on_mobile %}splide__slide w-full lg:w-full{% endif %} relative {{ col_span }}" {% unless block.settings.color_scheme == 'same_as_section' %}data-color-scheme="{{ block.settings.color_scheme }}"{% endunless %} {{ block.shopify_attributes }}>
-              <div class="{{ section.settings.text_align }}">
+            <li class="lbox__card {% if slideshow_on_mobile %}splide__slide w-full lg:w-full{% endif %} relative" {% unless block.settings.color_scheme == 'same_as_section' %}data-color-scheme="{{ block.settings.color_scheme }}"{% endunless %} {{ block.shopify_attributes }}>
+              <div class="{{ section.settings.text_align }} max-w-[480px] mx-auto flex justify-between">
+                <div class="w-3/5 py-5 pl-5 flex flex-col justify-between">
+                  <div>
+                    {% if block.settings.title != '' %}
+                      <{{ block_heading_level }} class="lbox__heading font-heading {{ block.settings.heading_size }} {% if block.settings.title_uppercase %}uppercase {% endif %}break-words" style="color: {{ block.settings.column-heading-color }}">{{ block.settings.title }}</{{ block_heading_level }}>
+                    {% endif %}
+                    <div class="lbox__text {{ block.settings.text_size }} {{ block.settings.text_font }} rte {% if block.settings.title != '' %}mt-1{% endif %}" style="color: {{ block.settings.column-text-color }}">{{ block.settings.text }}</div>
+                    {% if block.settings.cta_link %}
+                    <div class="mt-5 relative z-10">
+                    <a href="{{ block.settings.cta_link }}" class="inline-block push-btn">
+                        <span class="push-btn-surface">{{ block.settings.cta_text }}</span>
+                    </a>
+                    </div>
+                    {% endif %}
+                  </div>
+                  <button class="modal__btn" data-fancybox data-src="#modalContent" data-body="{{forloop.index}}">{% render 'icon-plus' %}</button>
+                </div>
                 {%- if block.settings.show_image -%}
                   {%- liquid
                     assign shape_id = section.id
@@ -61,7 +77,7 @@
                     endif
                   -%}
                   {%- if block.settings.image != blank -%}
-                  <div class="relative mb-5 {% if settings.media_shadow_direction contains 'top' %}pt-media-shadow{% else %}pb-media-shadow{% endif %}">
+                  <div class="relative w-1/3 {% if settings.media_shadow_direction contains 'top' %}pt-media-shadow{% else %}pb-media-shadow{% endif %}">
                     {%- render 'media-image',
                         media: block.settings.image,
                         shape_id: shape_id,
@@ -69,6 +85,7 @@
                         is_card: section.settings.display_on_card,
                         crop: crop,
                         index: forloop.index0 
+                        media_class: ""
                     %}
                   </div>
                   {%- else -%}
@@ -79,17 +96,6 @@
                   </div>
                   {%- endif -%}
                 {%- endif -%}
-                {% if block.settings.title != '' %}
-                <{{ block_heading_level }} class="font-heading {{ block.settings.heading_size }} {% if block.settings.title_uppercase %}uppercase {% endif %}break-words" style="color: {{ block.settings.column-text-color }}">{{ block.settings.title }}</{{ block_heading_level }}>
-                {% endif %}
-                <div class="{{ block.settings.text_size }} {{ block.settings.text_font }} rte {% if block.settings.title != '' %}mt-2.5{% endif %}">{{ block.settings.text }}</div>
-                {% if block.settings.cta_link %}
-                <div class="mt-5 relative z-10">
-                  <a href="{{ block.settings.cta_link }}" class="inline-block push-btn">
-                    <span class="push-btn-surface">{{ block.settings.cta_text }}</span>
-                  </a>
-                </div>
-                {% endif %}
               </div>
               {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}<div class="card-border"></div>{% endif %}
               {%- if section.settings.show_index_on_blocks -%}
@@ -114,6 +120,10 @@
             </li>
           {% endfor %}
         </ul>
+        <div class="lbox__see-all border-t-1 mt-8 pt-2 flex justify-center">
+          <span class="mr-2">See all {{ columns.size }}</span> 
+          {% render 'icon-arrow-down' %}
+        </div>
       </div>
       {%- if slideshow_on_mobile -%}
       <div class="splide__arrows flex justify-between items-center mt-5 px-section lg:hidden">
@@ -158,6 +168,11 @@
       endcase
     endfor
   -%}
+  <div id="modalContent" style="display:none;max-width:700px;">
+    <h2 class="modal__title pb-4"></h2>
+    <div class="modal__desc lg:p-8 p-5"></div>
+  </div>
+   
 </section>
 
 {%- liquid
@@ -177,11 +192,43 @@
 {% endunless %}
 {{ 'modules-slideshow.bundle.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+<script>
+  const columns_data = [];
+  {% for block in columns %}
+    columns_data.push(
+      {
+        title: "{{ block.settings.modal_title }}",
+        description: "{{ block.settings.modal_body }}"
+      }
+    )
+  {% endfor %}
+  document.addEventListener("DOMContentLoaded", ()=>{
+    Fancybox.bind("[data-fancybox]", {
+      // Your custom options
+    });
+    const modal__btns = document.querySelectorAll('.modal__btn');
+    modal__btns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        //e.preventDefault();
+        console.log(`modal__btn clicked`);
+        let data_idx = parseInt(e.currentTarget.getAttribute('data-body')) - 1;
+        document.querySelector('.modal__title').innerHTML = columns_data[data_idx]['title'];
+        document.querySelector('.modal__desc').innerHTML = columns_data[data_idx]['description'];
+      });
+    });
+    document.querySelector('.lbox__see-all').addEventListener('click', function(e) {
+      document.querySelector('.lbox').classList.add('lbox__show-all');
+      document.querySelector('.lbox__see-all').style.display = 'none';
+    });
+  });
+  
+</script>
 
 {% schema %}
 {
-  "name": "Text columns with images",
-  "class":"text-col-img",
+  "name": "Lightbox Gallery",
   "settings": [
     {
           "type": "select",
@@ -255,11 +302,7 @@
             {
               "value": "#F8DF8D",
               "label": "Flavescent"
-            },
-             {
-              "value": "#DA6655",
-              "label": "Pastel Red"
-            }
+            }            
           ],
         "default": "#FFF7E8"
     },
@@ -344,7 +387,7 @@
       ]
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "title",
       "label": "Heading"
     },
@@ -492,7 +535,6 @@
     {
       "type": "column",
       "name": "Column",
-      "limit": 8,
       "settings": [
         {
           "type": "checkbox",
@@ -544,12 +586,12 @@
           "label": "Template"
         }
           ],
-          "default": "text-base"
+          "default": "text-lg"
         },
         {
           "type": "select",
-          "id": "column-text-color",
-          "label": "Text Color",
+          "id": "column-heading-color",
+          "label": "Heading Color",
           "options": [
             {
               "value": "#000000",
@@ -618,9 +660,17 @@
             {
               "value": "#F8DF8D",
               "label": "Flavescent"
+            },
+            {
+              "value": "#575892",
+              "label": "Twighlight"
+            },
+            {
+              "value": "#9A89A9",
+              "label": "Dusty Lavender"
             }
           ],
-      "default": "#000000"
+      "default": "#575892"
     },
         {
           "type": "checkbox",
@@ -632,6 +682,90 @@
           "id": "text",
           "label": "Text"
         },
+        {
+            "type": "select",
+            "id": "column-text-color",
+            "label": "Text Color",
+            "options": [
+              {
+                "value": "#000000",
+                "label": "Black"
+              },
+              {
+                "value": "#FFF7E8",
+                "label": "Cosmic Latte"
+              },
+              {
+                "value": "#F1D09F",
+                "label": "Peach"
+              },
+              {
+                "value": "#DEA46E",
+                "label": "Peru"
+              },
+              {
+                "value": "#FFC56D",
+                "label": "Topaz"
+              },
+              {
+                "value": "#C5D9E7",
+                "label": "Columbia Blue"
+              },
+              {
+                "value": "#7BADD3",
+                "label": "Iceberg"
+              },
+              {
+                "value": "#C0CA80",
+                "label": "Sage"
+              },
+              {
+                "value": "#A1A468",
+                "label": "Olivine"
+              },
+              {
+                "value": "#638C1C",
+                "label": "Olive"
+              },
+              {
+                "value": "#999A32",
+                "label": "Pistachio"
+              },
+              {
+                "value": "#AE5D57",
+                "label": "Matrix"
+              },
+              {
+                "value": "#E99182",
+                "label": "Dark Salmon"
+              },
+              {
+                "value": "#F9B7AC",
+                "label": "Sundown"
+              },
+              {
+                "value": "#FFC844",
+                "label": "Sun Burst"
+              },
+              {
+                "value": "#FDDA64",
+                "label": "Pale Gold"
+              },
+              {
+                "value": "#F8DF8D",
+                "label": "Flavescent"
+              },
+              {
+                "value": "#575892",
+                "label": "Twighlight"
+              },
+              {
+                "value": "#9A89A9",
+                "label": "Dusty Lavender"
+              }
+            ],
+        "default": "#9A89A9"
+      },
         {
       "type": "select",
       "id": "text_size",
@@ -701,6 +835,20 @@
           "type": "text",
           "id": "cta_text",
           "label": "Text"
+        },
+        {
+          "type": "header",
+          "content": "Modal Content"
+        },
+        {
+          "type": "richtext",
+          "id": "modal_title",
+          "label": "Modal title"
+        },
+        {
+          "type": "richtext",
+          "id": "modal_body",
+          "label": "Modal body"
         },
         {
           "type": "header",
@@ -1121,7 +1269,7 @@
   ],
   "presets": [
     {
-      "name": "Text columns with images",
+      "name": "Lightbox Gallery",
       "blocks": [
         {
           "type": "column"

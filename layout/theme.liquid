@@ -128,9 +128,21 @@
           font-family: "Creo Bold";
           src: url({{ "https://cdn.shopify.com/s/files/1/0331/2094/4263/files/Wahyu_and_Sani_Co._-_Creo_Bold.ttf" }}) format("truetype");
         }
+        
+        @font-face {
+          font-family: "Creo Bold";
+          src: url({{ "https://cdn.shopify.com/s/files/1/0331/2094/4263/files/Creo-ExtraBold.ttf?v=1693639147" }}) format("truetype");
+          font-weight: 800;
+        }
+        
         @font-face {
           font-family: "Creo Light";
           src: url({{ "https://cdn.shopify.com/s/files/1/0331/2094/4263/files/Wahyu_and_Sani_Co._-_Creo_Medium.ttf" }}) format("truetype");
+        }
+
+         @font-face {
+          font-family: "Creo ExtraLight";
+          src: url({{ "https://cdn.shopify.com/s/files/1/0331/2094/4263/files/Creo-ExtraLight.ttf?v=1693466984" }}) format("truetype");
         }
         @font-face {
           font-family: "Auger Light";
@@ -230,7 +242,7 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
 
 </head>
   
-    <body data-color-scheme="primary">
+    <body data-color-scheme="primary" id="{{page.handle}}">
       {% comment %}theme-check-disable MissingTemplate{% endcomment %}
       <a class="skip-link" href="#MainContent">{{ "general.accessibility.skip_to_content" | t }}</a>
        {% liquid

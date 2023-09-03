@@ -1,0 +1,192 @@
+h2.font-heading.text-left {
+    color: #000;
+    font-family: 'Creo Bold';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 105.699%;
+    text-transform: uppercase;
+}
+
+
+.okeReviews .okeReviews-ratingsBadge--small .okeReviews-ratingsBadge-holder {
+    background-color: transparent;
+    border: 0px;
+    display: flex;
+}
+
+
+span.okeReviews-ratingsBadge-reviewCount {
+    margin-left: 5px;
+}
+
+.okeReviews-lazyPoweredBy.is-okeReviews-lazyLoaded {
+    display: none !important;
+}
+
+legend.block.font-secondary {
+    color: #000;
+    font-family: Creo;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 141.199%; /* 31.064px */
+}
+
+
+.shopify-payment-button__more-options[disabled] {
+    display: none;
+}
+
+.shopify-payment-button {
+    display: none !important;
+}
+
+ul.attn-li {
+    font-size: 14px;
+}
+
+
+body#attention-chews .text-col-img ul.grid strong {
+    color: #fff;
+    font-family: Creo Bold;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 105.699%;
+    max-width: 60%;
+    display: block;
+    margin: auto;
+    text-align:center;
+}
+
+.section-content.relative.z-10.section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-padding {
+    max-width: 1600px;
+}
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) img {
+    width: 40%;
+    margin: auto auto auto auto;
+}
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2)  {
+    display: table;
+}
+
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2)  .text-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) h2.font-heading{
+    color: #575892!important;
+    text-align: center;
+    font-family: 'Creo Bold';
+    font-size: 28px !important;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 105.699%; 
+    margin-bottom: 50px;
+}
+
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) p {
+    color: #000;
+    text-align: center;
+    font-family: Creo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6em;
+    max-width: 90%;
+    text-align: center;
+    display: block !important;
+    margin: auto;
+}
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) p strong {
+    color: #575892;
+    text-align: center;
+    font-family: Creo Bold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    max-width: 100%;
+    line-height: 1.2em;
+    margin-top: 15px;
+}
+
+
+
+@media (max-width:1024px){
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) p {
+    max-width: 100%;
+}
+
+body#attention-chews div#shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 ul.grid {
+    display: block;
+}
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(1) {
+    display: none;
+}
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) img {
+    width: 30%;
+    margin: 10px auto auto auto;
+}
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) h2.font-heading {
+    font-size: 18px!important;
+    margin-bottom: 20px;
+}
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) p {
+    font-size: 14px;
+}
+
+body#attention-chews #shopify-section-template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486 li:nth-child(2) p strong {
+    display: none;
+}
+
+#shopify-section-template--16869722980605__ff17cd22-c3ab-433f-bea8-68def1d0d075 ul.grid li:first-child,
+#shopify-section-template--16869722980605__ff17cd22-c3ab-433f-bea8-68def1d0d075 ul.grid li:last-child  {
+    display: none;
+}
+
+body#attention-chews #shopify-section-template--16869722980605__ff17cd22-c3ab-433f-bea8-68def1d0d075 .media-style-container.media-no-shadow.default img {
+    width: 30px;
+    height: 30px;
+}
+
+body#attention-chews .text-col-img ul.grid strong {
+    font-size: 12px;
+    max-width: 100%;
+}
+
+body#attention-chews #shopify-section-template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8  .grid-cols-2,
+body#attention-chews #shopify-section-template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783  .grid-cols-2 {
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    row-gap: 50px;
+}
+
+body#attention-chews #shopify-section-template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8 .media-style-container.media-no-shadow.default img,
+body#attention-chews #shopify-section-template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783 .media-style-container.media-no-shadow.default img{
+    width: 60px;
+    height: 60px;
+}
+
+body#attention-chews  #shopify-section-template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8 p,
+body#attention-chews  #shopify-section-template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783 p  {
+    font-size: 16px;
+}
+
+.z-sticker#sticker-c0c54392-3c15-4250-b9e7-4d43d6feb57a {
+    left: 81%;
+}
+
+
+}
