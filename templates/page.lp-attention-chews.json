@@ -37,7 +37,7 @@
           "type": "buy_buttons",
           "settings": {
             "display_on_card": false,
-            "show_price": false,
+            "show_price": true,
             "enable_payment_button": true,
             "show_pickup_availability": true
           }
