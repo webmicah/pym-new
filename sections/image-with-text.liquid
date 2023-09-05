@@ -13,7 +13,7 @@
 {%- endstyle -%}
 
 
-<section class="text-scheme-text bg-scheme-background relative overflow-hidden" style="background-color: {{ section.settings.background-color }}">
+<section class="{{ section.settings.class_section }} text-scheme-text bg-scheme-background relative overflow-hidden" style="background-color: {{ section.settings.background-color }}">
   
   <div class="section-content relative z-10 section-{{ section.id }}-padding">
   {%- render 'image-with-text',
@@ -67,6 +67,11 @@
 {
   "name": "Image with text",
   "settings": [
+      {
+          "type": "text",
+          "id": "class_section",
+          "label": "Custom class"
+     },
     {
           "type": "select",
           "id": "background-color",
