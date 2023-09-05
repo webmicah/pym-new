@@ -178,9 +178,11 @@
 {%- liquid
   assign stickers = section.blocks | where: "type", "sticker" 
   assign shape_dividers = section.blocks | where: "type", "shape_divider" 
-  for sticker in stickers
-    render 'block-sticker' with block: sticker, section: section
-  endfor
+-%}
+{% for sticker in stickers %}
+  <div class="lbox_sticker_{{ forloop.index }}">{% render 'block-sticker' with block: sticker, section: section %}</div>
+{% endfor %}
+{%- liquid
   for shape_divider in shape_dividers
     render 'block-shape-divider' with block: shape_divider, section: section
   endfor

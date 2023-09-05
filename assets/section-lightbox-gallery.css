@@ -105,4 +105,11 @@ img.media-style{
         height: 12px;
         width: 12px;
     }
+    .lbox_sticker_1 .z-sticker {
+        top: 5% !important;
+        left: 70% !important;
+    }
+    .lbox_sticker_1 .z-sticker img {
+        width: 140px !important;
+    }
 }
