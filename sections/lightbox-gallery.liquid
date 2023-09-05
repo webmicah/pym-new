@@ -49,7 +49,7 @@
 
     <div {% if slideshow_on_mobile %}id="slideshow-{{ section.id }}"{% endif %} class="{% if slideshow_on_mobile %}splide{% endif %}  {% if section.settings.title != '' %}section-content-top-margin{% endif %}">
       <div class="{% if slideshow_on_mobile %}splide__track {% if section.settings.display_on_card %}{% if settings.card_shadow_direction contains 'top' %}pt-card-shadow{% else %}pb-card-shadow{% endif %}{% endif %}{% endif %}">
-        <ul class="lbox {% if slideshow_on_mobile %}splide__list{% endif %} {% if section.settings.title != '' %}section-content-top-margin{% endif %} {% if slideshow_on_mobile %}lg:grid lg:gap-10{% else %}grid grid-cols md:grid-cols-2 gap-5{% endif %} lg:grid-cols-3">
+        <ul class="lbox {% if slideshow_on_mobile %}splide__list{% endif %} mt-10 {% if slideshow_on_mobile %}lg:grid lg:gap-10{% else %}grid grid-cols md:grid-cols-2 gap-5{% endif %} lg:grid-cols-3">
           {% for block in columns %}
             <li class="lbox__card {% if slideshow_on_mobile %}splide__slide w-full lg:w-full{% endif %} relative" {% unless block.settings.color_scheme == 'same_as_section' %}data-color-scheme="{{ block.settings.color_scheme }}"{% endunless %} {{ block.shopify_attributes }}>
               <div class="{{ section.settings.text_align }} max-w-[480px] mx-auto flex justify-between">
@@ -204,6 +204,8 @@
       }
     )
   {% endfor %}
+  const l_box = document.querySelector('.lbox');
+  const columns_size = {{ columns.size }};
   document.addEventListener("DOMContentLoaded", ()=>{
     Fancybox.bind("[data-fancybox]", {
       // Your custom options
@@ -211,16 +213,22 @@
     const modal__btns = document.querySelectorAll('.modal__btn');
     modal__btns.forEach(btn => {
       btn.addEventListener('click', function(e) {
-        //e.preventDefault();
-        console.log(`modal__btn clicked`);
         let data_idx = parseInt(e.currentTarget.getAttribute('data-body')) - 1;
         document.querySelector('.modal__title').innerHTML = columns_data[data_idx]['title'];
         document.querySelector('.modal__desc').innerHTML = columns_data[data_idx]['description'];
       });
     });
     document.querySelector('.lbox__see-all').addEventListener('click', function(e) {
-      document.querySelector('.lbox').classList.add('lbox__show-all');
-      document.querySelector('.lbox__see-all').style.display = 'none';
+      if(!l_box.classList.contains('lbox__show-all')){
+        l_box.classList.add('lbox__show-all');
+        document.querySelector('.lbox__see-all > span').innerText = 'See less';
+        document.querySelector('.lbox__see-all > svg').style.transform='rotate(180deg)'
+      }
+      else {
+        l_box.classList.remove('lbox__show-all');
+        document.querySelector('.lbox__see-all > span').innerText = `See all ${columns_size}`;
+        document.querySelector('.lbox__see-all > svg').style.transform='rotate(0deg)'
+      }
     });
   });
   
