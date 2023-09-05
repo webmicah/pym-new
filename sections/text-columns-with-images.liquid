@@ -39,7 +39,7 @@
 -%}
 
 {%- render 'static-sticker-defs' with shape: section.settings.index_shape, id: index_id -%}
-<section class="relative text-scheme-text bg-scheme-background relative overflow-hidden" style="background-color: {{ section.settings.background-color }}" >
+<section class="{{ section.settings.class_section }} relative text-scheme-text bg-scheme-background relative overflow-hidden" style="background-color: {{ section.settings.background-color }}" >
 
   <div class="section-content relative z-10 section-{{ section.id }}-padding mx-auto {{ section.settings.content_width_desktop }} {% if section.settings.extra_wide %}lg:max-w-site {% else %}lg:max-w-4xl {% endif %}{% if slideshow_on_mobile %}lg:px-section lg:max-w-site lg:mx-auto{% else %}px-section{% endif %}">
     {% if section.settings.title != '' %}
@@ -183,7 +183,12 @@
   "name": "Text columns with images",
   "class":"text-col-img",
   "settings": [
-    {
+     {
+          "type": "text",
+          "id": "class_section",
+          "label": "Custom class"
+     },
+     {
           "type": "select",
           "id": "background-color",
           "label": "Background Color",
