@@ -426,8 +426,8 @@
       ],
       "settings": {
         "background-color": "#FFF7E8",
-        "padding_top": 70,
-        "padding_bottom": 20,
+        "padding_top": 100,
+        "padding_bottom": 40,
         "image": "shopify:\/\/shop_images\/Group_476.png",
         "crop": "",
         "image_shape": "default",
