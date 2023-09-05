@@ -619,13 +619,10 @@
         "cf0d2728-7c30-4171-a94a-1107a4fca825"
       ],
       "custom_css": [
-        "section.relative.text-scheme-text.bg-scheme-background.relative.overflow-hidden {background-color: #da6655 !important;}",
-        ".section-content.relative.z-10.section-template--16869722980605__ff17cd22-c3ab-433f-bea8-68def1d0d075-padding {width: 100%; max-width: 1920px;}",
-        "ul.grid {display: flex; justify-content: space-around;}",
-        ".media-style-container.media-no-shadow.default img {width: 150px; height: 100px; object-fit: contain; margin: auto; border-radius: 0;}"
+
       ],
       "settings": {
-        "class_section": "",
+        "class_section": "attn-sect5",
         "background-color": "#FFF7E8",
         "padding_top": 50,
         "padding_bottom": 50,
