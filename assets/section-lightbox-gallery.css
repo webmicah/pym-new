@@ -28,6 +28,9 @@ img.media-style{
     height: 35px;
     width: 35px;
 }
+.lbox {
+    margin-top: 40px !important;
+}
 .lbox__card {
     background-color: #FFEFD0;
     max-width: 450px;
@@ -72,6 +75,9 @@ img.media-style{
     #modalContent {
         font-size: 21px;
         line-height: 30px;
+    }
+  .lbox {
+        margin-top: 100px !important;
     }
 }
 
