@@ -161,6 +161,7 @@
         "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-3"
       ],
       "settings": {
+        "class_section": "attn-sect2",
         "background-color": "#FFF7E8",
         "padding_top": 0,
         "padding_bottom": 40,
@@ -292,6 +293,7 @@
         "p {color: #000; text-align: center; font-family: Creo; font-size: 18px; font-style: normal; font-weight: 800; line-height: 1.4em;}"
       ],
       "settings": {
+        "class_section": "",
         "background-color": "#F1D09F",
         "padding_top": 10,
         "padding_bottom": 10,
@@ -371,6 +373,7 @@
         "p {color: #000; text-align: center; font-family: Creo; font-size: 18px; font-style: normal; font-weight: 800; line-height: 1.4em;}"
       ],
       "settings": {
+        "class_section": "",
         "background-color": "#F1D09F",
         "padding_top": 40,
         "padding_bottom": 30,
@@ -626,6 +629,7 @@
         ".media-style-container.media-no-shadow.default img {width: 150px; height: 100px; object-fit: contain; margin: auto; border-radius: 0;}"
       ],
       "settings": {
+        "class_section": "",
         "background-color": "#FFF7E8",
         "padding_top": 50,
         "padding_bottom": 50,
