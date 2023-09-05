@@ -13,10 +13,10 @@
   assign content_desktop_width = section.settings.desktop_media_width | split: '_' | last
 -%}
 <section
-  class="text-scheme-text bg-scheme-background"
+  class="{{ section.settings.class_section }}  text-scheme-text bg-scheme-background"
   data-color-scheme="{{ section.settings.color_scheme }}"
   >
-  <div class="mains-prod-lp section-content py-section-vertical-spacing lg:px-section max-w-site mx-auto relative z-10">
+  <div class=" section-content py-section-vertical-spacing lg:px-section max-w-site mx-auto relative z-10">
 
     {% if section.settings.title != '' %}
       <h2 class="text-center font-heading heading-effects heading-base heading-style break-words {{ settings.heading_drop_shadow_style }}">{{ section.settings.title }}</h2>
@@ -96,6 +96,11 @@
 {
   "name": "Main Product LP",
   "settings": [
+       {
+          "type": "text",
+          "id": "class_section",
+          "label": "Custom class"
+     },
     {
       "type": "text",
       "id": "title",
