@@ -94,6 +94,7 @@
         "heading_font": "font-heading",
         "rich_text": "",
         "text_size": "text-base",
+        "text_color": "",
         "text_font": "font-main",
         "content_width_desktop": "lg:w-2\/3",
         "button_link": "",
@@ -203,6 +204,7 @@
         "heading_font": "font-heading",
         "rich_text": "",
         "text_size": "text-base",
+        "text_color": "",
         "text_font": "font-main",
         "content_width_desktop": "lg:w-2\/3",
         "button_link": "",
@@ -221,6 +223,7 @@
         "heading_font": "font-heading",
         "rich_text": "<p>Without the side effects<\/p>",
         "text_size": "text-base",
+        "text_color": "",
         "text_font": "font-heading",
         "content_width_desktop": "lg:w-2\/3",
         "button_link": "",
@@ -411,6 +414,7 @@
         "heading_font": "font-heading",
         "rich_text": "",
         "text_size": "text-base",
+        "text_color": "",
         "text_font": "font-main",
         "content_width_desktop": "lg:w-2\/3",
         "button_link": "",
@@ -480,6 +484,7 @@
         "heading_font": "font-heading",
         "rich_text": "",
         "text_size": "text-base",
+        "text_color": "",
         "text_font": "font-main",
         "content_width_desktop": "lg:w-2\/3",
         "button_link": "",
@@ -667,6 +672,7 @@
         "heading_font": "font-heading",
         "rich_text": "",
         "text_size": "text-base",
+        "text_color": "",
         "text_font": "font-main",
         "content_width_desktop": "lg:w-2\/3",
         "button_link": "",
@@ -700,6 +706,7 @@
       "block_order": [
         "c0c54392-3c15-4250-b9e7-4d43d6feb57a"
       ],
+      "disabled": true,
       "custom_css": [
         ".font-heading.leading-snug.mx-auto.heading-base.rte {color: #dd6859; line-height: 130.699%; margin-left: 10px;}"
       ],
@@ -713,6 +720,7 @@
         "heading_font": "font-heading",
         "rich_text": "<p>Ingredients for Calm,<br\/> yet Focused Productivity<\/p>",
         "text_size": "heading-base",
+        "text_color": "",
         "text_font": "font-heading",
         "content_width_desktop": "lg:w-full",
         "button_link": "",
@@ -901,6 +909,26 @@
             "modal_body": "<p>Blueberries contain a powerful antioxidant called pterostilbene, which supports memory, learning, and protecting the brain against cognitive decline. Studies in rats indicate pterostilbene may also help individuals de-construct difficult tasks and overcome challenges easier. <\/p>",
             "color_scheme": "same_as_section"
           }
+        },
+        "5ed47c5d-2615-42c4-92d8-7329be1ae0de": {
+          "type": "sticker",
+          "settings": {
+            "shape": "pym_shape_1",
+            "color": "bg-scheme-accent text-scheme-accent-overlay",
+            "sticker_multiply": false,
+            "width": 270,
+            "horizontal_position": 50,
+            "vertical_position": 11,
+            "rotate": 0,
+            "sticker_opacity": 1,
+            "show_sticker_on_mobile": false,
+            "show_sticker_on_desktop": true,
+            "rotation_animation": "none",
+            "enable_parallax": false,
+            "parallax_speed": 3,
+            "image": "shopify:\/\/shop_images\/Vector_9.png",
+            "half_image_width_on_mobile": true
+          }
         }
       },
       "block_order": [
@@ -912,7 +940,8 @@
         "a34edbe6-d599-4c27-829d-499c09fdac9d",
         "9789252e-cd1a-4691-854c-e105064e9154",
         "1656f08b-0fc7-4c30-8ceb-0e1a48f47d05",
-        "12ce4f3e-8d8f-4fd6-8d24-2e92f43541a0"
+        "12ce4f3e-8d8f-4fd6-8d24-2e92f43541a0",
+        "5ed47c5d-2615-42c4-92d8-7329be1ae0de"
       ],
       "custom_css": [
 
@@ -925,7 +954,9 @@
         "extra_wide": true,
         "slideshow_on_mobile": false,
         "text_align": "text-left",
-        "title": "",
+        "title": "<p>Ingredients for Calm,<br\/> yet Focused Productivity<\/p>",
+        "title_color": "#dd6859",
+        "title_align": "text-left",
         "crop": "",
         "image_shape": "default",
         "index_shape": "star_1"
