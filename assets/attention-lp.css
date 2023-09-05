@@ -251,6 +251,11 @@ body#attention-chews .attn-sect2 ul.grid li:first-child  {
     display: none;
 }
 
+body#attention-chews .attn-sect5 ul.grid li:first-child ,
+body#attention-chews .attn-sect5 ul.grid li:last-child   {
+    display: none;
+}
+
 body#attention-chews .attn-sect5 .media-style-container.media-no-shadow.default img {
     width: 30px;
     height: 30px;
