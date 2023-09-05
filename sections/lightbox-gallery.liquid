@@ -44,7 +44,7 @@
   <div class="section-lightbox-gallery section-content relative z-10 section-{{ section.id }}-padding mx-auto {{ section.settings.content_width_desktop }} {% if section.settings.extra_wide %}lg:max-w-site {% else %}lg:max-w-4xl {% endif %}{% if slideshow_on_mobile %}lg:px-section lg:max-w-site lg:mx-auto{% else %}px-section{% endif %}">
     {% if section.settings.title != '' %}
     {%- assign block_heading_level = 'h3' -%}
-    <h2 class="text-center font-heading heading-effects heading-base heading-style break-words {{ settings.heading_drop_shadow_style }}">{{ section.settings.title }}</h2>
+    <h2 class="font-heading heading-effects heading-base heading-style break-words {{ settings.heading_drop_shadow_style }} {{ section.settings.title_align }}" {% if section.settings.title_color %} style="color:{{ section.settings.title_color }}"{% endif %}>{{ section.settings.title }}</h2>
     {% endif %}
 
     <div {% if slideshow_on_mobile %}id="slideshow-{{ section.id }}"{% endif %} class="{% if slideshow_on_mobile %}splide{% endif %}  {% if section.settings.title != '' %}section-content-top-margin{% endif %}">
@@ -390,6 +390,31 @@
       "type": "richtext",
       "id": "title",
       "label": "Heading"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Heading color"
+    },
+    {
+      "type": "select",
+      "id": "title_align",
+      "label": "Heading text align",
+      "default": "text-left",
+      "options": [
+        {
+          "value": "text-left",
+          "label": "Left Align"
+        },
+        {
+          "value": "text-center",
+          "label": "Center Align"
+        },
+        {
+          "value": "text-right",
+          "label": "Right Align"
+        }
+      ]
     },
     {
       "type": "select",
