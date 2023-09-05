@@ -247,8 +247,7 @@ body#attention-chews .attn-sect2 li:nth-child(2) p strong {
     display: none;
 }
 
-body#attention-chews .attn-sect2 ul.grid li:first-child,
-body#attention-chews .attn-sect2 ul.grid li:last-child  {
+body#attention-chews .attn-sect2 ul.grid li:first-child  {
     display: none;
 }
 
