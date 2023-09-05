@@ -65,6 +65,9 @@ img.media-style{
 .lbox__media-container img {
     object-fit: cover;
 }
+.section-lightbox-gallery h2 {
+    text-transform: unset !important;
+}
 @media (min-width: 768px) {
     #modalContent {
         font-size: 21px;
