@@ -136,6 +136,28 @@ body#attention-chews .attn-sect2 li:nth-child(2) p strong {
     margin-top: 15px;
 }
 
+body#attention-chews .attn-sect3 .media-style-container.media-no-shadow.default img {
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+  margin: auto;
+  border-radius: 0;
+}
+
+body#attention-chews .attn-sect3 .section-content.relative {
+  max-width: 70rem !important;
+}
+
+body#attention-chews .attn-sect3  p {
+  color: #000;
+  text-align: center;
+  font-family: Creo;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.4em;
+}
+
 
 .product-block li:before {
     content: '';
