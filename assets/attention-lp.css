@@ -194,8 +194,8 @@ body#attention-chews .attn-sect5 ul.grid {
 }
 
 body#attention-chews .attn-sect5 .media-style-container.media-no-shadow.default img {
-  width: 120px;
-  height: 100px;
+  width: 100px;
+  height: 60px;
   object-fit: contain;
   margin: auto;
   border-radius: 0;
