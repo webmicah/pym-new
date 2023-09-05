@@ -61,7 +61,7 @@ ul.attn-li {
 }
 
 
-body#attention-chews .attn-sect2 .text-col-img ul.grid strong {
+body#attention-chews .text-col-img ul.grid strong {
     color: #fff;
     font-family: Creo Bold;
     font-size: 22px;
@@ -124,7 +124,7 @@ body#attention-chews .attn-sect2 li:nth-child(2) p {
     margin: auto;
 }
 
-body#attention-chews.attn-sect2 li:nth-child(2) p strong {
+body#attention-chews .attn-sect2 li:nth-child(2) p strong {
     color: #575892;
     text-align: center;
     font-family: Creo Bold;
