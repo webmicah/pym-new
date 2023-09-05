@@ -633,7 +633,7 @@
         "padding_bottom": 50,
         "content_width_desktop": "lg:w-1\/2",
         "extra_wide": true,
-        "slideshow_on_mobile": false,
+        "slideshow_on_mobile": true,
         "text_align": "text-center",
         "title": "",
         "crop": "",
