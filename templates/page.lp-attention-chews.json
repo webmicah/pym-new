@@ -109,7 +109,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Frame_538_2.png",
+            "image": "shopify:\/\/shop_images\/Frame_538_3.png",
             "title": "",
             "heading_size": "text-base",
             "column-text-color": "#000000",
@@ -143,7 +143,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Frame_538_1.png",
+            "image": "shopify:\/\/shop_images\/Frame_538_4.png",
             "title": "",
             "heading_size": "text-base",
             "column-text-color": "#000000",
@@ -155,12 +155,54 @@
             "cta_text": "",
             "color_scheme": "same_as_section"
           }
+        },
+        "192d2470-313f-4e7a-a710-8924047c0c2f": {
+          "type": "sticker",
+          "settings": {
+            "shape": "pym_shape_1",
+            "color": "bg-scheme-accent text-scheme-accent-overlay",
+            "sticker_multiply": false,
+            "width": 210,
+            "horizontal_position": 16,
+            "vertical_position": 10,
+            "rotate": 0,
+            "sticker_opacity": 1,
+            "show_sticker_on_mobile": true,
+            "show_sticker_on_desktop": true,
+            "rotation_animation": "none",
+            "enable_parallax": false,
+            "parallax_speed": 3,
+            "image": "shopify:\/\/shop_images\/Vector_13.png",
+            "half_image_width_on_mobile": true
+          }
+        },
+        "0d4843c1-74f5-4056-82d7-9b7b99a45afc": {
+          "type": "sticker",
+          "settings": {
+            "shape": "pym_shape_1",
+            "color": "bg-scheme-accent text-scheme-accent-overlay",
+            "sticker_multiply": false,
+            "width": 150,
+            "horizontal_position": 86,
+            "vertical_position": 80,
+            "rotate": 0,
+            "sticker_opacity": 1,
+            "show_sticker_on_mobile": true,
+            "show_sticker_on_desktop": true,
+            "rotation_animation": "none",
+            "enable_parallax": false,
+            "parallax_speed": 3,
+            "image": "shopify:\/\/shop_images\/Group_564.png",
+            "half_image_width_on_mobile": true
+          }
         }
       },
       "block_order": [
         "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-1",
         "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-2",
-        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-3"
+        "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-3",
+        "192d2470-313f-4e7a-a710-8924047c0c2f",
+        "0d4843c1-74f5-4056-82d7-9b7b99a45afc"
       ],
       "settings": {
         "class_section": "attn-sect2",
@@ -746,7 +788,7 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "modal_title": "<p><strong>N-Acetyl-L-Tyrosine for PROCRASTINATION & FOCUS<\/strong><\/p>",
+            "modal_title": "<p>N-Acetyl-L-Tyrosine for <strong>PROCRASTINATION & FOCUS<\/strong><\/p>",
             "modal_body": "<p>Research suggests the amino acid L-Tyrosine may help restore and elevate dopamine levels which have been depleted due to stress. By boosting dopamine levels, L-Tyrosine helps minimize the effects of stress, while also improving focus, memory and concentration. <\/p>",
             "color_scheme": "same_as_section"
           }
@@ -766,7 +808,7 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "modal_title": "<p><strong>Taurine for MEMORY<\/strong><\/p>",
+            "modal_title": "<p>Taurine for <strong>MEMORY<\/strong><\/p>",
             "modal_body": "<p>Taurine is an amino acid best known to promote long-term memory, protect the brain from cognitive decline, and promote healthy metabolism. <\/p><p>The amount of taurine in the brain decreases with age. A 2017 review posted to Brain Defects Research notes that taurine supplementation works to maintain taurine levels across the lifespan, and promote healthy long-term memory storage.<\/p>",
             "color_scheme": "same_as_section"
           }
@@ -786,7 +828,7 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "modal_title": "<p><strong>L-Theanine for WAKEFUL RELAXATION<\/strong><\/p>",
+            "modal_title": "<p>L-Theanine for <strong>WAKEFUL RELAXATION<\/strong><\/p>",
             "modal_body": "<p>L-Theanine is an amino acid found in green tea that can help lower feelings of stress while increasing concentration, memory and alertness. It also boosts dopamine and alpha brainwaves to promote a “wakeful relaxation” and creativity.<\/p><p>A 2019 study found that L-Theanine can lower your blood pressure while stressed, as well as protecting your cognition. <\/p>",
             "color_scheme": "same_as_section"
           }
@@ -806,7 +848,7 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "modal_title": "<p><strong>L-Glycine for BRAIN CELL HEALTH<\/strong><\/p>",
+            "modal_title": "<p>L-Glycine for <strong>BRAIN CELL HEALTH<\/strong><\/p>",
             "modal_body": "<p>Glycine is one of three amino acids required to manufacture creatine. Creatine provides a helpful, short-term, as-needed energy source for neurons when under stress. Glycine therefore helps support the energy supply of brain cells, leading to better brain function.<\/p>",
             "color_scheme": "same_as_section"
           }
@@ -826,7 +868,7 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "modal_title": "<p><strong>Acetyl L-Carnitine HCl for ENERGY<\/strong><\/p>",
+            "modal_title": "<p>Acetyl L-Carnitine HCl for <strong>ENERGY<\/strong><\/p>",
             "modal_body": "<p>L-Carnitine<strong> <\/strong>is a naturally occurring amino acid that turns fat from our food into energy. It also supports the release of dopamine, for increased focus, attention and motivation.<\/p>",
             "color_scheme": "same_as_section"
           }
@@ -866,7 +908,7 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "modal_title": "<p><strong>Vitamin B6 for DOPAMINE PRODUCTION<\/strong><\/p>",
+            "modal_title": "<p>Vitamin B6 for <strong>DOPAMINE PRODUCTION<\/strong><\/p>",
             "modal_body": "<p>Vitamin B6 is a key player in the synthesis of many neurotransmitters, including GABA, serotonin, dopamine, noradrenalin, and histamine.<\/p><p>B6 thus helps increase brain serotonin and dopamine levels to promote positive moods, mental energy, cognition, and overall brain health.<\/p>",
             "color_scheme": "same_as_section"
           }
@@ -906,7 +948,7 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "modal_title": "<p><strong>Wild Blueberry Extract for COGNITION<\/strong><\/p>",
+            "modal_title": "<p>Wild Blueberry Extract for <strong>COGNITION<\/strong><\/p>",
             "modal_body": "<p>Blueberries contain a powerful antioxidant called pterostilbene, which supports memory, learning, and protecting the brain against cognitive decline. Studies in rats indicate pterostilbene may also help individuals de-construct difficult tasks and overcome challenges easier. <\/p>",
             "color_scheme": "same_as_section"
           }
