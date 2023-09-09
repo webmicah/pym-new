@@ -71,6 +71,18 @@ img.media-style{
 .section-lightbox-gallery h2 {
     text-transform: unset !important;
 }
+
+.lbox__text.text-base p strong {
+    font-weight: 800;
+    font-family: 'Creo Bold';
+    color: #372C58 !important;
+}
+
+.lbox__text.text-base p {
+    font-weight: 200;
+    font-family: 'Creo';
+    color: rgba(90, 71, 144, 0.61)!important;
+}
 @media (min-width: 768px) {
     #modalContent {
         font-size: 21px;
