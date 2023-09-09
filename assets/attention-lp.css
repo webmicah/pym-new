@@ -300,4 +300,9 @@ body#attention-chews  .attn-sect4 p  {
 }
 
 
+.text-col-img .z-sticker {
+    display: none;
+}
+
+
 }
