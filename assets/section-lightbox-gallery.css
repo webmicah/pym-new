@@ -2,9 +2,9 @@ img.media-style{
     border-radius: 0;
 }
 #modalContent {
-    background-color: #F1D09F;
+    background-color: #575892;
     border-radius: 35px;
-    color: #000000;
+    color: #FFF7E8;
     font-family: Creo;
     font-size: 18px;
     font-weight: 200;
@@ -16,10 +16,10 @@ img.media-style{
 }
 .modal__title {
     text-align: center;
-    background-color: #DA6655;
-    padding-top: 1em;
-    border-radius: 35px 35px 0px 0px;
-    color: #F1D09F;
+    padding: 2em 0px 1em 0px;
+    color: #FFF7E8;
+    border-bottom: 3px solid #F1D09F;
+    margin: 0px 2em;
 }
 .modal__desc {
     font-family: Creo ExtraLight;
