@@ -53,6 +53,12 @@
           {% for block in columns %}
             <li class="{% if slideshow_on_mobile %}splide__slide w-full lg:w-full{% endif %} relative {{ col_span }}" {% unless block.settings.color_scheme == 'same_as_section' %}data-color-scheme="{{ block.settings.color_scheme }}"{% endunless %} {{ block.shopify_attributes }}>
               <div class="{{ section.settings.text_align }}">
+             {%- if block.settings.video_popup -%}
+            <a href="{{ block.settings.video_file }}" data-fancybox data-width="360" data-height="640" data-type="html5video"
+              data-thumb="{{ block.settings.video_thumbnail }}">
+              <img class="card-img-top img-fluid" src="{{ block.settings.thumbnail }}" style="width:100%;height:100%;object-fit:cover;" />
+            </a>
+             {%- else -%}
                 {%- if block.settings.show_image -%}
                   {%- liquid
                     assign shape_id = section.id
@@ -79,6 +85,7 @@
                   </div>
                   {%- endif -%}
                 {%- endif -%}
+            {%- endif -%}
                 {% if block.settings.title != '' %}
                 <{{ block_heading_level }} class="font-heading {{ block.settings.heading_size }} {% if block.settings.title_uppercase %}uppercase {% endif %}break-words" style="color: {{ block.settings.column-text-color }}">{{ block.settings.title }}</{{ block_heading_level }}>
                 {% endif %}
