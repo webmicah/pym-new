@@ -142,11 +142,18 @@ body#attention-chews .text-col-img ul.grid strong {
 
 .attn-sect2 .slick-slide {
       margin: 0 27px;
+      height: auto;
   }
 
 .attn-sect2 .slick-list {
       margin: 0 -27px;
   }
+
+
+.attn-sect2 .slick-track {
+  display: flex !important;
+}
+
 
 body#attention-chews .attn-sect3 .media-style-container.media-no-shadow.default img {
   width: 150px;
