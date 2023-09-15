@@ -51,7 +51,7 @@
       <div class="{% if slideshow_on_mobile %}splide__track {% if section.settings.display_on_card %}{% if settings.card_shadow_direction contains 'top' %}pt-card-shadow{% else %}pb-card-shadow{% endif %}{% endif %}{% endif %}">
         <ul class="{% if slideshow_on_mobile %}splide__list{% endif %} {% if section.settings.title != '' %}section-content-top-margin{% endif %} {% if slideshow_on_mobile %}lg:grid lg:gap-10{% else %}grid grid-cols-2 gap-5{% endif %} lg:grid-cols-12 ">
           {% for block in columns %}
-            <li class="{% if slideshow_on_mobile %}splide__slide w-full lg:w-full{% endif %} relative {{ col_span }}" {% unless block.settings.color_scheme == 'same_as_section' %}data-color-scheme="{{ block.settings.color_scheme }}"{% endunless %} {{ block.shopify_attributes }}>
+            <li class="{{ block.settings.column_class }}{% if slideshow_on_mobile %}splide__slide w-full lg:w-full{% endif %} relative {{ col_span }}" {% unless block.settings.color_scheme == 'same_as_section' %}data-color-scheme="{{ block.settings.color_scheme }}"{% endunless %} {{ block.shopify_attributes }}>
               <div class="{{ section.settings.text_align }}">
              {%- if block.settings.video_popup -%}
             <a href="{{ block.settings.video_file }}" data-fancybox data-width="360" data-height="640" data-type="html5video"
@@ -760,6 +760,11 @@
           "type": "text",
           "id": "video_file",
           "label": "Video File"
+        },
+        {
+          "type": "text",
+          "id": "column_class",
+          "label": "Column Class"
         }
       ]
     },
