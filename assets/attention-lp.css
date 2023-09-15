@@ -82,23 +82,23 @@ body#attention-chews .text-col-img ul.grid strong {
     max-width: 1600px;
 }
 
-body#attention-chews .attn-sect2 li img {
+body#attention-chews .attn-sect2 li.review-text img {
     width: 40%;
     margin: auto auto auto auto;
 }
 
-body#attention-chews .attn-sect2 li  {
+body#attention-chews .attn-sect2 li.review-text  {
     display: table;
 }
 
 
-body#attention-chews .attn-sect2 li  .text-center {
+body#attention-chews .attn-sect2 li.review-text  .text-center {
     display: table-cell;
     vertical-align: middle;
 }
 
 
-body#attention-chews .attn-sect2 li h2.font-heading{
+body#attention-chews .attn-sect2 li.review-text h2.font-heading{
     color: #575892!important;
     text-align: center;
     font-family: 'Creo Bold';
@@ -110,7 +110,7 @@ body#attention-chews .attn-sect2 li h2.font-heading{
 }
 
 
-body#attention-chews .attn-sect2 li p {
+body#attention-chews .attn-sect2 li.review-text p {
     color: #000;
     text-align: center;
     font-family: Creo;
@@ -124,7 +124,7 @@ body#attention-chews .attn-sect2 li p {
     margin: auto;
 }
 
-body#attention-chews .attn-sect2 li p strong {
+body#attention-chews .attn-sect2 li.review-text p strong {
     color: #575892;
     text-align: center;
     font-family: Creo Bold;
