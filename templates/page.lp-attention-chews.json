@@ -119,7 +119,10 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": true,
+            "video_thumb": "shopify:\/\/shop_images\/Group_562_2.png",
+            "video_file": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3cc58de895434df49e9245db15260f4e.mov"
           }
         },
         "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-2": {
@@ -136,7 +139,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         },
         "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-3": {
@@ -153,7 +158,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         },
         "192d2470-313f-4e7a-a710-8924047c0c2f": {
@@ -290,7 +297,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         },
         "template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8-column-2": {
@@ -307,7 +316,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         },
         "template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8-column-3": {
@@ -324,7 +335,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         }
       },
@@ -368,7 +381,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         },
         "template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783-column-2": {
@@ -385,7 +400,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         },
         "template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783-column-3": {
@@ -402,7 +419,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         }
       },
@@ -551,7 +570,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         },
         "template--16642170487037__ff17cd22-c3ab-433f-bea8-68def1d0d075-1665451386fc877d75-1": {
@@ -568,7 +589,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         },
         "template--16642170487037__ff17cd22-c3ab-433f-bea8-68def1d0d075-1665451386fc877d75-2": {
@@ -585,7 +608,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         },
         "717c09d0-c2bc-4c2f-8f9e-9fe17a071b9f": {
@@ -602,7 +627,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         },
         "8f8d07e7-88f0-4b1a-9bd9-6cdd3b254439": {
@@ -619,7 +646,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         },
         "1b76197f-3b20-4a93-aed6-78e6ea444575": {
@@ -636,7 +665,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         },
         "cf0d2728-7c30-4171-a94a-1107a4fca825": {
@@ -653,7 +684,9 @@
             "text_font": "font-main",
             "cta_link": "",
             "cta_text": "",
-            "color_scheme": "same_as_section"
+            "color_scheme": "same_as_section",
+            "video_popup": false,
+            "video_file": ""
           }
         }
       },
