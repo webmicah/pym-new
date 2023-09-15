@@ -130,14 +130,14 @@ body#attention-chews .text-col-img ul.grid strong {
 
 .attn-sect2 li.review-text p strong {
     color: #575892!important;
-    text-align: center;
-    font-family: Creo Bold;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 800;
-    max-width: 100%;
-    line-height: 1.2em;
-    margin-top: 15px;
+    text-align: center !important;
+    font-family: Creo !important;
+    font-size: 20px !important;
+    font-style: normal !important;
+    font-weight: 800 !important;
+    max-width: 100% !important;
+    line-height: 1.2em !important;
+    margin-top: 15px !important;
 }
 
 .attn-sect2 .slick-slide {
