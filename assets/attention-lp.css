@@ -140,6 +140,14 @@ body#attention-chews .text-col-img ul.grid strong {
     margin-top: 15px;
 }
 
+.attn-sect2 .slick-slide {
+      margin: 0 27px;
+  }
+
+.attn-sect2 .slick-list {
+      margin: 0 -27px;
+  }
+
 body#attention-chews .attn-sect3 .media-style-container.media-no-shadow.default img {
   width: 150px;
   height: 100px;
