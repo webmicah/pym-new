@@ -129,7 +129,7 @@ body#attention-chews .text-col-img ul.grid strong {
 }
 
 .attn-sect2 li.review-text p strong {
-    color: #575892;
+    color: #575892!important;
     text-align: center;
     font-family: Creo Bold;
     font-size: 20px;
