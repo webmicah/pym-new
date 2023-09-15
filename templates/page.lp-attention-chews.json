@@ -122,7 +122,8 @@
             "color_scheme": "same_as_section",
             "video_popup": true,
             "video_thumb": "shopify:\/\/shop_images\/Group_562_2.png",
-            "video_file": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3cc58de895434df49e9245db15260f4e.mov"
+            "video_file": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3cc58de895434df49e9245db15260f4e.mov",
+            "column_class": ""
           }
         },
         "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-2": {
@@ -141,7 +142,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": "review-text"
           }
         },
         "template--16869722980605__cca9ca76-293e-41a3-87d5-b36862d7d486-column-3": {
@@ -160,7 +162,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         },
         "192d2470-313f-4e7a-a710-8924047c0c2f": {
@@ -219,7 +222,8 @@
             "color_scheme": "same_as_section",
             "video_popup": true,
             "video_thumb": "shopify:\/\/shop_images\/Group_562_2.png",
-            "video_file": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3cc58de895434df49e9245db15260f4e.mov"
+            "video_file": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3cc58de895434df49e9245db15260f4e.mov",
+            "column_class": ""
           }
         }
       },
@@ -319,7 +323,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         },
         "template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8-column-2": {
@@ -338,7 +343,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         },
         "template--16869722980605__d0705ec0-5e83-4f53-88be-a0820869d5e8-column-3": {
@@ -357,7 +363,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         }
       },
@@ -403,7 +410,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         },
         "template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783-column-2": {
@@ -422,7 +430,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         },
         "template--16869722980605__4e500af2-a04d-470f-a23b-85fb84b46783-column-3": {
@@ -441,7 +450,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         }
       },
@@ -592,7 +602,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         },
         "template--16642170487037__ff17cd22-c3ab-433f-bea8-68def1d0d075-1665451386fc877d75-1": {
@@ -611,7 +622,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         },
         "template--16642170487037__ff17cd22-c3ab-433f-bea8-68def1d0d075-1665451386fc877d75-2": {
@@ -630,7 +642,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         },
         "717c09d0-c2bc-4c2f-8f9e-9fe17a071b9f": {
@@ -649,7 +662,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         },
         "8f8d07e7-88f0-4b1a-9bd9-6cdd3b254439": {
@@ -668,7 +682,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         },
         "1b76197f-3b20-4a93-aed6-78e6ea444575": {
@@ -687,7 +702,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         },
         "cf0d2728-7c30-4171-a94a-1107a4fca825": {
@@ -706,7 +722,8 @@
             "cta_text": "",
             "color_scheme": "same_as_section",
             "video_popup": false,
-            "video_file": ""
+            "video_file": "",
+            "column_class": ""
           }
         }
       },
