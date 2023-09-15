@@ -160,6 +160,10 @@ body#attention-chews .text-col-img ul.grid strong {
     color: #55568f;
 }
 
+.attn-sect2 .slick-dots li button:before {
+    font-size: 12px;
+}
+
 
 body#attention-chews .attn-sect3 .media-style-container.media-no-shadow.default img {
   width: 150px;
