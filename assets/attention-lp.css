@@ -82,7 +82,7 @@ body#attention-chews .text-col-img ul.grid strong {
     max-width: 1600px;
 }
 
-.attn-sect2 .lg\:w-3\/4 {
+.attn-sect2 .lg\:w-3\/4,.attn-sect2  .lg\:w-full {
     width: 85%;
 }
 
