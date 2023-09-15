@@ -1,8 +1,10 @@
 <link rel="stylesheet" href="{{ 'attention-lp.css' | asset_url }}">
 <link rel="stylesheet" href="{{ 'main-product-lp.css' | asset_url }}">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <script>
 $( document ).ready(function() {
@@ -16,6 +18,76 @@ $( document ).ready(function() {
     }
 });
 
+</script>
+
+
+<script>
+  function getImages(el,arr){
+    let content = '';
+    arr.forEach(img => {
+      content += '<img src="' + img + '" alt="Image">';
+    });
+    $(el).html(content);  
+  }
+  $(document).ready(function () {
+    Fancybox.bind("[data-fancybox]", {});
+    const progressBar = document.getElementById('progress-fill');
+    function updateProgressBar() {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      progressBar.style.backgroundColor='#F6A118'
+      progressBar.style.width = progress + '%';
+    }
+    window.addEventListener('scroll', updateProgressBar);
+    const menuItems = document.querySelectorAll('.main-nav-list a');
+    const sections = document.querySelectorAll('section');
+    let currentActiveItem = null;
+    let currentActiveItemId = null;
+    function setActiveMenuItem(sectionId) {
+        menuItems.forEach(item => {
+            let item_id = item.getAttribute('href');
+            item_id = item_id.replace("#", "");
+            if (item_id == sectionId) {
+            	item.classList.add('active-menu-item');
+              currentActiveItem = item;
+              currentActiveItemId = item_id;
+            } else {
+            	item.classList.remove('active-menu-item');
+            }
+        });
+    }
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Trigger when 50% of the section is visible in the viewport
+    };
+   	function handleIntersection(entries) {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+            console.log(`currentActiveItemId: ${currentActiveItemId}`)
+            setActiveMenuItem(sectionId);
+            if (index !== entries.length - 1) {
+                const nextSectionId = entries[index + 1].target.id;
+                if (currentActiveItem && currentActiveItemId !== nextSectionId) {
+                    currentActiveItem.classList.remove('active-menu-item');
+                    currentActiveItem = null;
+                }
+            }
+            }
+        });
+    }
+  
+
+
+    const openVideo = document.querySelectorAll('.open-video');
+    openVideo.forEach(el => {
+      el.addEventListener('click',function(e){
+        e.preventDefault();
+        document.getElementById('vidLightbox').click();
+      })
+    });
+  });
 </script>
 
 {%- liquid
